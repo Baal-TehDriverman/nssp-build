@@ -1,0 +1,6 @@
+# /etc/crypttab.initramfs - NSSP Lilith OS
+# LUKS2 root partition with Argon2id
+# UUID will be filled in by installer
+
+# name		device		password	options
+cryptroot	PARTUUID=ROOT_PARTUUID	none	luks,discard,tries=3,timeout=30
