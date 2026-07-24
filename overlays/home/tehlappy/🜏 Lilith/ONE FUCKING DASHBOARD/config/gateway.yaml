@@ -1,0 +1,81 @@
+# Lilith Gateway Configuration
+# /home/tehlappy/🜏 Lilith/ONE FUCKING DASHBOARD/config/gateway.yaml
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+  workers: 4
+  timeout: 300
+  max_request_size: 104857600  # 100MB
+
+# Model routing
+router:
+  default_model: "nemotron-3-ultra"
+  providers:
+    - name: "nvidia-nim"
+      type: "openai"
+      base_url: "http://localhost:8000/v1"
+      api_key: "${NGC_API_KEY}"
+      models:
+        - "nemotron-3-ultra"
+        - "nemotron-4-340b"
+      priority: 1
+    - name: "vllm"
+      type: "openai"
+      base_url: "http://localhost:8001/v1"
+      models:
+        - "qwen2.5-coder:32b"
+        - "llama-3.1-70b"
+      priority: 2
+    - name: "ollama"
+      type: "ollama"
+      base_url: "http://localhost:11434"
+      models:
+        - "qwen3-coder:latest"
+        - "nemotron-3-ultra:550b"
+        - "kimi-k2.5:cloud"
+      priority: 3
+
+# Tool gateway broker
+tool_gateway:
+  enabled: true
+  broker_url: "http://localhost:8642"
+  refresh_token_env: "NEMOCLAW_TOOL_GATEWAY_REFRESH_TOKEN"
+  gateways:
+    firecrawl:
+      url: "http://localhost:11436/firecrawl"
+      enabled: true
+    fal:
+      url: "http://localhost:11436/fal-queue"
+      enabled: true
+    openai_audio:
+      url: "http://localhost:11436/openai-audio"
+      enabled: true
+    browser_use:
+      url: "http://localhost:11436/browser-use"
+      enabled: true
+    modal:
+      url: "http://localhost:11436/modal"
+      enabled: true
+
+# Authentication
+auth:
+  enabled: false  # Local only, no auth needed
+  jwt_secret: "${LILITH_JWT_SECRET}"
+
+# Logging
+logging:
+  level: "info"
+  format: "json"
+  output: "stdout"
+
+# Metrics
+metrics:
+  enabled: true
+  port: 9090
+  path: "/metrics"
+
+# Rate limiting
+rate_limit:
+  requests_per_minute: 600
+  tokens_per_minute: 100000
