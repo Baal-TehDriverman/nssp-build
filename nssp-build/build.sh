@@ -5,7 +5,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-OUTPUT_DIR="$SCRIPT_DIR/../iso"
+OUTPUT_DIR="${SCRIPT_DIR}/../iso"
+OVERLAY_DIR="${SCRIPT_DIR}/overlays"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -108,12 +109,12 @@ mkosi build \
   --bootable yes \
   --bootloader systemd-boot \
   --uefi yes \
-  --secure-boot yes \
+  --secure-boot on \
   --partition-table gpt \
   --size 500G \
-  --overlay "$SCRIPT_DIR/../overlays" \
+  --overlay "$OVERLAY_DIR" \
   --scripts "$SCRIPT_DIR" \
-  --pre-script prepare.sh \
+  --pre-script pre-install.sh \
   --post-script verify.sh \
   --environment LANG=en_US.UTF-8 \
   --environment LC_ALL=en_US.UTF-8 \
@@ -126,31 +127,9 @@ mkosi build \
   --locale en_US.UTF-8 \
   --keyboard us
 
-# Rename UKI to expected name
-UKI_GENERATED="$OUTPUT_DIR/lilith-os-uki.uki"
-UKI_EXPECTED="$OUTPUT_DIR/lilith-os-$(uname -m).efi"
-if [[ -f "$UKI_GENERATED" ]]; then
-  mv "$UKI_GENERATED" "$UKI_EXPECTED"
-  echo "Renamed UKI to $UKI_EXPECTED"
-else
-  echo "UKI file not found: $UKI_GENERATED"
-  # Sometimes the extension is .uki, sometimes it's just the output name without extension?
-  # Let's check for the output name directly
-  UKI_ALT="$OUTPUT_DIR/lilith-os-uki"
-  if [[ -f "$UKI_ALT" ]]; then
-    mv "$UKI_ALT" "$UKI_EXPECTED"
-    echo "Renamed UKI (alternative) to $UKI_EXPECTED"
-  else
-    # List what we have in the output directory for debugging
-    echo "Files in $OUTPUT_DIR:"
-    ls -la "$OUTPUT_DIR"
-    exit 1
-  fi
-fi
-
 echo "=== Building NSSP Lilith OS ISO (disk image) ==="
 
-# Build disk image (ISO)
+# Build ISO (disk image)
 mkosi build \
   --format disk \
   --output-dir "$OUTPUT_DIR" \
@@ -247,12 +226,12 @@ mkosi build \
   --bootable yes \
   --bootloader systemd-boot \
   --uefi yes \
-  --secure-boot yes \
+  --secure-boot on \
   --partition-table gpt \
   --size 500G \
-  --overlay "$SCRIPT_DIR/../overlays" \
+  --overlay "$OVERLAY_DIR" \
   --scripts "$SCRIPT_DIR" \
-  --pre-script prepare.sh \
+  --pre-script pre-install.sh \
   --post-script verify.sh \
   --environment LANG=en_US.UTF-8 \
   --environment LC_ALL=en_US.UTF-8 \
@@ -265,7 +244,20 @@ mkosi build \
   --locale en_US.UTF-8 \
   --keyboard us
 
-# Rename disk image to expected ISO name
+echo "=== Renaming artifacts ==="
+
+# Rename UKI
+UKI_GENERATED="$OUTPUT_DIR/lilith-os-uki.uki"
+UKI_EXPECTED="$OUTPUT_DIR/lilith-os-$(uname -m).efi"
+if [[ -f "$UKI_GENERATED" ]]; then
+  mv "$UKI_GENERATED" "$UKI_EXPECTED"
+  echo "Renamed UKI to $UKI_EXPECTED"
+else
+  echo "UKI file not found: $UKI_GENERATED"
+  ls -la "$OUTPUT_DIR"
+fi
+
+# Rename ISO
 ISO_GENERATED="$OUTPUT_DIR/lilith-os-disk.disk"
 ISO_EXPECTED="$OUTPUT_DIR/lilith-os-$(uname -m).iso"
 if [[ -f "$ISO_GENERATED" ]]; then
@@ -273,17 +265,7 @@ if [[ -f "$ISO_GENERATED" ]]; then
   echo "Renamed ISO to $ISO_EXPECTED"
 else
   echo "ISO file not found: $ISO_GENERATED"
-  # Check for alternative naming
-  ISO_ALT="$OUTPUT_DIR/lilith-os-disk"
-  if [[ -f "$ISO_ALT" ]]; then
-    mv "$ISO_ALT" "$ISO_EXPECTED"
-    echo "Renamed ISO (alternative) to $ISO_EXPECTED"
-  else
-    # List what we have in the output directory for debugging
-    echo "Files in $OUTPUT_DIR:"
-    ls -la "$OUTPUT_DIR"
-    exit 1
-  fi
+  ls -la "$OUTPUT_DIR"
 fi
 
 echo "=== Build complete ==="

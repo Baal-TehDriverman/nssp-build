@@ -6,6 +6,9 @@ set -euo pipefail
 
 echo "=== NSSP Pre-Install: Setting up build environment ==="
 
+# Install systemd-ukify for UKI generation
+pacman -S --noconfirm systemd-ukify
+
 # Configure mkinitcpio for UKI + btrfs + luks + zstd
 cat > /etc/mkinitcpio.conf.d/nssp.conf << 'EOF'
 MODULES=(btrfs nvidia nvidia_modeset nvidia_uvm nvidia_drm)
@@ -31,7 +34,7 @@ cat >> /etc/pacman.conf << 'EOF'
 Include = /etc/pacman.d/chaotic-mirrorlist
 
 [nvidia]
-Server = https://pkgbuild.com/~dreamsalad/nvidia/\$arch
+Server = https://pkgbuild.com/~dreamsalad/nvidia/$arch
 EOF
 
 # Install chaotic-aur keyring

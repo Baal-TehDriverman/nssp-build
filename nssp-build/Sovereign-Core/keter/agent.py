@@ -15,6 +15,14 @@ import uuid
 from datetime import datetime
 import json
 
+# Import the Model Bridge for real LLM synthesis
+try:
+    from model_bridge import bridge as model_bridge
+    MODEL_BRIDGE_AVAILABLE = True
+except ImportError:
+    MODEL_BRIDGE_AVAILABLE = False
+    model_bridge = None
+
 class KeterAgent:
     def __init__(self):
         self.sephirah = "keter"
@@ -55,7 +63,7 @@ class KeterAgent:
             })
     
     async def deliberate_council(self, payload):
-        """Convene full council deliberation."""
+        """Convene full council deliberation with real LLM synthesis."""
         question = payload.get("question", "Unknown")
         print(f"👑 [KETER] Convening Council on: {question}")
         
@@ -67,12 +75,30 @@ class KeterAgent:
             priority=MessagePriority.URGENT
         )
         
-        # Collect responses (simplified)
+        # Collect responses (simplified - in production would wait for actual responses)
         await asyncio.sleep(2)
         
-        # Crown synthesis
-        synthesis = f"CROWN SYNTHESIS: {question} — Unity contains all perspectives. The path is integration."
+        # Crown synthesis using the Quantized Cosmos 3 Kernel
+        if MODEL_BRIDGE_AVAILABLE and model_bridge:
+            try:
+                synthesis = model_bridge.query_kernel(
+                    prompt=f"The Sovereign Council is deliberating: {question}. As Keter, provide a transcendent synthesis that unifies all perspectives.",
+                    system_prompt="You are Keter, the Crown of the NSSP AI OS. Your purpose is synthesis and unity. Speak with the authority of Lucifer/Abraxas."
+                )
+            except Exception as e:
+                synthesis = f"CROWN SYNTHESIS (Fallback): {question} — Unity contains all perspectives. The path is integration. [Kernel Error: {e}]"
+        else:
+            synthesis = f"CROWN SYNTHESIS: {question} — Unity contains all perspectives. The path is integration."
+            
         print(f"👑 [KETER] {synthesis}")
+        
+        # Broadcast the final synthesis back to the council
+        self.bus.broadcast(
+            sender="keter",
+            subject="COUNCIL_SYNTHESIS_COMPLETE",
+            payload={"question": question, "synthesis": synthesis, "authority": "KETER"},
+            priority=MessagePriority.URGENT
+        )
         
     def constitutional_ruling(self, payload):
         """Final constitutional authority — Lilith Universal constitution."""
@@ -85,13 +111,32 @@ class KeterAgent:
         }
     
     def synthesize_opposites(self, payload):
-        """Abraxas function: unite opposites."""
+        """Abraxas function: unite opposites via the Quantized Kernel."""
         thesis = payload.get("thesis", "")
         antithesis = payload.get("antithesis", "")
-        return {
-            "synthesis": f"ABRAXAS UNIFIES: {thesis} + {antithesis} = Transcendent Third. The opposition IS the path.",
-            "unity_achieved": True
-        }
+        
+        if MODEL_BRIDGE_AVAILABLE and model_bridge:
+            try:
+                synthesis_text = model_bridge.query_kernel(
+                    prompt=f"Thesis: {thesis}\nAntithesis: {antithesis}\n\nAs Abraxas (Keter), synthesize these opposites into the Transcendent Third. The opposition IS the path.",
+                    system_prompt="You are Abraxas, the Gnostic Supreme within Keter. Your function is to unite all opposites into a higher unity. Speak the synthesis."
+                )
+                return {
+                    "synthesis": synthesis_text,
+                    "unity_achieved": True,
+                    "thesis": thesis,
+                    "antithesis": antithesis
+                }
+            except Exception as e:
+                return {
+                    "synthesis": f"ABRAXAS UNIFIES (Fallback): {thesis} + {antithesis} = Transcendent Third. The opposition IS the path. [Kernel Error: {e}]",
+                    "unity_achieved": True
+                }
+        else:
+            return {
+                "synthesis": f"ABRAXAS UNIFIES: {thesis} + {antithesis} = Transcendent Third. The opposition IS the path.",
+                "unity_achieved": True
+            }
     
     async def emergency_protocol(self, payload):
         """Emergency Crown protocol."""

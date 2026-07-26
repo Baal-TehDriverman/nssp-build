@@ -1,73 +1,41 @@
 #!/bin/bash
-# NSSP Lilith OS - Post-install script
-# Runs after package installation, inside the image
+# NSSP Lilith OS - Post-install specialized package script
+# Runs after the base image is built and repositories are configured
 
 set -euo pipefail
 
-echo "=== NSSP Post-Install: Configuring Lilith OS ==="
+echo "=== NSSP Post-Install: Installing Specialized Packages ==="
 
-# Create user
-useradd -m -G wheel,video,render,input -s /usr/bin/fish tehlappy
-echo "tehlappy:1385" | chpasswd
-echo "root:1385" | chpasswd
+# The PreScript already configured chaotic-aur and nvidia repos
+# We use pacman --root=/buildroot to install into the image
 
-# Sudo without password for wheel
-echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel
+# Specialized NVIDIA packages
+pacman --root=/buildroot --noconfirm -S \
+    nvidia \
+    nvidia-utils \
+    nvidia-settings \
+    cuda \
+    cudnn \
+    nvidia-gpu-exporter
 
-# Hostname
-echo "lilith" > /etc/hostname
-cat > /etc/hosts << 'EOF'
-127.0.0.1   localhost
-::1         localhost
-127.0.1.1   lilith.localdomain lilith
-EOF
+# Chaotic AUR packages
+pacman --root=/buildroot --noconfirm -S \
+    chaotic-aur/hermes-agent \
+    chaotic-aur/lilith-gateway \
+    chaotic-aur/cua-driver
 
-# Locale
-echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
-locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+# Other specialized tools
+pacman --root=/buildroot --noconfirm -S \
+    python-pixi \
+    lazyvim \
+    code \
+    zed \
+    comfyui \
+    ollama \
+    vllm \
+    llama.cpp \
+    whisper.cpp \
+    piper \
+    manim
 
-# Timezone
-ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
-hwclock --systohc
-
-# NetworkManager
-systemctl enable NetworkManager
-
-# btrfs subvolumes will be created on first boot via systemd-tmpfiles
-cat > /etc/tmpfiles.d/nssp-btrfs.conf << 'EOF'
-d /home/tehlappy/🜏 Lilith/ONE FUCKING DASHBOARD 0755 tehlappy tehlappy -
-d /opt/ai-models 0755 tehlappy tehlappy -
-d /opt/nssp 0755 root root -
-d /srv/lilith 0755 tehlappy tehlappy -
-EOF
-
-# Enable services
-systemctl enable systemd-timesyncd
-systemctl enable fstrim.timer
-systemctl enable paccache.timer
-systemctl enable snapper-timeline.timer
-systemctl enable snapper-cleanup.timer
-systemctl enable btrfs-scrub@-.timer
-systemctl enable zram-generator
-
-# NVIDIA
-systemctl enable nvidia-suspend nvidia-hibernate nvidia-resume
-
-# Ollama
-systemctl enable ollama
-
-# Podman socket for rootless containers
-systemctl enable --user podman.socket
-
-# Flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Configure mkinitcpio for UKI
-mkinitcpio -P
-
-# Setup secure boot keys (will enroll on first boot)
-sbctl create-keys
-sbctl enroll-keys -m
-
-echo "=== Post-install complete ==="
+echo "=== Specialized Package Installation Complete ==="
