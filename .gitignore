@@ -1,0 +1,42 @@
+# Virtual environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+build/
+
+# Model weights & caches
+.cache/
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Large binary archives
+*.zip
+*.tar
+*.tar.gz
+*.iso
+*.img
+*.efi
+
+# Build artifacts
+iso/
+build.log
+mkosi.log
+
+# AMD Radeon Tool Suite (large binaries)
+nssp-build/AMD/
+
+# NemoClaw source (tracked in its own repo)
+NemoClaw/
+
+# Shared repos & archives
+_shared/
+archive/
+opencode_worktrees_backup_*/

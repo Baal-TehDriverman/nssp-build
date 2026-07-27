@@ -1,10 +1,10 @@
 # /etc/kernel/cmdline - NSSP Lilith OS kernel command line
 # Used by systemd-boot and mkinitcpio for UKI
 
-root=UUID=ROOT_UUID rootflags=subvol=@ rw
+root=UUID=cdb67ef4-735f-4907-8cff-4d7f1f35c205 rootflags=subvol=@,compress=zstd:3,noatime rw
 rootfstype=btrfs
-luks.uuid=LUKS_UUID luks.options=discard
-initrd=\intel-ucode.img initrd=\initramfs-linux-zen.img
+rd.luks.name=f93839e8-8ec5-41a1-aebf-a9bcdb80a690=cryptroot
+rd.luks.options=discard
 nvidia_drm.modeset=1 nvidia_drm.fbdev=1
 mitigations=off
 nowatchdog

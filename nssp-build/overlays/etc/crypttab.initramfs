@@ -3,4 +3,4 @@
 # UUID will be filled in by installer
 
 # name		device		password	options
-cryptroot	PARTUUID=ROOT_PARTUUID	none	luks,discard,tries=3,timeout=30
+cryptroot	UUID=f93839e8-8ec5-41a1-aebf-a9bcdb80a690	none	luks,discard,tries=3,timeout=30
