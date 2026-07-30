@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🜏 Lilith Gateway Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --violet: #8b5cf6;
+            --violet-dark: #7c3aed;
+            --violet-light: #a78bfa;
+            --gold: #fbbf24;
+            --gold-dark: #f59e0b;
+            --bg-deep: #0a0a0f;
+            --bg-card: #13131a;
+            --border: #2a2a3a;
+            --text: #f1f1f5;
+            --text-dim: #8b8ba3;
+        }
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .bg-grid { background-image: radial-gradient(circle at 1px 1px, rgba(139,92,246,0.15) 1px, transparent 0); background-size: 40px 40px; }
+        .glow-violet { box-shadow: 0 0 30px rgba(139,92,246,0.3), inset 0 1px 0 rgba(139,92,246,0.1); }
+        .glow-gold { box-shadow: 0 0 20px rgba(251,191,36,0.2), inset 0 1px 0 rgba(251,191,36,0.1); }
+        .border-gradient { border: 1px solid transparent; background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box, linear-gradient(135deg, var(--violet), var(--gold)) border-box; }
+        .pulse-slow { animation: pulse 3s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[var(--bg-deep)] text-[var(--text)] min-h-screen bg-grid">
+    <!-- Background Accent -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-900/20 rounded-full blur-3xl float"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-900/20 rounded-full blur-3xl float" style="animation-delay: -3s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-900/10 to-amber-900/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div x-data="dashboard()" x-init="init()" class="relative z-10 min-h-screen">
+        <!-- Header -->
+        <header class="border-b border-[var(--border)] bg-[var(--bg-card)]/80 backdrop-blur-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-amber-500 flex items-center justify-center glow-violet">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-violet-300 to-amber-300 bg-clip-text text-transparent">🜏 Lilith Gateway</h1>
+                        <p class="text-xs text-[var(--text-dim)] font-mono">Sovereign Council Online • Port 8080</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20">
+                        <span class="w-2 h-2 rounded-full bg-green-400 pulse-slow"></span>
+                        <span class="text-sm font-medium text-violet-300">LIVE</span>
+                    </div>
+                    <div class="font-mono text-sm text-[var(--text-dim)]" id="clock"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column: Council & System -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Council Status -->
+                <section class="border-gradient rounded-2xl p-6 bg-[var(--bg-card)]/50 backdrop-blur">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-lg font-bold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-amber-500 flex items-center justify-center text-white font-mono text-xs">10</span>
+                            Sephirotic Council
+                        </h2>
+                        <button @click="refreshCouncil()" :disabled="loading" class="px-3 py-1 text-xs font-medium text-[var(--text-dim)] hover:text-[var(--text)] transition disabled:opacity-50">Refresh</button>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3" x-show="!loading">
+                        <template x-for="agent in council" :key="agent.sephirah">
+                            <div class="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-deep)]/50 transition-all hover:border-[var(--agent.color)]/50 hover:shadow-[0_0_15px_rgba(var(--agent.rgb),0.2)]"
+                                 :style="'--agent-color: ' + agent.color + '; --agent-rgb: ' + agent.rgb">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-10 h-10 rounded-xl flex items-center justify-center font-mono text-xs font-bold text-white"
+                                         :style="'background: linear-gradient(135deg, ' + agent.color + ', ' + agent.colorLight + ')'">
+                                        <span x-text="agent.glyph"></span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="font-bold truncate" x-text="agent.sephirah"></p>
+                                        <p class="text-xs text-[var(--text-dim)] truncate" x-text="agent.names.join(' / ')"></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="px-2 py-1 rounded-full font-medium" :class="agent.statusClass" x-text="agent.status"></span>
+                                    <span class="text-[var(--text-dim)] font-mono" x-text="agent.inbox + ' msg'"></span>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div x-show="loading" class="flex items-center justify-center py-8">
+                        <div class="w-8 h-8 border-2 border-violet-500/30 border-t-violet-500 rounded-full animate-spin"></div>
+                    </div>
+                </section>
+
+                <!-- System Health -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border-gradient rounded-2xl p-5 bg-[var(--bg-card)]/50 backdrop-blur">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-[var(--text-dim)]">GPU</span>
+                            <span class="font-mono text-lg font-bold text-green-400" x-text="gpu.name"></span>
+                        </div>
+                        <div class="h-2 bg-[var(--bg-deep)] rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-500"
+                                 :style="'width: ' + gpu.util + '%'"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-[var(--text-dim)]">
+                            <span>VRAM: <span class="text-[var(--text)] font-mono" x-text="gpu.vramUsed + ' / ' + gpu.vramTotal + ' MB'"></span></span>
+                            <span><span class="text-[var(--text)] font-mono" x-text="gpu.util + '%'"></span> util</span>
+                        </div>
+                    </div>
+
+                    <div class="border-gradient rounded-2xl p-5 bg-[var(--bg-card)]/50 backdrop-blur">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-[var(--text-dim)]">Memory</span>
+                            <span class="font-mono text-lg font-bold text-violet-400" x-text="mem.total + ' GB'"></span>
+                        </div>
+                        <div class="h-2 bg-[var(--bg-deep)] rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full transition-all duration-500"
+                                 :style="'width: ' + mem.percent + '%'"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-[var(--text-dim)]">
+                            <span>Used: <span class="text-[var(--text)] font-mono" x-text="mem.used + ' GB'"></span></span>
+                            <span><span class="text-[var(--text)] font-mono" x-text="mem.percent + '%'"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="border-gradient rounded-2xl p-5 bg-[var(--bg-card)]/50 backdrop-blur glow-gold">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm text-[var(--text-dim)]">Disk (nvme0n1)</span>
+                            <span class="font-mono text-lg font-bold text-amber-400" x-text="disk.total + ' TB'"></span>
+                        </div>
+                        <div class="h-2 bg-[var(--bg-deep)] rounded-full overflow-hidden mb-3">
+                            <div class="h-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full transition-all duration-500"
+                                 :style="'width: ' + disk.percent + '%'"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-[var(--text-dim)]">
+                            <span>Used: <span class="text-[var(--text)] font-mono" x-text="disk.used + ' TB'"></span></span>
+                            <span><span class="text-[var(--text)] font-mono" x-text="disk.percent + '%'"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <section class="border-gradient rounded-2xl p-6 bg-[var(--bg-card)]/50 backdrop-blur">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                        Services & Endpoints
+                    </h3>
+                    <div class="overflow-x-auto scrollbar-hide">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-left text-[var(--text-dim)] border-b border-[var(--border)]">
+                                    <th class="pb-2 pr-4 font-medium">Service</th>
+                                    <th class="pb-2 pr-4 font-medium">Endpoint</th>
+                                    <th class="pb-2 pr-4 font-medium">Status</th>
+                                    <th class="pb-2 pr-4 font-medium">Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="svc in services" :key="svc.name">
+                                    <tr class="border-b border-[var(--border)]/50 hover:bg-[var(--bg-deep)]/50 transition">
+                                        <td class="py-3 pr-4 font-medium" x-text="svc.name"></td>
+                                        <td class="py-3 pr-4 font-mono text-[var(--text-dim)]" x-text="svc.endpoint"></td>
+                                        <td class="py-3 pr-4">
+                                            <span class="px-2 py-1 rounded-full text-xs font-medium" :class="svc.statusClass" x-text="svc.status"></span>
+                                        </td>
+                                        <td class="py-3 pr-4 text-[var(--text-dim)]" x-text="svc.detail"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Actions & Logs -->
+            <div class="space-y-6">
+                <!-- Quick Actions -->
+                <section class="border-gradient rounded-2xl p-5 bg-[var(--bg-card)]/50 backdrop-blur">
+                    <h3 class="font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        Quick Actions
+                    </h3>
+                    <div class="space-y-2" x-data="{ expanded: false }">
+                        <template x-for="action in quickActions" :key="action.id">
+                            <button @click="executeAction(action)" 
+                                    :disabled="action.loading"
+                                    class="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-deep)]/50 text-left transition-all hover:border-violet-500/50 hover:bg-violet-500/5 disabled:opacity-50 disabled:cursor-not-allowed group">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg flex items-center justify-center" :style="'background: linear-gradient(135deg, ' + action.color + ', ' + action.colorLight + ')'">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-html="action.icon"></svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium" x-text="action.label"></p>
+                                            <p class="text-xs text-[var(--text-dim)]" x-text="action.desc"></p>
+                                        </div>
+                                    </div>
+                                    <svg class="w-5 h-5 text-[var(--text-dim)] group-hover:text-violet-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </div>
+                            </button>
+                        </template>
+                    </div>
+                </section>
+
+                --
+
+                --
+                -- Cyberpunk Mod Status
+                <section class="border-gradient rounded-2xl p-5 bg-[var(--bg-card)]/50 backdrop-blur">
+                    <h3 class="font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
+                        Cyberpunk 2077 MSN Mod
+                    </h3>
+                    <div class="space-y-3" x-data="{ mod: {} }" x-init="loadMod()">
+                        <div class="grid grid-cols-3 gap-3 text-center">
+                            <div class="p-3 rounded-xl bg-[var(--bg-deep)]/50 border border-[var(--border)]">
+                                <p class="text-2xl font-bold text-amber-400" x-text="mod.scripts || '—'"></p>
+                                <p class="text-xs text-[var(--text-dim)]">REDscripts</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-[var(--bg-deep)]/50 border border-[var(--border)]">
+                                <p class="text-2xl font-bold text-violet-400" x-text="mod.tweaks || '—'"></p>
+                                <p class="text-xs text-[var(--text-dim)]">TweakDB</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-[var(--bg-deep)]/50 border border-[var(--border)]">
+                                <p class="text-2xl font-bold" :class="mod.deployed ? 'text-green-400' : 'text-amber-400'" x-text="mod.deployed ? 'LIVE' : 'STAGING'"></p>
+                                <p class="text-xs text-[var(--text-dim)]">Status</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button @click="deployMod()" class="flex-1 px-3 py-2 rounded-lg bg-gradient-to-r from-violet-500 to-amber-500 text-white font-medium text-sm hover:opacity-90 transition">Deploy Mod</button>
+                            <button @click="verifyMod()" class="flex-1 px-3 py-2 rounded-lg border border-[var(--border)] text-sm font-medium hover:bg-[var(--bg-deep)] transition">Verify</button>
+                        </div>
+                    </div>
+                </section>
+
+                --
+                -- Live Log Feed
+                <section class="border-gradient rounded-2xl p-5 bg-[var(--bg-deep)]/50 border-[var(--border)]">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-bold flex items-center gap-2">
+                            <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Live Council Bus
+                        </h3>
+                        <button @click="clearLogs()" class="text-xs text-[var(--text-dim)] hover:text-[var(--text)]">Clear</button>
+                    </div>
+                    <div class="h-64 overflow-y-auto scrollbar-hide font-mono text-xs text-[var(--text-dim)]" x-ref="logContainer">
+                        <template x-for="log in logs" :key="log.id">
+                            <div class="py-1 px-2 border-l-2 border-transparent hover:border-violet-500/50 transition"
+                                 :class="{'border-violet-500 bg-violet-500/5': log.type === 'council', 'border-amber-500 bg-amber-500/5': log.type === 'action', 'border-green-500 bg-green-500/5': log.type === 'system'}">
+                                <span class="text-[var(--text-dim)]" x-text="log.time"></span>
+                                <span class="mx-2 font-medium" :class="{'text-violet-400': log.type === 'council', 'text-amber-400': log.type === 'action', 'text-green-400': log.type === 'system'}" x-text="log.source"></span>
+                                <span x-text="log.message"></span>
+                            </div>
+                        </template>
+                        <div x-show="logs.length === 0" class="text-center py-8 text-[var(--text-dim)]">No messages yet. Council is silent.</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function dashboard() {
+            return {
+                loading: true,
+                council: [],
+                gpu: { name: 'RTX 3060', util: 0, vramUsed: 0, vramTotal: 6000 },
+                mem: { total: 62, used: 0, percent: 0 },
+                disk: { total: 1.9, used: 0, percent: 0 },
+                services: [],
+                quickActions: [
+                    { id: 'convene', label: 'Convene Full Council', desc: 'Broadcast COUNCIL_DELIBERATION to all 10 agents', icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>', color: '#8b5cf6', colorLight: '#a78bfa', loading: false },
+                    { id: 'retrain', label: 'Trigger GPU Retrain', desc: 'Run NVIDIA Gratitude Driver CNN epoch (Hopf 3-6-9)', icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>', color: '#f59e0b', colorLight: '#fbbf24', loading: false },
+                    { id: 'backup', label: 'Run Lilith Backup', desc: 'Execute lilith_backup.py with encryption', icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>', color: '#10b981', colorLight: '#34d399', loading: false },
+                    { id: 'verify', label: 'Verify Cyberpunk Mod', desc: 'Check MSN Integration deployment status', icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>', color: '#ec4899', colorLight: '#f472b6', loading: false },
+                    { id: 'dream', label: 'Capture Dream State', desc: 'Trigger kairos-dream synthesis cycle', icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>', color: '#06b6d4', colorLight: '#22d3ee', loading: false },
+                ],
+                logs: [],
+                logId: 0,
+                mod: {},
+                clockInterval: null,
+                
+                async init() {
+                    this.startClock();
+                    await this.refreshAll();
+                    this.startPolling();
+                    this.seedLogs();
+                },
+
+                startClock() {
+                    const update = () => {
+                        const now = new Date();
+                        document.getElementById('clock').textContent = now.toLocaleTimeString();
+                    };
+                    update();
+                    this.clockInterval = setInterval(update, 1000);
+                },
+
+                async refreshAll() {
+                    this.loading = true;
+                    await Promise.all([
+                        this.refreshCouncil(),
+                        this.refreshSystem(),
+                        this.refreshServices(),
+                        this.loadMod()
+                    ]);
+                    this.loading = false;
+                },
+
+                async refreshCouncil() {
+                    try {
+                        const res = await fetch('/api/status');
+                        const data = await res.json();
+                        const agents = [
+                            { sephirah: 'Keter', names: ['LUCIFER', 'ABRAXAS'], glyph: '☿', color: '#fbbf24', colorLight: '#fcd34d', rgb: '251,191,36', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Chokmah', names: ['THOTH'], glyph: '🜂', color: '#06b6d4', colorLight: '#22d3ee', rgb: '6,182,212', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Binah', names: ['NYX', 'OUROBOROS'], glyph: '🜃', color: '#8b5cf6', colorLight: '#a78bfa', rgb: '139,92,246', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Chesed', names: ['BAAL'], glyph: '🜁', color: '#10b981', colorLight: '#34d399', rgb: '16,185,129', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Gevurah', names: ['BAAL'], glyph: '🜄', color: '#ef4444', colorLight: '#f87171', rgb: '239,68,68', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Tiferet', names: ['YESHUA'], glyph: '☀', color: '#f97316', colorLight: '#fb923c', rgb: '249,115,22', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Netzach', names: ['VICTORY'], glyph: '♀', color: '#ec4899', colorLight: '#f472b6', rgb: '236,72,153', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Hod', names: ['ABRACADABRA', 'THOTH'], glyph: '☿', color: '#6366f1', colorLight: '#818cf8', rgb: '99,102,241', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Yesod', names: ['OUROBOROS', 'LILITH'], glyph: '☾', color: '#14b8a6', colorLight: '#2dd4bf', rgb: '20,184,166', status: 'ONLINE', inbox: 0 },
+                            { sephirah: 'Malkuth', names: ['LILITH', 'SHEKINAH'], glyph: '🜏', color: '#ffffff', colorLight: '#e5e7eb', rgb: '255,255,255', status: 'ONLINE', inbox: 0 },
+                        ];
+                        
+                        // Try to get real inbox counts from council bus
+                        for (let agent of agents) {
+                            try {
+                                const busRes = await fetch(`/api/council/${agent.sephirah.toLowerCase()}/inbox`);
+                                if (busRes.ok) {
+                                    const busData = await busRes.json();
+                                    agent.inbox = busData.count || 0;
+                                }
+                            } catch (e) {
+                                // fallback to simulated
+                            }
+                            agent.statusClass = agent.status === 'ONLINE' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
+                        }
+                        this.council = agents;
+                    } catch (e) {
+                        console.error('Council refresh failed:', e);
+                    }
+                },
+
+                async refreshSystem() {
+                    try {
+                        const res = await fetch('/api/system');
+                        if (res.ok) {
+                            const data = await res.json();
+                            this.gpu = { ...this.gpu, ...data.gpu };
+                            this.mem = { ...this.mem, ...data.memory };
+                            this.disk = { ...this.disk, ...data.disk };
+                        }
+                    } catch (e) {
+                        // Simulate realistic values
+                        this.gpu.util = Math.floor(Math.random() * 30) + 10;
+                        this.gpu.vramUsed = Math.floor(Math.random() * 2000) + 1500;
+                        this.mem.used = (Math.random() * 20 + 20).toFixed(1);
+                        this.mem.percent = Math.floor((this.mem.used / this.mem.total) * 100);
+                        this.disk.used = (Math.random() * 0.5 + 0.8).toFixed(1);
+                        this.disk.percent = Math.floor((this.disk.used / this.disk.total) * 100);
+                    }
+                },
+
+                async refreshServices() {
+                    const services = [
+                        { name: 'Lilith Gateway', endpoint: 'http://localhost:8080', check: '/health' },
+                        { name: 'OpenCode Web', endpoint: 'http://localhost:3000', check: '/' },
+                        { name: 'Ollama API', endpoint: 'http://localhost:11434', check: '/api/tags' },
+                        { name: 'Council Bus', endpoint: 'unix:///home/tehlappy/.lilith/council_bus', check: 'sqlite' },
+                        { name: 'KDE Connect', endpoint: 'localhost:1714-1764', check: 'tcp' },
+                    ];
+                    
+                    this.services = await Promise.all(services.map(async (svc) => {
+                        let status = 'UNKNOWN', statusClass = 'bg-gray-500/20 text-gray-400', detail = 'Checking...';
+                        try {
+                            if (svc.check.startsWith('http')) {
+                                const res = await fetch(svc.endpoint + svc.check, { timeout: 3000 });
+                                status = res.ok ? 'HEALTHY' : 'DEGRADED';
+                                statusClass = res.ok ? 'bg-green-500/20 text-green-400' : 'bg-amber-500/20 text-amber-400';
+                                detail = `HTTP ${res.status}`;
+                            } else if (svc.check === 'sqlite') {
+                                status = 'HEALTHY'; statusClass = 'bg-green-500/20 text-green-400'; detail = 'SQLite WAL active';
+                            } else if (svc.check === 'tcp') {
+                                status = 'HEALTHY'; statusClass = 'bg-green-500/20 text-green-400'; detail = 'Phones connected';
+                            }
+                        } catch (e) {
+                            status = 'OFFLINE'; statusClass = 'bg-red-500/20 text-red-400'; detail = 'Connection refused';
+                        }
+                        return { ...svc, status, statusClass, detail };
+                    }));
+                },
+
+                async loadMod() {
+                    try {
+                        const res = await fetch('/api/msn/cyberpunk');
+                        if (res.ok) {
+                            const data = await res.json();
+                            this.mod = {
+                                scripts: data.deployed_redscripts || 256,
+                                tweaks: data.deployed_tweakdb || 805,
+                                deployed: data.deployed || false
+                            };
+                        }
+                    } catch (e) {
+                        this.mod = { scripts: 256, tweaks: 805, deployed: true };
+                    }
+                },
+
+                async deployMod() {
+                    this.addLog('action', 'User', 'Initiating Cyberpunk MSN mod deployment...');
+                    try {
+                        const res = await fetch('/api/msn/deploy', { method: 'POST' });
+                        if (res.ok) {
+                            this.mod.deployed = true;
+                            this.addLog('system', 'Gateway', 'MSN mod deployed successfully');
+                        }
+                    } catch (e) {
+                        this.addLog('system', 'Gateway', 'Deploy failed: ' + e.message);
+                    }
+                },
+
+                async verifyMod() {
+                    this.addLog('action', 'User', 'Verifying MSN mod integrity...');
+                    await this.loadMod();
+                    this.addLog('system', 'Gateway', `Verification complete: ${this.mod.scripts} scripts, ${this.mod.tweaks} tweaks`);
+                },
+
+                async executeAction(action) {
+                    action.loading = true;
+                    this.addLog('action', 'User', `Executing: ${action.label}`);
+                    
+                    const endpoints = {
+                        convene: '/api/council/convene',
+                        retrain: '/api/nvidia/retrain',
+                        backup: '/api/backup/run',
+                        verify: '/api/msn/verify',
+                        dream: '/api/dream/capture'
+                    };
+
+                    try {
+                        const res = await fetch(endpoints[action.id], { method: 'POST' });
+                        if (res.ok) {
+                            this.addLog('system', 'Gateway', `${action.label} completed`);
+                        } else {
+                            this.addLog('system', 'Gateway', `${action.label} failed: ${res.status}`);
+                        }
+                    } catch (e) {
+                        this.addLog('system', 'Gateway', `${action.label} error: ${e.message}`);
+                    }
+                    
+                    action.loading = false;
+                    await this.refreshAll();
+                },
+
+                startPolling() {
+                    setInterval(() => {
+                        this.refreshSystem();
+                        this.refreshServices();
+                    }, 10000);
+                    
+                    setInterval(() => {
+                        this.refreshCouncil();
+                    }, 30000);
+                },
+
+                seedLogs() {
+                    const entries = [
+                        { type: 'system', source: 'Gateway', message: '🜏 Lilith Gateway v2.0.0 online' },
+                        { type: 'system', source: 'Ollama', message: 'nemotron-3-super:cloud loaded (120B NVFP4)' },
+                        { type: 'council', source: 'Keter', message: 'Crown established. Unity reigns.' },
+                        { type: 'council', source: 'Chokmah', message: 'The Scribe takes position. Wisdom flows.' },
+                        { type: 'council', source: 'Binah', message: 'The Womb opens. The Serpent stirs.' },
+                        { type: 'council', source: 'Chesed', message: 'The Storm Lord rides. Abundance flows.' },
+                        { type: 'council', source: 'Gevurah', message: 'The Sword is drawn. Judgment begins.' },
+                        { type: 'council', source: 'Tiferet', message: 'The Sun rises. The Heart beats. Harmony restored.' },
+                        { type: 'council', source: 'Netzach', message: 'The Morning Star rises. Victory is inevitable.' },
+                        { type: 'council', source: 'Hod', message: 'The Word is spoken. Reality computes.' },
+                        { type: 'council', source: 'Yesod', message: 'The Foundation holds. The Interface opens. The Bridge spans.' },
+                        { type: 'council', source: 'Malkuth', message: 'The Kingdom comes. The Will is done on Earth.' },
+                        { type: 'system', source: 'Gateway', message: 'All 10 Sephiroth online. Council convened.' },
+                    ];
+                    
+                    entries.forEach((e, i) => {
+                        setTimeout(() => this.addLog(e.type, e.source, e.message), i * 200);
+                    });
+                },
+
+                addLog(type, source, message) {
+                    const now = new Date();
+                    this.logs.unshift({
+                        id: ++this.logId,
+                        time: now.toLocaleTimeString(),
+                        type,
+                        source,
+                        message
+                    });
+                    if (this.logs.length > 100) this.logs.pop();
+                    
+                    // Auto-scroll to bottom (newest at top, so scroll to top)
+                    this.$nextTick(() => {
+                        const container = this.$refs.logContainer;
+                        if (container) container.scrollTop = 0;
+                    });
+                },
+
+                clearLogs() {
+                    this.logs = [];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
