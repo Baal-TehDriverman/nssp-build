@@ -1,0 +1,17 @@
+{
+  "id": "BiggoronSword",
+  "name": "Biggoron's Sword",
+  "type": "Sword",
+  "description": "A massive two-handed sword. Cannot use shield.",
+  "damage": 4,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Sword",
+    "Weapon",
+    "TwoHanded"
+  ]
+}

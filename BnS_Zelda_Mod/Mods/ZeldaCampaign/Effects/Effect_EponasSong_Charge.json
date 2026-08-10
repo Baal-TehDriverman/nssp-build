@@ -1,0 +1,35 @@
+{
+  "id": "Effect_EponasSong_Charge",
+  "name": "Epona's Song Charge Effect",
+  "type": "SpellEffect",
+  "description": "Gentle ranch melody particles while charging",
+  "particleSystems": [
+    {
+      "name": "RanchNotes",
+      "prefab": "Particles/Spells/EponasSongNotes",
+      "offset": [0, 0.1, 0],
+      "scale": 0.8,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 10
+    },
+    {
+      "name": "GrassSway",
+      "prefab": "Particles/Spells/GrassSway",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/EponasSongCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [0.6, 0.4, 0.2, 0.7],
+    "pulseSpeed": 2.0,
+    "pulseIntensity": 0.3
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "GoronTunic",
+  "name": "Goron Tunic",
+  "type": "Armor",
+  "description": "Red tunic woven from Dodongo hide and Goron-spun fiber. Grants immunity to extreme heat and lava. Essential for Fire Temple, Dodongo's Cavern, and Death Mountain.",
+  "damage": 0,
+  "defense": 2,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Armor",
+    "KeyItem",
+    "PuzzleItem",
+    "FireResist",
+    "HeatImmunity",
+    "GoronCraft"
+  ],
+  "slot": "Body",
+  "customData": {
+    "heatResist": true,
+    "lavaImmunity": true,
+    "fireDamageReduction": 1.0,
+    "heatStrokeImmunity": true,
+    "requiredFor": ["DodongosCavern", "FireTemple", "GanonsCastle_FireBarrier", "DeathMountainCrater", "FireTemple_Volvagia"],
+    "era": "Adult",
+    "obtainedAs": "Child (Darunia) / Adult (Goron Shop)",
+    "location": "Goron City (Darunia) / Goron Shop",
+    "lore": "Woven from fireproof Dodongo hide and volcanic silk. The Gorons gift this to sworn brothers who brave the mountain's heart.",
+    "puzzleUses": [
+      "Walk through extreme heat rooms",
+      "Survive lava contact (brief)",
+      "Navigate Fire Temple flame mazes",
+      "Resist Volvagia fire breath",
+      "Enter Death Mountain Crater safely"
+    ]
+  }
+}

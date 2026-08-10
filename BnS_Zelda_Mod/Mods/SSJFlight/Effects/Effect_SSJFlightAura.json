@@ -1,0 +1,47 @@
+{
+ "$type": "ThunderRoad.EffectData, ThunderRoad",
+ "id": "SSJFlightAura",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 0,
+ "groupId": "SkillTree",
+ "volumeDb": 0.0,
+ "modules": [
+  {
+   "$type": "ThunderRoad.EffectModuleParticle, ThunderRoad",
+   "effectLink": "Intensity",
+   "insideParticleRadius": 0.0,
+   "cullMinIntensity": 0.05,
+   "cullMinSpeed": 0.05,
+   "effectParticleAddress": "Pilot.DBZ.Spell.VFX.Main.AroundBody.prefab",
+   "renderInLateUpdate": false,
+   "mainColorStart": {
+    "r": 0.6,
+    "g": 0.72,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "mainColorEnd": {
+    "r": 0.6,
+    "g": 0.72,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "localScale": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 1.0
+   },
+   "useScaleCurve": false,
+   "worldSpace": true,
+   "playParticle": true,
+   "playAudio": false,
+   "playHaptics": false,
+   "prewarm": true,
+   "duration": 1.0,
+   "loopEmission": true,
+   "playOnce": false
+  }
+ ],
+ "matchingModulesInRaycast": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "Effect_SerenadeOfWater_Ready",
+  "name": "Serenade of Water Ready Effect",
+  "type": "SpellEffect",
+  "description": "Water spheres pulse, ready to warp to Water Temple",
+  "particleSystems": [
+    {
+      "name": "WaterDroplets",
+      "prefab": "Particles/Spells/SerenadeWaterReadyDroplets",
+      "offset": [0, 0.2, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 60
+    },
+    {
+      "name": "WaterRipples",
+      "prefab": "Particles/Spells/SerenadeWaterReadyRipples",
+      "offset": [0, 0, 0],
+      "scale": 2.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "WaterPortal",
+      "prefab": "Particles/Spells/WaterPortal",
+      "offset": [0, 0, 3],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": -10
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/SerenadeOfWaterReady",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "waterAmbience": "Audio/Ambience/Underwater"
+  },
+  "visuals": {
+    "glowColor": [0.0, 0.6, 1.0, 1.0],
+    "pulseSpeed": 4.0,
+    "pulseIntensity": 0.5,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.0, 0.6, 1.0, 0.4],
+      "duration": 0.3
+    }
+  }
+}

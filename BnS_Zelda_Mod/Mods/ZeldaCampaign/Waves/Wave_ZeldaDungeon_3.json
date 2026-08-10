@@ -1,0 +1,57 @@
+{
+  "id": "Wave_ZeldaDungeon_3",
+  "name": "Jabu-Jabu's Belly: Inside the Great Fish",
+  "description": "Enter the belly of the Zora patron deity to rescue Princess Ruto. Face Barinade, the bio-electric anemone.",
+  "difficulty": "Apprentice",
+  "recommendedLevel": 20,
+  "tags": ["ZeldaCampaign", "JabuJabusBelly", "ChildEra", "ThirdDungeon", "Water", "Electric"],
+  "enemies": [
+    {
+      "type": "Bari",
+      "count": 8,
+      "modifiers": ["ElectricBody", "SplitOnHit", "Float"]
+    },
+    {
+      "type": "Shabom",
+      "count": 6,
+      "modifiers": ["BubbleBody", "ReflectsProjectiles", "PopOnContact"]
+    },
+    {
+      "type": "Stinger",
+      "count": 4,
+      "modifiers": ["ChargeAttack", "ElectricAura", "Fast"]
+    },
+    {
+      "type": "Barinade",
+      "count": 1,
+      "modifiers": ["Boss", "CentralBody", "TentacleArms", "ElectricBarrier", "SummonsBari", "BoomerangRequired"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "SpiritualStone_Zora",
+      "ZoraTunic",
+      "Boomerang"
+    ],
+    "chance": [
+      { "item": "Fish", "probability": 0.8, "count": 5 },
+      { "item": "Fairy", "probability": 0.3, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.1 },
+      { "item": "ZoraSapphireFragment", "probability": 0.2, "count": 3 }
+    ],
+    "experience": 20000,
+    "rupees": 1000
+  },
+  "environment": {
+    "map": "JabuJabusBelly",
+    "music": "JabuJabusBelly_Dungeon",
+    "timeLimit": 900,
+    "specialRules": [
+      "BoomerangStunsBari",
+      "CarryRutoThroughSections",
+      "BarinadeCutTentaclesFirst",
+      "ElectricWaterDamage"
+    ]
+  },
+  "lore": "Lord Jabu-Jabu, patron deity of the Zoras, has swallowed Princess Ruto and been infested by the bio-electric Barinade. Navigate the living dungeon, use the boomerang to sever tentacles, and claim the Zora Sapphire."
+}

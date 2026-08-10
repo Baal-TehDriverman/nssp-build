@@ -1,0 +1,85 @@
+{
+  "id": "ZeldaCampaign_SuperSaiyan_Songs_Hybrid",
+  "name": "Sage's Super Saiyan Songs",
+  "description": "Each Sage Medallion resonates with a Super Saiyan form. The Songs of the Sages channel divine ki.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_OcarinaOfTime",
+    "spellB": "Spell.SuperSaiyan_SSJ1",
+    "minForm": "SSJ1"
+  },
+  "result": {
+    "spellId": "Spell_ZeldaCampaign_SageSongs_SuperSaiyan",
+    "name": "Sage's Super Saiyan Melodies",
+    "description": "Each warp song gains a Super Saiyan variant. The Sages' power flows through golden ki.",
+    "damage": 0,
+    "cooldown": 0,
+    "manaCost": 0,
+    "effects": {
+      "songTransformations": {
+        "MinuetOfForest": {
+          "form": "SSJ1",
+          "effect": "ForestSaiyan",
+          "auraColor": "#00FF7F",
+          "bonus": "NatureKiHealing",
+          "healingPerSecond": 10
+        },
+        "BoleroOfFire": {
+          "form": "SSJ2",
+          "effect": "FireSaiyan",
+          "auraColor": "#FF4500",
+          "bonus": "FlameKiArmor",
+          "fireImmunity": true,
+          "meleeDamageBonus": 1.5
+        },
+        "SerenadeOfWater": {
+          "form": "SSJ3",
+          "effect": "WaterSaiyan",
+          "auraColor": "#00BFFF",
+          "bonus": "FlowingKiDefense",
+          "damageReduction": 0.4,
+          "counterAttack": true
+        },
+        "NocturneOfShadow": {
+          "form": "UI",
+          "effect": "ShadowSaiyan",
+          "auraColor": "#8A2BE2",
+          "bonus": "VoidUltraInstinct",
+          "autoDodge": 0.3,
+          "voidDamage": true
+        },
+        "RequiemOfSpirit": {
+          "form": "SSG",
+          "effect": "SpiritSaiyan",
+          "auraColor": "#FFD700",
+          "bonus": "DivineSpiritKi",
+          "holyDamage": true,
+          "spiritForm": true
+        },
+        "PreludeOfLight": {
+          "form": "MUI",
+          "effect": "LightSaiyan",
+          "auraColor": "#FFFFFF",
+          "bonus": "PerfectUltraInstinct",
+          "autoDodge": 0.5,
+          "perfectCounters": true,
+          "beamDamageMultiplier": 3.0
+        }
+      },
+      "masterSwordSynergy": {
+        "enabled": true,
+        "requiresMasterSword": true,
+        "beamKiInfusion": true,
+        "beamDamageBonus": 2.0,
+        "beamRangeBonus": 2.0
+      },
+      "aura": {
+        "color": "#FFD700",
+        "particles": "sage_super_saiyan",
+        "sound": "sage_ki_resonance"
+      }
+    }
+  },
+  "tags": ["ZeldaCampaign", "SuperSaiyanTransformations", "CrossMod", "SpellMerge", "Sages", "Songs"],
+  "lore": "The Seven Sages' medallions resonate with the Super Saiyan transformations. Each song becomes a conduit for divine ki, blending Hyrule's magic with the warrior race's power."
+}

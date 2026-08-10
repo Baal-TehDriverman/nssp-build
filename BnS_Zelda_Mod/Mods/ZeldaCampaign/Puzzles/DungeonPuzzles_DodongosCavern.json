@@ -1,0 +1,126 @@
+{
+  "id": "DungeonPuzzles_DodongosCavern",
+  "name": "Dodongo's Cavern Puzzles",
+  "dungeon": "DodongosCavern",
+  "era": "Child",
+  "difficulty": "Beginner",
+  "puzzles": [
+    {
+      "id": "DodongosCavern_1_EntranceBoulder",
+      "name": "Entrance Boulder",
+      "type": "Bomb",
+      "description": "Blow up the large boulder blocking the cavern entrance with a Bomb Flower.",
+      "location": "Cavern Entrance",
+      "requiredItems": ["Bomb", "BombFlower"],
+      "steps": [
+        "Pick up Bomb Flower",
+        "Throw at boulder",
+        "Boulder explodes, entrance opens"
+      ],
+      "reward": "Cavern Access",
+      "hints": ["Bomb Flower grows right next to boulder", "Goron outside says: \"Smash it with a Bomb Flower!\""]
+    },
+    {
+      "id": "DodongosCavern_2_MainRoomStatues",
+      "name": "Armadillo Statue Puzzle",
+      "type": "BlockPush",
+      "description": "Push Armadillo statues onto pressure plates to open doors. Requires Goron Bracelet for heavy statues.",
+      "location": "Main Chamber (1F)",
+      "requiredItems": ["GoronBracelet"],
+      "steps": [
+        "Get Goron Bracelet from Darunia",
+        "Push statues onto floor switches",
+        "Doors unlock"
+      ],
+      "reward": "Access to deeper caverns",
+      "hints": ["Statues have flat backs for pushing", "Switches click when weighted"]
+    },
+    {
+      "id": "DodongosCavern_3_BombFlowerPlatform",
+      "name": "Bomb Flower Throwing Platform",
+      "type": "Target",
+      "description": "Stand on platform, throw Bomb Flowers at distant switches to open doors across gaps.",
+      "location": "Lava Pit Room (B1)",
+      "requiredItems": ["BombFlower", "Throwing"],
+      "steps": [
+        "Pick up Bomb Flower on platform",
+        "Aim at switch across lava",
+        "Throw - switch activates door"
+      ],
+      "reward": "Progress deeper",
+      "hints": ["Bomb Flowers regenerate on platform", "Arc throw for distance"]
+    },
+    {
+      "id": "DodongosCavern_4_DodongoSkullEye",
+      "name": "Dodongo Skull Eyes",
+      "type": "Target",
+      "description": "Shoot the eyes of the giant Dodongo skull with arrows to open its mouth (main progression path).",
+      "location": "Central Chamber - Dodongo Skull",
+      "requiredItems": ["Bow", "Arrow"],
+      "steps": [
+        "Equip Bow",
+        "Shoot left eye",
+        "Shoot right eye",
+        "Skull mouth opens - path to B2"
+      ],
+      "reward": "Access to Lower Caverns (B2)",
+      "hints": ["Eyes glow when targetable", "Skull rumbles when hit"]
+    },
+    {
+      "id": "DodongosCavern_5_LavaBridge",
+      "name": "Lava Bridge Timing",
+      "type": "Switch",
+      "description": "Hit crystal switch to extend/retract bridge over lava. Timing required to cross.",
+      "location": "Lava Bridge Room (B2)",
+      "requiredItems": ["Sword", "Bomb"],
+      "steps": [
+        "Hit crystal switch with sword/bomb",
+        "Bridge extends for 10 seconds",
+        "Run across before retract"
+      ],
+      "reward": "Access to King Dodongo",
+      "hints": ["Switch changes color when active", "Countdown sound plays"]
+    },
+    {
+      "id": "DodongosCavern_6_BombBagChest",
+      "name": "Bomb Bag Chest Puzzle",
+      "type": "BlockPush",
+      "description": "Push block to reach chest containing Bomb Bag on elevated platform.",
+      "location": "Side Chamber (B1)",
+      "requiredItems": ["GoronBracelet"],
+      "steps": [
+        "Push block under ledge",
+        "Climb block to platform",
+        "Open chest"
+      ],
+      "reward": "Bomb Bag (20 capacity)",
+      "optional": false
+    }
+  ],
+  "bossPuzzle": {
+    "name": "King Dodongo",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Rolling Charge",
+        "mechanic": "King Dodongo rolls around arena, breathing fire",
+        "puzzle": "Throw Bomb Flower/Bomb into mouth when he inhales",
+        "vulnerability": "Mouth opens wide, glows orange before fire breath"
+      },
+      {
+        "phase": 2,
+        "name": "Stunned Recovery",
+        "mechanic": "After bomb ingestion, King Dodongo is stunned on ground",
+        "puzzle": "Attack tail weak point with sword",
+        "vulnerability": "Tail flashes red, take 3-4 hits per stun"
+      },
+      {
+        "phase": 3,
+        "name": "Enraged Fire Rain",
+        "mechanic": "Low health - jumps to center, rains fire bombs from sky",
+        "puzzle": "Dodge fire bombs, wait for inhale, bomb mouth again",
+        "vulnerability": "Same mouth bomb, but faster inhale cycle"
+      }
+    ]
+  }
+}

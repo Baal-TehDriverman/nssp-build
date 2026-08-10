@@ -1,0 +1,135 @@
+{
+  "id": "DungeonPuzzles_ForestTemple",
+  "name": "Forest Temple Puzzles",
+  "dungeon": "ForestTemple",
+  "era": "Adult",
+  "difficulty": "Advanced",
+  "puzzles": [
+    {
+      "id": "ForestTemple_1_TwistedCorridor",
+      "name": "Twisted Corridor Rotation",
+      "type": "Switch",
+      "description": "Rotate the central corridor to align paths. Four positions change room connections.",
+      "location": "Main Hall (1F)",
+      "requiredItems": ["FairyBow"],
+      "steps": [
+        "Shoot eye switch on wall with Fairy Bow",
+        "Corridor rotates 90 degrees",
+        "New path accessible",
+        "Repeat to access all 4 wings"
+      ],
+      "reward": "Access to all 4 Poe Sister rooms",
+      "hints": ["Eye switch glints", "Corridor rotation sound echoes"]
+    },
+    {
+      "id": "ForestTemple_2_PoeSisters",
+      "name": "Poe Sisters Puzzle",
+      "type": "Target",
+      "description": "Defeat 4 Poe Sisters by shooting the real one among illusions. Joelle, Beth, Amy, Margaret.",
+      "location": "Four Wing Rooms",
+      "requiredItems": ["FairyBow"],
+      "steps": [
+        "Enter each wing room",
+        "Watch Poe spin - real one has distinct color",
+        "Shoot real Poe with Bow",
+        "Fake ones vanish",
+        "Collect flames to light torches in main hall"
+      ],
+      "reward": "Main Hall torches lit, Boss Key",
+      "hints": ["Real Poe spins differently", "Each sister has unique color: Red, Blue, Green, Purple"]
+    },
+    {
+      "id": "ForestTemple_3_FairyBowAcquisition",
+      "name": "Fairy Bow Chest",
+      "type": "Target",
+      "description": "Shoot eye switch through bars to lower chest platform containing Fairy Bow.",
+      "location": "East Wing - Bow Room",
+      "requiredItems": ["FairyBow (after getting it)"],
+      "steps": [
+        "Navigate to Bow Room",
+        "Shoot eye switch on far wall through bars",
+        "Chest platform lowers",
+        "Get Fairy Bow",
+        "Shoot eye switch inside room to exit"
+      ],
+      "reward": "Fairy Bow",
+      "hints": ["Switch visible through bars", "Chest glows green"]
+    },
+    {
+      "id": "ForestTemple_4_FallingCeiling",
+      "name": "Falling Ceiling Room",
+      "type": "Switch",
+      "description": "Hit crystal switch to stop ceiling, then hookshot to ceiling to avoid crush.",
+      "location": "Basement - Falling Ceiling Room",
+      "requiredItems": ["Hookshot"],
+      "steps": [
+        "Enter room - ceiling begins falling",
+        "Shoot crystal switch with Bow",
+        "Ceiling stops",
+        "Hookshot to ceiling target",
+        "Wait for ceiling to rise"
+      ],
+      "reward": "Access to basement areas",
+      "hints": ["Switch on wall opposite entrance", "Ceiling target glints"]
+    },
+    {
+      "id": "ForestTemple_5_WallmasterAvoidance",
+      "name": "Wallmaster Shadow Puzzle",
+      "type": "ShadowIllusion",
+      "description": "Avoid Wallmasters by watching shadows on floor. Use Lens of Truth to see them early.",
+      "location": "Various Rooms",
+      "requiredItems": ["LensOfTruth (optional)"],
+      "steps": [
+        "Watch for circular shadows on floor",
+        "Move away before Wallmaster drops",
+        "Lens of Truth reveals them on ceiling",
+        "Hookshot ceiling to pull them down early"
+      ],
+      "reward": "Safe navigation",
+      "hints": ["Shadow appears before Wallmaster", "Lens shows them on ceiling"]
+    },
+    {
+      "id": "ForestTemple_6_BossKeyPuzzle",
+      "name": "Boss Key Acquisition",
+      "type": "BlockPush",
+      "description": "Push block onto switch in rotating room to spawn Boss Key chest.",
+      "location": "Basement - Rotating Block Room",
+      "requiredItems": ["FairyBow", "Hookshot"],
+      "steps": [
+        "Rotate corridor to align block room",
+        "Push block onto pressure plate",
+        "Chest spawns on platform",
+        "Hookshot to platform",
+        "Get Boss Key"
+      ],
+      "reward": "Boss Key",
+      "hints": ["Block room accessible from rotated corridor", "Plate clicks when block placed"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Phantom Ganon",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Painting Game",
+        "mechanic": "Phantom Ganon rides horse through paintings, player must identify real one",
+        "puzzle": "Watch for painting with no reflection/distortion, shoot with Bow",
+        "vulnerability": "Real painting shows Ganon clearly, fakes are distorted"
+      },
+      {
+        "phase": 2,
+        "name": "Tennis Match",
+        "mechanic": "Phantom Ganon floats, shoots energy balls - reflect with sword",
+        "puzzle": "Perfect parry energy balls back at Ganon",
+        "vulnerability": "Ball slows before impact - time parry"
+      },
+      {
+        "phase": 3,
+        "name": "Sword Duel",
+        "mechanic": "Close range sword fight, Ganon teleports",
+        "puzzle": "L-target, dodge teleport slash, counter-attack",
+        "vulnerability": "Brief pause after teleport"
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "campaignName": "The Legend of Zelda: Blade of Hyrule",
+  "version": "1.0.0",
+  "description": "A full Zelda campaign for Blade & Sorcery Quest. Journey through Hyrule, conquer 8 dungeons, master legendary items, and defeat Ganon.",
+  "startingLocation": "HyruleField",
+  "dungeons": [
+    {
+      "index": 0,
+      "name": "Great Deku Tree",
+      "sceneName": "Zelda_DekuTree",
+      "description": "The first dungeon. Inside the Great Deku Tree, defeat Queen Gohma and claim the Kokiri Emerald.",
+      "recommendedHeartContainers": 3,
+      "rewardItem": "KokiriEmerald",
+      "bossName": "Queen Gohma",
+      "requiredItems": [],
+      "enemies": ["DekuBaba", "DekuScrub", "Skulltula", "GohmaLarva"],
+      "secrets": ["Fairy Fountain", "Gold Skulltula x1"]
+    },
+    {
+      "index": 1,
+      "name": "Dodongo's Cavern",
+      "sceneName": "Zelda_DodongosCavern",
+      "description": "A fiery cavern filled with Dodongos. Use bombs to defeat King Dodongo and claim the Goron Ruby.",
+      "recommendedHeartContainers": 4,
+      "rewardItem": "GoronRuby",
+      "bossName": "King Dodongo",
+      "requiredItems": ["Bomb"],
+      "enemies": ["Dodongo", "BabyDodongo", "Lizalfos", "Keese"],
+      "secrets": ["Bomb Bag Upgrade", "Gold Skulltula x2"]
+    },
+    {
+      "index": 2,
+      "name": "Inside Jabu-Jabu's Belly",
+      "sceneName": "Zelda_JabuJabu",
+      "description": "Navigate the insides of the great fish deity. Defeat Barinade and claim the Zora Sapphire.",
+      "recommendedHeartContainers": 5,
+      "rewardItem": "ZoraSapphire",
+      "bossName": "Barinade",
+      "requiredItems": ["Boomerang"],
+      "enemies": ["Bari", "Shabom", "Tailpasaran", "Stinger"],
+      "secrets": ["Magic Meter Upgrade", "Gold Skulltula x3"]
+    },
+    {
+      "index": 3,
+      "name": "Forest Temple",
+      "sceneName": "Zelda_ForestTemple",
+      "description": "A twisted mansion in the Lost Woods. Defeat Phantom Ganon and awaken the Forest Sage.",
+      "recommendedHeartContainers": 6,
+      "rewardItem": "ForestMedallion",
+      "bossName": "Phantom Ganon",
+      "requiredItems": ["Hookshot", "Bow"],
+      "enemies": ["Stalfos", "Wallmaster", "Floormaster", "Poe", "Skulltula"],
+      "secrets": ["Quiver Upgrade", "Gold Skulltula x4"]
+    },
+    {
+      "index": 4,
+      "name": "Fire Temple",
+      "sceneName": "Zelda_FireTemple",
+      "description": "Deep within Death Mountain. Defeat Volvagia and awaken the Fire Sage.",
+      "recommendedHeartContainers": 7,
+      "rewardItem": "FireMedallion",
+      "bossName": "Volvagia",
+      "requiredItems": ["MegatonHammer", "GoronTunic"],
+      "enemies": ["FlareDancer", "Lizalfos", "TorchSlug", "LikeLike"],
+      "secrets": ["Goron Tunic", "Gold Skulltula x5"]
+    },
+    {
+      "index": 5,
+      "name": "Water Temple",
+      "sceneName": "Zelda_WaterTemple",
+      "description": "A complex water-filled temple. Defeat Morpha and awaken the Water Sage.",
+      "recommendedHeartContainers": 8,
+      "rewardItem": "WaterMedallion",
+      "bossName": "Morpha",
+      "requiredItems": ["IronBoots", "ZoraTunic", "Hookshot"],
+      "enemies": ["ShellBlade", "Spike", "Octorok", "BioDekuBaba"],
+      "secrets": ["Longshot", "Gold Skulltula x6"]
+    },
+    {
+      "index": 6,
+      "name": "Shadow Temple",
+      "sceneName": "Zelda_ShadowTemple",
+      "description": "A temple of illusions and the dead. Defeat Bongo Bongo and awaken the Shadow Sage.",
+      "recommendedHeartContainers": 9,
+      "rewardItem": "ShadowMedallion",
+      "bossName": "Bongo Bongo",
+      "requiredItems": ["HoverBoots", "LensOfTruth"],
+      "enemies": ["ReDead", "Gibdo", "DeadHand", "Stalfos", "Beamos"],
+      "secrets": ["Lens of Truth", "Gold Skulltula x7"]
+    },
+    {
+      "index": 7,
+      "name": "Spirit Temple",
+      "sceneName": "Zelda_SpiritTemple",
+      "description": "Twin temples across time. Defeat Twinrova and awaken the Spirit Sage.",
+      "recommendedHeartContainers": 10,
+      "rewardItem": "SpiritMedallion",
+      "bossName": "Twinrova",
+      "requiredItems": ["MirrorShield", "SilverGauntlets"],
+      "enemies": ["IronKnuckle", "Anubis", "Beamos", "Lizalfos"],
+      "secrets": ["Mirror Shield", "Gold Skulltula x8"]
+    },
+    {
+      "index": 8,
+      "name": "Ganon's Castle",
+      "sceneName": "Zelda_GanonsCastle",
+      "description": "The final confrontation. Storm the castle, overcome the barriers, and defeat Ganondorf.",
+      "recommendedHeartContainers": 12,
+      "rewardItem": "TriforceOfCourage",
+      "bossName": "Ganondorf",
+      "requiredItems": ["MasterSword", "LightArrows", "AllMedallions"],
+      "enemies": ["Stalfos", "Darknut", "IronKnuckle", "ReDead", "PhantomGanon"],
+      "secrets": ["Final Heart Container", "Gold Skulltula x9"]
+    }
+  ],
+  "overworldLocations": [
+    {
+      "name": "Hyrule Field",
+      "sceneName": "Zelda_HyruleField",
+      "connections": ["KokiriForest", "LonLonRanch", "MarketEntrance", "LakeHylia", "GerudoValley", "ZorasDomain", "DeathMountainTrail", "KakarikoVillage"],
+      "enemies": ["Peahat", "Stalchild", "BigPoe"],
+      "secrets": ["Gold Skulltula x10", "Fairy Fountain"]
+    },
+    {
+      "name": "Kokiri Forest",
+      "sceneName": "Zelda_KokiriForest",
+      "connections": ["HyruleField", "LostWoods", "SacredForestMeadow"],
+      "enemies": ["DekuScrub", "Skullkid"],
+      "secrets": ["Kokiri Sword", "Gold Skulltula x1"]
+    },
+    {
+      "name": "Lost Woods",
+      "sceneName": "Zelda_LostWoods",
+      "connections": ["KokiriForest", "SacredForestMeadow", "ZorasRiver"],
+      "enemies": ["Skullkid", "DekuScrub", "BusinessScrub"],
+      "secrets": ["Saria's Song", "Gold Skulltula x2"]
+    },
+    {
+      "name": "Kakariko Village",
+      "sceneName": "Zelda_KakarikoVillage",
+      "connections": ["HyruleField", "Graveyard", "DeathMountainTrail"],
+      "enemies": [],
+      "secrets": ["Bottle", "Gold Skulltula x3", "Hookshot"]
+    },
+    {
+      "name": "Death Mountain Trail",
+      "sceneName": "Zelda_DeathMountainTrail",
+      "connections": ["KakarikoVillage", "GoronCity", "DeathMountainCrater"],
+      "enemies": ["Tektite", "Dodongo", "Goron"],
+      "secrets": ["Goron Bracelet", "Gold Skulltula x4"]
+    },
+    {
+      "name": "Zora's Domain",
+      "sceneName": "Zelda_ZorasDomain",
+      "connections": ["ZorasRiver", "ZorasFountain", "IceCavern"],
+      "enemies": [],
+      "secrets": ["Silver Scale", "Gold Skulltula x5"]
+    },
+    {
+      "name": "Gerudo Valley",
+      "sceneName": "Zelda_GerudoValley",
+      "connections": ["HyruleField", "GerudoFortress", "HauntedWasteland"],
+      "enemies": ["GerudoThief", "Guay"],
+      "secrets": ["Gerudo Membership Card", "Gold Skulltula x6"]
+    },
+    {
+      "name": "Lake Hylia",
+      "sceneName": "Zelda_LakeHylia",
+      "connections": ["HyruleField", "WaterTempleEntrance", "FishingPond"],
+      "enemies": ["Octorok", "Bari"],
+      "secrets": ["Golden Scale", "Gold Skulltula x7", "Fishing Rod"]
+    }
+  ],
+  "items": [
+    {"id": "KokiriSword", "name": "Kokiri Sword", "type": "Sword", "damage": 1, "description": "A small sword for a child."},
+    {"id": "MasterSword", "name": "Master Sword", "type": "Sword", "damage": 2, "description": "The blade of evil's bane. Fires beams at full health."},
+    {"id": "BiggoronSword", "name": "Biggoron's Sword", "type": "Sword", "damage": 4, "description": "A massive two-handed sword. Cannot use shield."},
+    {"id": "DekuShield", "name": "Deku Shield", "type": "Shield", "defense": 1, "description": "Wooden shield. Burns easily."},
+    {"id": "HylianShield", "name": "Hylian Shield", "type": "Shield", "defense": 2, "description": "Legendary shield. Reflects projectiles on perfect parry."},
+    {"id": "MirrorShield", "name": "Mirror Shield", "type": "Shield", "defense": 3, "description": "Reflects magic and light."},
+    {"id": "OcarinaOfTime", "name": "Ocarina of Time", "type": "Instrument", "description": "Play songs to warp, change time, control weather, and more."},
+    {"id": "Hookshot", "name": "Hookshot", "type": "Tool", "description": "Grapple to surfaces and pull yourself or items."},
+    {"id": "Longshot", "name": "Longshot", "type": "Tool", "description": "Longer range Hookshot."},
+    {"id": "Boomerang", "name": "Boomerang", "type": "Tool", "description": "Stuns enemies, retrieves items, hits switches."},
+    {"id": "Bomb", "name": "Bomb", "type": "Consumable", "description": "Explodes after short fuse. Blows up walls and enemies."},
+    {"id": "Bow", "name": "Fairy Bow", "type": "Ranged", "description": "Shoots arrows. Can use elemental arrows."},
+    {"id": "FireArrows", "name": "Fire Arrows", "type": "Arrow", "description": "Burns enemies and lights torches."},
+    {"id": "IceArrows", "name": "Ice Arrows", "type": "Arrow", "description": "Freezes enemies and water."},
+    {"id": "LightArrows", "name": "Light Arrows", "type": "Arrow", "description": "Pierces evil. Required for Ganon."},
+    {"id": "DinFire", "name": "Din's Fire", "type": "Magic", "description": "Creates a dome of fire around you."},
+    {"id": "FaroresWind", "name": "Farore's Wind", "type": "Magic", "description": "Sets a warp point and returns to it."},
+    {"id": "NayrusLove", "name": "Nayru's Love", "type": "Magic", "description": "Invincibility barrier for short duration."},
+    {"id": "KokiriEmerald", "name": "Kokiri Emerald", "type": "SpiritualStone", "description": "Spiritual Stone of the Forest."},
+    {"id": "GoronRuby", "name": "Goron Ruby", "type": "SpiritualStone", "description": "Spiritual Stone of Fire."},
+    {"id": "ZoraSapphire", "name": "Zora Sapphire", "type": "SpiritualStone", "description": "Spiritual Stone of Water."},
+    {"id": "ForestMedallion", "name": "Forest Medallion", "type": "Medallion", "description": "Medallion of the Forest Sage."},
+    {"id": "FireMedallion", "name": "Fire Medallion", "type": "Medallion", "description": "Medallion of the Fire Sage."},
+    {"id": "WaterMedallion", "name": "Water Medallion", "type": "Medallion", "description": "Medallion of the Water Sage."},
+    {"id": "ShadowMedallion", "name": "Shadow Medallion", "type": "Medallion", "description": "Medallion of the Shadow Sage."},
+    {"id": "SpiritMedallion", "name": "Spirit Medallion", "type": "Medallion", "description": "Medallion of the Spirit Sage."},
+    {"id": "LightMedallion", "name": "Light Medallion", "type": "Medallion", "description": "Medallion of the Light Sage."},
+    {"id": "GoronTunic", "name": "Goron Tunic", "type": "Armor", "description": "Protects from extreme heat."},
+    {"id": "ZoraTunic", "name": "Zora Tunic", "type": "Armor", "description": "Allows underwater breathing."},
+    {"id": "HoverBoots", "name": "Hover Boots", "type": "Boots", "description": "Walk on air briefly."},
+    {"id": "IronBoots", "name": "Iron Boots", "type": "Boots", "description": "Sink in water, resist wind."},
+    {"id": "LensOfTruth", "name": "Lens of Truth", "type": "Tool", "description": "Reveals invisible things and illusions."},
+    {"id": "MegatonHammer", "name": "Megaton Hammer", "type": "Tool", "description": "Smashes heavy switches and enemies."},
+    {"id": "SilverGauntlets", "name": "Silver Gauntlets", "type": "Gauntlets", "description": "Lifts heavy blocks."},
+    {"id": "GoldenGauntlets", "name": "Golden Gauntlets", "type": "Gauntlets", "description": "Lifts massive blocks."},
+    {"id": "Bottle", "name": "Empty Bottle", "type": "Container", "description": "Catch fairies, potions, bugs, fish."},
+    {"id": "Rupee", "name": "Rupee", "type": "Currency", "description": "Green=1, Blue=5, Red=20, Purple=50, Silver=100, Gold=300."}
+  ]
+}

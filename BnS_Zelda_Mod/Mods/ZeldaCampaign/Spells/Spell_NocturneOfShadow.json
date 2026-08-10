@@ -1,0 +1,86 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_NocturneOfShadow",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Nocturne of Shadow - warps to the Shadow Temple.",
+  "imbueDescription": "Darkness swallows the ocarina's light.",
+  "chargeEffectId": "Effect_NocturneOfShadow_Charge",
+  "readyEffectId": "Effect_NocturneOfShadow_Ready",
+  "fingerEffectId": "Effect_NocturneOfShadow_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 2.0,
+  "orbVariationAmount": 0.15,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.5,
+  "allowThrow": true,
+  "throwEffectId": "Effect_NocturneOfShadow_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Nocturne of Shadow",
+  "hasOrder": true,
+  "order": 9,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 25.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Nocturne of Shadow",
+  "description": "A haunting melody taught by the Shadow Sage. Warps you to the Shadow Temple entrance in the Graveyard. The dead silence for this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 9,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "NocturneOfShadow_Warp",
+    "spellKind": "Warp",
+    "color": [0.3, 0.0, 0.4],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "KakarikoGraveyard",
+        "sceneName": "Zelda_ShadowTemple",
+        "particleEffect": "ShadowWarp",
+        "soundEffect": "NocturneWarp"
+      },
+      "shadowSight": {
+        "enabled": true,
+        "duration": 45.0,
+        "revealsInvisible": true,
+        "seesThroughIllusions": true
+      },
+      "undeadCommand": {
+        "enabled": true,
+        "radius": 15.0,
+        "duration": 20.0,
+        "charmsUndead": true
+      },
+      "crossModSynergy": {
+        "superSaiyan": {
+          "spellId": "Spell.SuperSaiyan_UI",
+          "effect": "VoidUltraInstinct",
+          "damageBonus": 2.5,
+          "voidDamage": true
+        },
+        "lithosphere": {
+          "effectId": "Effect_Loot_PainfulDeath_Aura",
+          "potencyBonus": 1.5
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_BloodOrb_Aura",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 1,
+  "name": "Blood Crystal aura",
+  "addressableName": "Lithosphere_BloodOrb_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticle, ThunderRoad",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Additive",
+      "effectParticleAddress": "Bas.Particle.Infuser.Mind",
+      "linkDestination": "Self",
+      "linkRotationType": "Self",
+      "linkScaleType": "World",
+      "playParticle": true,
+      "particleCount": 30,
+      "localScale": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5
+      },
+      "mainGradient": {
+        "mainStart": {
+          "r": 0.85,
+          "g": 0.03,
+          "b": 0.04,
+          "a": 0.6
+        },
+        "mainEnd": {
+          "r": 0.9,
+          "g": 0.12,
+          "b": 0.08,
+          "a": 0.0
+        }
+      },
+      "note": "Blood crystal: obsidian bloodstone, volatile reservoir"
+    }
+  ]
+}

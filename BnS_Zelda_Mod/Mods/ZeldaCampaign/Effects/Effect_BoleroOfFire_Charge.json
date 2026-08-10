@@ -1,0 +1,35 @@
+{
+  "id": "Effect_BoleroOfFire_Charge",
+  "name": "Bolero of Fire Charge Effect",
+  "type": "SpellEffect",
+  "description": "Flames dance around ocarina while charging",
+  "particleSystems": [
+    {
+      "name": "FireParticles",
+      "prefab": "Particles/Spells/BoleroFireParticles",
+      "offset": [0, 0.1, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 30
+    },
+    {
+      "name": "HeatDistortion",
+      "prefab": "Particles/Spells/HeatDistortion",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/BoleroOfFireCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.4, 0.0, 0.8],
+    "pulseSpeed": 3.5,
+    "pulseIntensity": 0.4
+  }
+}

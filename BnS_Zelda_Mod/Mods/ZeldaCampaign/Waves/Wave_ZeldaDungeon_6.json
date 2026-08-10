@@ -1,0 +1,64 @@
+{
+  "id": "Wave_ZeldaDungeon_6",
+  "name": "Water Temple: The Flooded Sanctuary",
+  "description": "Lake Hylia's sacred temple, now a labyrinth of shifting water levels. Face Morpha, the giant amoeba.",
+  "difficulty": "Expert",
+  "recommendedLevel": 50,
+  "tags": ["ZeldaCampaign", "WaterTemple", "AdultEra", "Water", "Puzzle", "WaterLevelControl"],
+  "enemies": [
+    {
+      "type": "ShellBlade",
+      "count": 6,
+      "modifiers": ["SpikedShell", "OpensToAttack", "WaterOnly"]
+    },
+    {
+      "type": "SpikeTrap",
+      "count": 8,
+      "modifiers": ["Moving", "InstantKill", "PatternBased"]
+    },
+    {
+      "type": "LikeLike",
+      "count": 3,
+      "modifiers": ["SwallowsEquipment", "AcidDamage", "SpitsPlayerOut"]
+    },
+    {
+      "type": "DarkLink",
+      "count": 1,
+      "modifiers": ["MiniBoss", "MirrorsPlayer", "NoLockOn", "SwordOnly", "RoomCenterOnly"]
+    },
+    {
+      "type": "Morpha",
+      "count": 1,
+      "modifiers": ["Boss", "GiantAmoeba", "WaterTentacles", "NucleusWeakPoint", "LongshotRequired", "WaterLevelManipulation"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "Medallion_Water",
+      "Longshot",
+      "WaterMedallion"
+    ],
+    "chance": [
+      { "item": "Fairy", "probability": 0.4, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.15 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 2 },
+      { "item": "WaterMedallionFragment", "probability": 0.2, "count": 3 }
+    ],
+    "experience": 65000,
+    "rupees": 4000
+  },
+  "environment": {
+    "map": "WaterTemple",
+    "music": "WaterTemple_Dungeon",
+    "timeLimit": 3600,
+    "specialRules": [
+      "IronBootsRequired",
+      "ZoraTunicRequired",
+      "WaterLevelControlThreePositions",
+      "LongshotRequiredForMorpha",
+      "DarkLinkRoomNoLockOn",
+      "MorphaNucleusOnlyVulnerable"
+    ]
+  },
+  "lore": "The Water Temple, built to protect Lake Hylia's purity, has been corrupted. Its central mechanism controls water levels throughout the complex. Morpha, a massive amoeba, guards the Water Medallion. The Longshot is essential to reach its nucleus."
+}

@@ -1,0 +1,85 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_SongOfStorms",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Song of Storms - summons rain and reveals hidden secrets.",
+  "imbueDescription": "Dark clouds gather around the ocarina.",
+  "chargeEffectId": "Effect_SongOfStorms_Charge",
+  "readyEffectId": "Effect_SongOfStorms_Ready",
+  "fingerEffectId": "Effect_SongOfStorms_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 4.0,
+  "orbVariationAmount": 0.15,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.4,
+  "allowThrow": true,
+  "throwEffectId": "Effect_SongOfStorms_Cast",
+  "throwMinCharge": 0.7,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Song of Storms",
+  "hasOrder": true,
+  "order": 2,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 15.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Song of Storms",
+  "description": "A chaotic melody learned from the windmill man. Summons a localized storm, reveals hidden grottos, and can manipulate water levels.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": false,
+  "ReadyThreshold": 0.7,
+  "Ready": false,
+  "Order": 2,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "SongOfStorms_Cloud",
+    "spellKind": "WeatherManipulation",
+    "color": [0.4, 0.4, 0.6],
+    "effects": {
+      "stormSummon": {
+        "enabled": true,
+        "radius": 30.0,
+        "duration": 60.0,
+        "rainIntensity": 1.0,
+        "lightningChance": 0.3
+      },
+      "revealSecrets": {
+        "enabled": true,
+        "radius": 20.0,
+        "revealsHiddenGrottos": true,
+        "revealsFakeWalls": true
+      },
+      "waterLevelControl": {
+        "enabled": true,
+        "canRaiseLower": true,
+        "range": 15.0
+      },
+      "crossModSynergy": {
+        "waterSpell": {
+          "spellId": "Water",
+          "effect": "LightningWaterMerge",
+          "damageBonus": 2.0
+        },
+        "blackFire": {
+          "spellId": "BlackFire",
+          "effect": "StormFireMerge",
+          "damageBonus": 1.5
+        }
+      }
+    }
+  }
+}

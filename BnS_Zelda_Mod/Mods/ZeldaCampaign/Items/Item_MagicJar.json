@@ -1,0 +1,19 @@
+{
+  "id": "MagicJar",
+  "name": "Magic Jar",
+  "type": "Consumable",
+  "description": "Restores magic power.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 20,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Consumable",
+    "ChestLoot"
+  ],
+  "customData": {
+    "magicRestore": 50
+  }
+}

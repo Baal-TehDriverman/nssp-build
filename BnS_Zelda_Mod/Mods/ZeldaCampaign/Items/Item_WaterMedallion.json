@@ -1,0 +1,20 @@
+{
+  "id": "WaterMedallion",
+  "name": "Water Medallion",
+  "type": "Medallion",
+  "description": "Medallion of the Water Sage.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 500,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Medallion"
+  ],
+  "customData": {
+    "sage": "Ruto",
+    "element": "Water"
+  }
+}

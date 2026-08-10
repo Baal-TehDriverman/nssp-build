@@ -1,0 +1,50 @@
+{
+ "$type": "ThunderRoad.WaveData, ThunderRoad",
+ "id": "ZeldaDungeon_0",
+ "saveFolder": "bas",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 2,
+ "category": "Forest Dungeon",
+ "localizationId": "ZeldaDungeon_0",
+ "title": "Great Deku Tree",
+ "description": "Zelda Campaign: Great Deku Tree. Clear the gauntlet to claim the dungeon reward.",
+ "loopBehavior": "LoopSeamless",
+ "totalMaxAlive": 3,
+ "alwaysAvailable": true,
+ "waveSelectors": [
+  "Arena"
+ ],
+ "factions": [
+  {
+   "$type": "ThunderRoad.WaveData+WaveFaction, ThunderRoad",
+   "factionID": 3,
+   "factionHealthMultiplier": 1.0,
+   "factionMaxAlive": 3
+  }
+ ],
+ "groups": [
+  {
+   "$type": "ThunderRoad.WaveData+Group, ThunderRoad",
+   "reference": "Table",
+   "referenceID": "HumansBandit",
+   "overrideFaction": true,
+   "factionID": 3,
+   "overrideContainer": true,
+   "overrideContainerID": "HumansBandit",
+   "overrideBrain": true,
+   "overrideBrainID": "Human",
+   "overrideMaxMelee": true,
+   "overrideMaxMeleeCount": 3,
+   "groupHealthMultiplier": 1.0,
+   "minMaxCount": {
+    "x": 3,
+    "y": 3
+   },
+   "spawnPointIndex": -1,
+   "prereqGroupIndex": -1,
+   "prereqMaxRemainingAlive": 0
+  }
+ ],
+ "_zelda_dungeon": "Great Deku Tree"
+}

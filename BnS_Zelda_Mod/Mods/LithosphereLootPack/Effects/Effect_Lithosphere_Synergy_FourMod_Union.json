@@ -1,0 +1,74 @@
+{
+  "id": "Lithosphere_Synergy_FourMod_Union",
+  "name": "Origin Union Aura",
+  "description": "When all four sovereign mods are active, the Lithosphere awakens its true form. Unity of Sword, Ki, Flight, and Stone.",
+  "type": "Effect",
+  "tags": ["Lithosphere", "ZeldaCampaign", "SuperSaiyanTransformations", "SSJFlight", "LithosphereLootPack", "Union", "Legendary"],
+  "customData": {
+    "requiresAllMods": [
+      "ZeldaCampaign",
+      "SuperSaiyanTransformations",
+      "SSJFlight",
+      "LithosphereLootPack"
+    ],
+    "effects": {
+      "masterResonance": {
+        "description": "All four mod systems resonate in perfect harmony",
+        "potencyMultiplier": 2.0,
+        "cooldownReduction": 0.5,
+        "manaEfficiency": 2.0
+      },
+      "unifiedAura": {
+        "colors": ["#00BFFF", "#FFD700", "#FF6BFF", "#FF4500"],
+        "particles": "origin_union",
+        "sound": "origin_awakening",
+        "visibleRange": 50
+      },
+      "crossModUltimates": {
+        "enabled": true,
+        "masterSwordCelestial": {
+          "name": "Master Sword: Origin",
+          "damage": 100,
+          "holy": true,
+          "superSaiyan": true,
+          "flight": true,
+          "lithosphere": true
+        },
+        "celestialKamehameha": {
+          "name": "Origin Kamehameha",
+          "damage": 150,
+          "beamWidth": 5,
+          "homing": true,
+          "penetratesAll": true
+        },
+        "divineOcarinaWarp": {
+          "name": "Farore's Ascension",
+          "instantWarp": true,
+          "unlimitedRange": true,
+          "partyWarp": true
+        },
+        "lithosphereOverdrive": {
+          "name": "World Heart Surge",
+          "healAll": true,
+          "reviveAll": true,
+          "maxBuffs": true,
+          "duration": 60
+        }
+      },
+      "passiveBonuses": {
+        "healthRegen": 5,
+        "manaRegen": 10,
+        "staminaRegen": 10,
+        "damageReduction": 0.25,
+        "critChance": 0.15,
+        "critDamage": 0.5
+      }
+    },
+    "activationCondition": {
+      "allModsActive": true,
+      "playerLevel": 50,
+      "hasOriginHeart": true
+    },
+    "lore": "When the Blade of Evil's Bane, the Legendary Super Saiyan, the Gravity-Defying Flyer, and the World's Heart unite — the Lithosphere remembers its true purpose. The Origin awakens."
+  }
+}

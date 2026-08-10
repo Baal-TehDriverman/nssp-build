@@ -1,0 +1,44 @@
+{
+  "id": "Effect_ZeldasLullaby_Finger",
+  "name": "Zelda's Lullaby Finger Effect",
+  "type": "SpellEffect",
+  "description": "Soft blue particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerRoyalGlow",
+      "prefab": "Particles/Spells/ZeldasLullabyFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "RoyalTrails",
+      "prefab": "Particles/Spells/ZeldasLullabyFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/ZeldasLullabyNote1",
+      "Audio/Spells/ZeldasLullabyNote2",
+      "Audio/Spells/ZeldasLullabyNote3",
+      "Audio/Spells/ZeldasLullabyNote4",
+      "Audio/Spells/ZeldasLullabyNote5",
+      "Audio/Spells/ZeldasLullabyNote6"
+    ],
+    "volume": 0.5,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.2, 0.5, 1.0, 0.8],
+    "trailColor": [0.4, 0.7, 1.0, 0.6]
+  }
+}

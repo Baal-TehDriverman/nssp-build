@@ -1,0 +1,16 @@
+{
+  "id": "HylianShield",
+  "name": "Hylian Shield",
+  "type": "Shield",
+  "description": "Legendary shield. Reflects projectiles on perfect parry.",
+  "damage": 0,
+  "defense": 2,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Shield",
+    "KeyItem"
+  ]
+}

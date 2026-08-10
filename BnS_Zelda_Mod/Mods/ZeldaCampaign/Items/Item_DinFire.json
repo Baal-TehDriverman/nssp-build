@@ -1,0 +1,21 @@
+{
+  "id": "DinFire",
+  "name": "Din's Fire",
+  "type": "Magic",
+  "description": "Creates a dome of fire around you.",
+  "damage": 2,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Magic",
+    "Fire"
+  ],
+  "customData": {
+    "magicCost": 12,
+    "radius": 5,
+    "fireDamage": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "Effect_BoleroOfFire_Finger",
+  "name": "Bolero of Fire Finger Effect",
+  "type": "SpellEffect",
+  "description": "Flame particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerFireGlow",
+      "prefab": "Particles/Spells/BoleroOfFireFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "FireTrails",
+      "prefab": "Particles/Spells/BoleroOfFireFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/BoleroOfFireNote1",
+      "Audio/Spells/BoleroOfFireNote2",
+      "Audio/Spells/BoleroOfFireNote3",
+      "Audio/Spells/BoleroOfFireNote4",
+      "Audio/Spells/BoleroOfFireNote5",
+      "Audio/Spells/BoleroOfFireNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [1.0, 0.4, 0.0, 0.9],
+    "trailColor": [1.0, 0.6, 0.2, 0.7]
+  }
+}

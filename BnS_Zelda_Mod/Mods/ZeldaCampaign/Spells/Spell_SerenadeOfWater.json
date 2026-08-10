@@ -1,0 +1,78 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_SerenadeOfWater",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Serenade of Water - warps to the Water Temple.",
+  "imbueDescription": "Crystal droplets orbit the ocarina.",
+  "chargeEffectId": "Effect_SerenadeOfWater_Charge",
+  "readyEffectId": "Effect_SerenadeOfWater_Ready",
+  "fingerEffectId": "Effect_SerenadeOfWater_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 2.5,
+  "orbVariationAmount": 0.1,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.4,
+  "allowThrow": true,
+  "throwEffectId": "Effect_SerenadeOfWater_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Serenade of Water",
+  "hasOrder": true,
+  "order": 8,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 20.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Serenade of Water",
+  "description": "A flowing melody taught by the Water Sage. Warps you to the Water Temple entrance at Lake Hylia. The waters part for this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 8,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "SerenadeOfWater_Warp",
+    "spellKind": "Warp",
+    "color": [0.0, 0.6, 1.0],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "LakeHylia",
+        "sceneName": "Zelda_WaterTemple",
+        "particleEffect": "WaterWarp",
+        "soundEffect": "SerenadeWarp"
+      },
+      "waterBreathing": {
+        "enabled": true,
+        "duration": 60.0,
+        "grantsZoraTunicEffect": true
+      },
+      "crossModSynergy": {
+        "waterSpell": {
+          "spellId": "Water",
+          "effect": "TsunamiSerenade",
+          "damageBonus": 2.0
+        },
+        "lithosphere": {
+          "effectId": "Effect_Loot_WaterSpell_Aura",
+          "potencyBonus": 1.5
+        }
+      }
+    }
+  }
+}

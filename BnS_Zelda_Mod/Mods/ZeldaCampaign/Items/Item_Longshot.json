@@ -1,0 +1,21 @@
+{
+  "id": "Longshot",
+  "name": "Longshot",
+  "type": "Tool",
+  "description": "Longer range Hookshot.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Tool",
+    "KeyItem",
+    "Upgrade"
+  ],
+  "customData": {
+    "range": 30,
+    "pullsPlayer": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ZoraTunic",
+  "name": "Zora Tunic",
+  "type": "Armor",
+  "description": "Blue tunic woven from Zora scales. Grants the ability to breathe underwater indefinitely. Essential for Water Temple and Jabu-Jabu's Belly.",
+  "damage": 0,
+  "defense": 1,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Armor",
+    "KeyItem",
+    "PuzzleItem",
+    "WaterBreathing",
+    "ZoraCraft"
+  ],
+  "slot": "Body",
+  "customData": {
+    "waterBreathing": true,
+    "unlimitedDive": true,
+    "swimSpeed": 1.2,
+    "underwaterVision": true,
+    "requiredFor": ["JabuJabusBelly", "WaterTemple", "GanonsCastle_WaterBarrier", "IceCavern"],
+    "era": "Adult",
+    "obtainedAs": "Child (frozen) / Adult (King Zora)",
+    "location": "Zora's Domain (melt King Zora) / Ice Cavern",
+    "lore": "Woven from the finest Zora scales by the royal tailors. The fabric filters oxygen from water like gills.",
+    "puzzleUses": [
+      "Breathe underwater indefinitely",
+      "Swim through long tunnels (Water Temple)",
+      "Explore Jabu-Jabu's Belly depths",
+      "Access Morpha corridor",
+      "Dive to bottom of Lake Hylia"
+    ]
+  }
+}

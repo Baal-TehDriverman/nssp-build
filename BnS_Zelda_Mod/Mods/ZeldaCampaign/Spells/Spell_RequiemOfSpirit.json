@@ -1,0 +1,85 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_RequiemOfSpirit",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Requiem of Spirit - warps to the Spirit Temple.",
+  "imbueDescription": "Golden sands swirl around the ocarina.",
+  "chargeEffectId": "Effect_RequiemOfSpirit_Charge",
+  "readyEffectId": "Effect_RequiemOfSpirit_Ready",
+  "fingerEffectId": "Effect_RequiemOfSpirit_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 3.0,
+  "orbVariationAmount": 0.15,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.4,
+  "allowThrow": true,
+  "throwEffectId": "Effect_RequiemOfSpirit_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Requiem of Spirit",
+  "hasOrder": true,
+  "order": 10,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 25.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Requiem of Spirit",
+  "description": "A solemn melody taught by the Spirit Sage. Warps you to the Spirit Temple entrance in the Desert Colossus. The sands part for this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 10,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "RequiemOfSpirit_Warp",
+    "spellKind": "Warp",
+    "color": [0.9, 0.7, 0.3],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "DesertColossus",
+        "sceneName": "Zelda_SpiritTemple",
+        "particleEffect": "SpiritWarp",
+        "soundEffect": "RequiemWarp"
+      },
+      "spiritForm": {
+        "enabled": true,
+        "duration": 30.0,
+        "phasesThroughWalls": true,
+        "immuneToPhysical": true
+      },
+      "timeShiftAdultChild": {
+        "enabled": true,
+        "allowsTimeTravel": true,
+        "switchesAgeForm": true
+      },
+      "crossModSynergy": {
+        "superSaiyan": {
+          "spellId": "Spell.SuperSaiyan_SSG",
+          "effect": "DivineSpiritRequiem",
+          "damageBonus": 2.5,
+          "holyDamage": true
+        },
+        "lithosphere": {
+          "effectId": "Effect_Loot_MysticHands_Aura",
+          "potencyBonus": 1.5
+        }
+      }
+    }
+  }
+}

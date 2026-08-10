@@ -1,0 +1,299 @@
+{
+ "$type": "ThunderRoad.LevelData, ThunderRoad",
+ "id": "ZeldaCampaign",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 3,
+ "groupPath": "Zelda Campaign",
+ "name": "Zelda Campaign",
+ "description": "A full Zelda campaign gauntlet \u2014 clear all 9 dungeons on the Cell Games arena. Each wave is a themed dungeon battle escalating to Ganon's Castle.",
+ "descriptionLocalizationId": null,
+ "sceneAddress": "CELL.games.Arena",
+ "showOnlyDevMode": false,
+ "showInLevelSelection": true,
+ "worldMapId": "Eraden",
+ "worldMapTravelAudioContainerAddress": "Bas.AudioGroup.Dungeon.Start",
+ "mapLocationIndex": 1,
+ "showOnMap": true,
+ "hideOnAndroid": false,
+ "mapLocationIconAddress": "Bas.Icon.Location.Arena",
+ "mapLocationIconHoverAddress": "Bas.Icon.Location.Arena_Highlight",
+ "mapPreviewImageAddress": "Bas.Image.Preview.Arena",
+ "modes": [
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_0_Great Deku Tree",
+   "displayName": "Zelda: Great Deku Tree",
+   "description": "Zelda Campaign dungeon 1/9 \u2014 Great Deku Tree.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 0,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_0"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_1_Dodongo's Cavern",
+   "displayName": "Zelda: Dodongo's Cavern",
+   "description": "Zelda Campaign dungeon 2/9 \u2014 Dodongo's Cavern.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 1,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_1"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_2_Jabu-Jabu's Belly",
+   "displayName": "Zelda: Jabu-Jabu's Belly",
+   "description": "Zelda Campaign dungeon 3/9 \u2014 Jabu-Jabu's Belly.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 2,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_2"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_3_Forest Temple",
+   "displayName": "Zelda: Forest Temple",
+   "description": "Zelda Campaign dungeon 4/9 \u2014 Forest Temple.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 3,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_3"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_4_Fire Temple",
+   "displayName": "Zelda: Fire Temple",
+   "description": "Zelda Campaign dungeon 5/9 \u2014 Fire Temple.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 4,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_4"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_5_Water Temple",
+   "displayName": "Zelda: Water Temple",
+   "description": "Zelda Campaign dungeon 6/9 \u2014 Water Temple.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 5,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_5"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_6_Shadow Temple",
+   "displayName": "Zelda: Shadow Temple",
+   "description": "Zelda Campaign dungeon 7/9 \u2014 Shadow Temple.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 6,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_6"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_7_Spirit Temple",
+   "displayName": "Zelda: Spirit Temple",
+   "description": "Zelda Campaign dungeon 8/9 \u2014 Spirit Temple.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 7,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_7"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  },
+  {
+   "$type": "ThunderRoad.LevelData+Mode, ThunderRoad",
+   "name": "Zelda_8_Ganon's Castle",
+   "displayName": "Zelda: Ganon's Castle",
+   "description": "Zelda Campaign dungeon 9/9 \u2014 Ganon's Castle.",
+   "allowGameModes": [
+    "Survival",
+    "Sandbox"
+   ],
+   "mapOrder": 8,
+   "playerDeathAction": "TryAgain",
+   "waves": [
+    "ZeldaDungeon_8"
+   ],
+   "modules": [
+    {
+     "$type": "ThunderRoad.LevelModuleCleaner, ThunderRoad",
+     "cleanerRate": 5.0
+    },
+    {
+     "$type": "ThunderRoad.LevelModuleMusic, ThunderRoad",
+     "dynamicMusic": "MusicArena"
+    },
+    {
+     "$type": "LevelModuleResetSpawners, ThunderRoad"
+    }
+   ],
+   "availableOptions": []
+  }
+ ],
+ "_zelda": {
+  "campaign": "Blade of Hyrule",
+  "dungeons": [
+   "Great Deku Tree",
+   "Dodongo's Cavern",
+   "Jabu-Jabu's Belly",
+   "Forest Temple",
+   "Fire Temple",
+   "Water Temple",
+   "Shadow Temple",
+   "Spirit Temple",
+   "Ganon's Castle"
+  ]
+ }
+}

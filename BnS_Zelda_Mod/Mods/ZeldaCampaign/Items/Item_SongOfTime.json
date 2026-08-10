@@ -1,0 +1,20 @@
+{
+  "id": "SongOfTime",
+  "name": "Song of Time",
+  "type": "Song",
+  "description": "Opens Door of Time, moves blocks",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Song",
+    "KeyItem"
+  ],
+  "customData": {
+    "ocarinaSong": true,
+    "magicCost": 10
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "Compass",
+  "name": "Compass",
+  "type": "Tool",
+  "description": "Shows location of chests and boss.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Dungeon"
+  ],
+  "customData": {
+    "showsChests": true,
+    "showsBoss": true
+  }
+}

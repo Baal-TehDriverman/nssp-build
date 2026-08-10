@@ -1,0 +1,20 @@
+{
+  "id": "KokiriEmerald",
+  "name": "Kokiri Emerald",
+  "type": "SpiritualStone",
+  "description": "Spiritual Stone of the Forest.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 1000,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "SpiritualStone"
+  ],
+  "customData": {
+    "element": "Forest",
+    "opens": "DoorOfTime"
+  }
+}

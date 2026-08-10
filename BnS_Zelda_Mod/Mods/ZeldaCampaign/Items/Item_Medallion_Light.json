@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Light",
+  "name": "Light Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Light Sage, Rauru. Proof of awakening the Temple of Light.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Light", "Sage"],
+  "customData": {
+    "sage": "Rauru",
+    "element": "Light",
+    "temple": "TempleOfLight",
+    "lore": "Rauru, the Sage of Light, bestows this medallion upon those who awaken the Temple of Light. It holds the power of the sacred light."
+  }
+}

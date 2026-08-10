@@ -1,0 +1,72 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_ZeldasLullaby",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play Zelda's Lullaby - proves royal lineage and opens sacred paths.",
+  "imbueDescription": "Soft blue notes drift from the ocarina.",
+  "chargeEffectId": "Effect_ZeldasLullaby_Charge",
+  "readyEffectId": "Effect_ZeldasLullaby_Ready",
+  "fingerEffectId": "Effect_ZeldasLullaby_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 1.5,
+  "orbVariationAmount": 0.05,
+  "chargeSpeed": 0.3,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.05,
+  "chargeMaxHaptic": 0.2,
+  "allowThrow": true,
+  "throwEffectId": "Effect_ZeldasLullaby_Cast",
+  "throwMinCharge": 0.5,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Zelda's Lullaby",
+  "hasOrder": true,
+  "order": 4,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 5.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Zelda's Lullaby",
+  "description": "The royal family's lullaby. Proves your connection to the Royal Family of Hyrule. Opens sealed passages, activates Time Blocks, and calms restless spirits.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": false,
+  "ReadyThreshold": 0.5,
+  "Ready": false,
+  "Order": 4,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "ZeldasLullaby_Wave",
+    "spellKind": "RoyalAuthority",
+    "color": [0.2, 0.5, 1.0],
+    "effects": {
+      "royalAuthority": {
+        "enabled": true,
+        "opensRoyalPassages": true,
+        "activatesTimeBlocks": true,
+        "range": 10.0
+      },
+      "spiritCalm": {
+        "enabled": true,
+        "calmsRestlessSpirits": true,
+        "range": 15.0,
+        "duration": 20.0
+      },
+      "triforceResonance": {
+        "enabled": true,
+        "revealsTriforceMarkings": true,
+        "range": 20.0
+      }
+    }
+  }
+}

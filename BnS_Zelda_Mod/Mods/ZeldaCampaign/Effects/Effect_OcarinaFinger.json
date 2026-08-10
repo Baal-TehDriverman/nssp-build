@@ -1,0 +1,43 @@
+{
+  "id": "Effect_OcarinaFinger",
+  "name": "Ocarina Finger Effect",
+  "type": "SpellEffect",
+  "description": "Visual feedback on fingers while playing ocarina",
+  "particleSystems": [
+    {
+      "name": "FingerGlow",
+      "prefab": "Particles/Spells/OcarinaFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "NoteTrails",
+      "prefab": "Particles/Spells/OcarinaFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/OcarinaNote1",
+      "Audio/Spells/OcarinaNote2",
+      "Audio/Spells/OcarinaNote3",
+      "Audio/Spells/OcarinaNote4",
+      "Audio/Spells/OcarinaNote5"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.8, 1.2]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.2, 0.6, 1.0, 0.9],
+    "trailColor": [0.4, 0.8, 1.0, 0.7]
+  }
+}

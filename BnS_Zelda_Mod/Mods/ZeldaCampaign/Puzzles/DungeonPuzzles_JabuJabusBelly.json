@@ -1,0 +1,118 @@
+{
+  "id": "DungeonPuzzles_JabuJabusBelly",
+  "name": "Jabu-Jabu's Belly Puzzles",
+  "dungeon": "JabuJabusBelly",
+  "era": "Child",
+  "difficulty": "Intermediate",
+  "puzzles": [
+    {
+      "id": "JabuJabusBelly_1_EntranceFeeding",
+      "name": "Feed Jabu-Jabu",
+      "type": "Switch",
+      "description": "Catch a fish in a bottle and feed it to Lord Jabu-Jabu to open his mouth.",
+      "location": "Zora's Domain - Jabu-Jabu Altar",
+      "requiredItems": ["Bottle", "Fish"],
+      "steps": [
+        "Catch fish in shallow water with bottle",
+        "Stand on altar before Jabu-Jabu",
+        "Use bottle to release fish",
+        "Jabu-Jabu inhales Link"
+      ],
+      "reward": "Enter Dungeon",
+      "hints": ["Ruto's letter: \"Feed him a fish!\"", "Fish swim in fountain near altar"]
+    },
+    {
+      "id": "JabuJabusBelly_2_CarryRuto",
+      "name": "Carry Princess Ruto",
+      "type": "BlockPush",
+      "description": "Ruto must be carried through dungeon. Put her down on switches, throw her across gaps.",
+      "location": "Throughout Dungeon",
+      "requiredItems": ["Ruto"],
+      "steps": [
+        "Talk to Ruto in first room",
+        "Pick her up (replaces item slot)",
+        "Place on pressure plates",
+        "Throw across gaps to hit switches",
+        "Don't leave her too long or she complains"
+      ],
+      "reward": "Progress through dungeon",
+      "hints": ["Ruto: \"Don't drop me!\"", "She activates child-weight switches"]
+    },
+    {
+      "id": "JabuJabusBelly_3_BoomerangRoom",
+      "name": "Boomerang Acquisition",
+      "type": "Target",
+      "description": "Use Boomerang to hit crystal switch through fence, then navigate to chest.",
+      "location": "Main Stomach Chamber",
+      "requiredItems": ["Boomerang"],
+      "steps": [
+        "Get Boomerang from chest in side room",
+        "Return to fenced switch",
+        "Throw Boomerang through fence gaps",
+        "Hit crystal switch",
+        "Door opens to next area"
+      ],
+      "reward": "Boomerang (permanent), Progress",
+      "hints": ["Boomerang passes through fence gaps", "Aim for the crystal"]
+    },
+    {
+      "id": "JabuJabusBelly_4_BariStun",
+      "name": "Electric Bari Navigation",
+      "type": "Target",
+      "description": "Stun electric Bari with Boomerang to safely pass or defeat them.",
+      "location": "Stomach Corridors",
+      "requiredItems": ["Boomerang"],
+      "steps": [
+        "Target Bari with Boomerang",
+        "Throw - Bari stunned temporarily",
+        "Run past or attack with sword",
+        "Bari split when hit with sword - use Boomerang first"
+      ],
+      "reward": "Safe passage",
+      "hints": ["Boomerang stuns without splitting", "Navi: \"Hit them with the Boomerang!\""]
+    },
+    {
+      "id": "JabuJabusBelly_5_BarinadeTentacles",
+      "name": "Barinade Tentacle Puzzle",
+      "type": "Target",
+      "description": "Sever Barinade's three tentacles with Boomerang before damaging main body.",
+      "location": "Barinade Arena",
+      "requiredItems": ["Boomerang"],
+      "steps": [
+        "Target tentacle connection points on ceiling",
+        "Throw Boomerang to sever each (3 total)",
+        "Central body exposed",
+        "Stun body with Boomerang",
+        "Attack nucleus with sword"
+      ],
+      "reward": "Zora Sapphire, Heart Container",
+      "hints": ["Tentacles glow where attached", "Body electric barrier drops after tentacles cut"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Barinade",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Tentacle Defense",
+        "mechanic": "Barinade protected by 3 tentacles, sends out Bari",
+        "puzzle": "Boomerang sever tentacles (3 hits each)",
+        "vulnerability": "Tentacle bases on ceiling targetable"
+      },
+      {
+        "phase": 2,
+        "name": "Electric Barrier",
+        "mechanic": "Body surrounded by rotating electric barrier, charges player",
+        "puzzle": "Boomerang stuns body through barrier gap, attack nucleus",
+        "vulnerability": "Nucleus exposed when barrier gap aligns"
+      },
+      {
+        "phase": 3,
+        "name": "Bari Swarm",
+        "mechanic": "Low health - releases many Bari, body moves faster",
+        "puzzle": "Boomerang clears Bari, quick strikes on nucleus",
+        "vulnerability": "Same as phase 2 but faster"
+      }
+    ]
+  }
+}

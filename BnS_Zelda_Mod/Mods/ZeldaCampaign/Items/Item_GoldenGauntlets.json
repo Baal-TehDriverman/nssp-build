@@ -1,0 +1,35 @@
+{
+  "id": "GoldenGauntlets",
+  "name": "Golden Gauntlets",
+  "type": "Gauntlets",
+  "description": "Legendary golden gauntlets granting the strength to lift massive pillars and colossal blocks. The ultimate strength upgrade, found deep in Ganon's Castle.",
+  "damage": 2,
+  "defense": 2,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Gauntlets",
+    "KeyItem",
+    "PuzzleItem",
+    "StrengthUpgrade",
+    "UltimateUpgrade"
+  ],
+  "slot": "Hands",
+  "customData": {
+    "liftStrength": "Massive",
+    "pushTypes": ["GoldBlock", "MassiveBlock", "PillarBlock", "SilverBlock", "StandardBlock", "StatueBlock"],
+    "requiredFor": ["GanonsCastle_Pillars", "GerudoTrainingGround_Final", "SpiritTemple_MassiveStatues"],
+    "era": "Adult",
+    "upgradeFrom": "SilverGauntlets",
+    "location": "Ganon's Castle - Spirit Trial",
+    "lore": "Said to be forged from the golden scales of a dragon. The wearer can move mountains. Even the Hero of Time strains under their weight.",
+    "puzzleUses": [
+      "Push gold blocks in Ganon's Castle",
+      "Lift massive stone pillars",
+      "Hold massive pressure plates",
+      "Move colossal statues"
+    ]
+  }
+}

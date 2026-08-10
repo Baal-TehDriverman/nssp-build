@@ -1,0 +1,49 @@
+{
+  "id": "Effect_ZeldasLullaby_Ready",
+  "name": "Zelda's Lullaby Ready Effect",
+  "type": "SpellEffect",
+  "description": "Royal blue aura pulses, ready to cast",
+  "particleSystems": [
+    {
+      "name": "BlueNotes",
+      "prefab": "Particles/Spells/ZeldasLullabyReadyNotes",
+      "offset": [0, 0.2, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 20
+    },
+    {
+      "name": "RoyalAura",
+      "prefab": "Particles/Spells/RoyalAura",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "TriforceSymbol",
+      "prefab": "Particles/Spells/TriforceSymbol",
+      "offset": [0, 0.3, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 10
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/ZeldasLullabyReady",
+    "volume": 0.6,
+    "pitch": 1.0
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.5, 1.0, 1.0],
+    "pulseSpeed": 2.0,
+    "pulseIntensity": 0.4,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.5, 1.0, 0.3],
+      "duration": 0.2
+    }
+  }
+}

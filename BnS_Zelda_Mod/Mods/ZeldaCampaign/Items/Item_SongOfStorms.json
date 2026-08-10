@@ -1,0 +1,20 @@
+{
+  "id": "SongOfStorms",
+  "name": "Song of Storms",
+  "type": "Song",
+  "description": "Summons rain, reveals secrets",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Song",
+    "KeyItem"
+  ],
+  "customData": {
+    "ocarinaSong": true,
+    "magicCost": 10
+  }
+}

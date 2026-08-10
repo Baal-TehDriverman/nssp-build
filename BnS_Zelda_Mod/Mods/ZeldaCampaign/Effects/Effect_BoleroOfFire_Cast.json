@@ -1,0 +1,54 @@
+{
+  "id": "Effect_BoleroOfFire_Cast",
+  "name": "Bolero of Fire Cast Effect",
+  "type": "SpellEffect",
+  "description": "Warp to Fire Temple, grants fire immunity",
+  "particleSystems": [
+    {
+      "name": "FireWarp",
+      "prefab": "Particles/Spells/BoleroFireWarp",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 10.0
+    },
+    {
+      "name": "FirePortalOpen",
+      "prefab": "Particles/Spells/FirePortalOpen",
+      "offset": [0, 0, 5],
+      "scale": 4.0,
+      "duration": 5.0,
+      "loop": false
+    },
+    {
+      "name": "FireImmunityAura",
+      "prefab": "Particles/Spells/FireImmunityAura",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 30.0,
+      "loop": false
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/BoleroOfFireCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "warpSound": "Audio/Spells/FireWarp",
+    "fireAmbienceFade": "Audio/Ambience/Volcano"
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.4, 0.0, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 0.6, 0.0, 0.5],
+      "duration": 0.5
+    },
+    "sceneTransition": {
+      "enabled": true,
+      "targetScene": "Zelda_FireTemple",
+      "transitionType": "FireWarp"
+    }
+  }
+}

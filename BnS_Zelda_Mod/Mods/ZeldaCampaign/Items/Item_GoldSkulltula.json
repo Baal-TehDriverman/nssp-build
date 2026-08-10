@@ -1,0 +1,19 @@
+{
+  "id": "GoldSkulltula",
+  "name": "Gold Skulltula Token",
+  "type": "Collectible",
+  "description": "Proof of defeating a Gold Skulltula. Collect 100 for a reward.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Collectible",
+    "ChestLoot"
+  ],
+  "customData": {
+    "skulltulaCount": 1
+  }
+}

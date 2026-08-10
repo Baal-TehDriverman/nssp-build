@@ -1,0 +1,39 @@
+{
+  "id": "ZeldaCampaign_SuperSaiyan_Hybrid",
+  "name": "Sage's Super Saiyan",
+  "description": "Fuse the Master Sword's holy power with Super Saiyan ki. Golden blade cuts through darkness with divine fury.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_ZeldaCampaign_EnergyBlast_1",
+    "spellB": "Spell.SuperSaiyan_SSJ1",
+    "minForm": "SSJ1"
+  },
+  "result": {
+    "spellId": "Spell_ZeldaCampaign_SuperSaiyan_Blade",
+    "name": "Master Sword: Super Saiyan",
+    "description": "Holy blade wreathed in golden Super Saiyan aura. Beams of divine ki on swing.",
+    "damage": 60,
+    "cooldown": 8,
+    "manaCost": 50,
+    "effects": {
+      "beamAttack": {
+        "enabled": true,
+        "damage": 40,
+        "range": 15,
+        "holy": true,
+        "goldenKi": true
+      },
+      "aura": {
+        "color": "#FFD700",
+        "particles": "holy_golden_ki",
+        "sound": "master_sword_hum_super"
+      },
+      "sealingPower": {
+        "sealsEvil": true,
+        "superSaiyanPressure": true
+      }
+    }
+  },
+  "tags": ["ZeldaCampaign", "SuperSaiyanTransformations", "CrossMod", "SpellMerge"],
+  "lore": "When the Hero of Time channels the warrior's spirit, the Master Sword awakens to its full potential — a blade that cuts through both darkness and limits."
+}

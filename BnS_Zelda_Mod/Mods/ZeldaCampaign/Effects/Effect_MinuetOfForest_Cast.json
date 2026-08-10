@@ -1,0 +1,46 @@
+{
+  "id": "Effect_MinuetOfForest_Cast",
+  "name": "Minuet of Forest Cast Effect",
+  "type": "SpellEffect",
+  "description": "Warp to Forest Temple, lost woods part",
+  "particleSystems": [
+    {
+      "name": "ForestWarp",
+      "prefab": "Particles/Spells/MinuetForestWarp",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 10.0
+    },
+    {
+      "name": "ForestPortalOpen",
+      "prefab": "Particles/Spells/ForestPortalOpen",
+      "offset": [0, 0, 5],
+      "scale": 4.0,
+      "duration": 5.0,
+      "loop": false
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/MinuetOfForestCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "warpSound": "Audio/Spells/ForestWarp",
+    "forestAmbienceFade": "Audio/Ambience/ForestMeadow"
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.8, 0.3, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 1.0, 0.3, 0.5],
+      "duration": 0.5
+    },
+    "sceneTransition": {
+      "enabled": true,
+      "targetScene": "Zelda_ForestTemple",
+      "transitionType": "ForestWarp"
+    }
+  }
+}

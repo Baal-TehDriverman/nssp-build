@@ -1,0 +1,44 @@
+{
+  "id": "Effect_PreludeOfLight_Finger",
+  "name": "Prelude of Light Finger Effect",
+  "type": "SpellEffect",
+  "description": "Pure light particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerLightGlow",
+      "prefab": "Particles/Spells/PreludeOfLightFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "LightTrails",
+      "prefab": "Particles/Spells/PreludeOfLightFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/PreludeOfLightNote1",
+      "Audio/Spells/PreludeOfLightNote2",
+      "Audio/Spells/PreludeOfLightNote3",
+      "Audio/Spells/PreludeOfLightNote4",
+      "Audio/Spells/PreludeOfLightNote5",
+      "Audio/Spells/PreludeOfLightNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [1.0, 1.0, 0.9, 0.9],
+    "trailColor": [1.0, 1.0, 1.0, 0.7]
+  }
+}

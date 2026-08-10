@@ -1,0 +1,35 @@
+{
+  "id": "Effect_SunsSong_Charge",
+  "name": "Sun's Song Charge Effect",
+  "type": "SpellEffect",
+  "description": "Golden light radiates while charging",
+  "particleSystems": [
+    {
+      "name": "SunRays",
+      "prefab": "Particles/Spells/SunsSongRays",
+      "offset": [0, 0.2, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "GoldenParticles",
+      "prefab": "Particles/Spells/SunsSongParticles",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 15
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/SunsSongCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.9, 0.3, 0.8],
+    "pulseSpeed": 2.0,
+    "pulseIntensity": 0.3
+  }
+}

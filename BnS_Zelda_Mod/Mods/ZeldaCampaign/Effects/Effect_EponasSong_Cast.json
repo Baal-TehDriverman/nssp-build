@@ -1,0 +1,50 @@
+{
+  "id": "Effect_EponasSong_Cast",
+  "name": "Epona's Song Cast Effect",
+  "type": "SpellEffect",
+  "description": "Epona gallops to player from anywhere, calms beasts",
+  "particleSystems": [
+    {
+      "name": "SummonRing",
+      "prefab": "Particles/Spells/EponaSummonRing",
+      "offset": [0, 0, 0],
+      "scale": 3.0,
+      "duration": 5.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 500.0
+    },
+    {
+      "name": "EponaSpawn",
+      "prefab": "Particles/Spells/EponaSpawn",
+      "offset": [0, 0, 2],
+      "scale": 1.5,
+      "duration": 3.0,
+      "loop": false
+    },
+    {
+      "name": "BeastCalm",
+      "prefab": "Particles/Spells/BeastCalm",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 30.0,
+      "loop": false,
+      "targetTags": ["Wolf", "Horse", "Cucco", "Dog", "Cow"]
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/EponasSongCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "horseGallop": "Audio/Ambience/HorseGallop",
+    "horseWhinnyClose": "Audio/Ambience/HorseWhinnyClose"
+  },
+  "visuals": {
+    "glowColor": [0.6, 0.4, 0.2, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.6, 0.4, 0.2, 0.3],
+      "duration": 0.3
+    }
+  }
+}

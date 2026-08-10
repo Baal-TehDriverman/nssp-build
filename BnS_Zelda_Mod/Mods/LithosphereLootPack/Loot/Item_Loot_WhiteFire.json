@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_WhiteFire",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere WhiteFire",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "White-hot diamond - purified flame",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_WhiteFire",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_WhiteFire_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 0.9,
+        "g": 0.95,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "materialId": "diamond"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

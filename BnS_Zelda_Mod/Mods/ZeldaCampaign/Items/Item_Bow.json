@@ -1,0 +1,20 @@
+{
+  "id": "Bow",
+  "name": "Fairy Bow",
+  "type": "Ranged",
+  "description": "Shoots arrows. Can use elemental arrows.",
+  "damage": 1,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Ranged",
+    "Weapon",
+    "KeyItem"
+  ],
+  "customData": {
+    "usesArrows": true
+  }
+}

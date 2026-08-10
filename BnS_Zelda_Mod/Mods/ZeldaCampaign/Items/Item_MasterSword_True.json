@@ -1,0 +1,81 @@
+{
+  "id": "MasterSword_True",
+  "name": "Master Sword (True Power)",
+  "type": "Sword",
+  "description": "The Blade of Evil's Bane, fully awakened. Beams of light at any health, seals darkness permanently. The true power of the Hero of Time.",
+  "damage": 45,
+  "defense": 5,
+  "weight": 2.5,
+  "value": 5000,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Weapon",
+    "Sword",
+    "Legendary",
+    "KeyItem",
+    "Holy",
+    "TrueMasterSword"
+  ],
+  "slot": "RightHand",
+  "customData": {
+    "isTwoHanded": false,
+    "era": "Adult",
+    "previousForm": "MasterSword",
+    "beamAttack": {
+      "enabled": true,
+      "condition": "always",
+      "damage": 30,
+      "range": 15,
+      "speed": 35,
+      "effect": "TrueHolyLight",
+      "cooldown": 0.5,
+      "penetratesEnemies": true,
+      "holyDamage": true
+    },
+    "sealingPower": {
+      "sealsEvil": true,
+      "weakensGanon": true,
+      "repelsDarkMagic": true,
+      "permanentSeal": true,
+      "breaksCurses": true
+    },
+    "durability": {
+      "infinite": true,
+      "neverBreaks": true
+    },
+    "sageResonance": {
+      "enabled": true,
+      "medallionsRequired": 6,
+      "powerBonus": 1.5,
+      "holyAura": true
+    },
+    "lore": "Forged by the Goddess Hylia, tempered in the Sacred Flame. Awakened by the hero who proved Courage, Wisdom, and Power. Bathed in the light of the Seven Sages. Only the true Hero of Time may wield its true power. The blade that seals evil for eternity.",
+    "skills": [
+      "TrueMasterSlash",
+      "TrueSpinAttack",
+      "TrueJumpAttack",
+      "TrueSwordBeam",
+      "TrueParry",
+      "TrueMortalDraw",
+      "SageResonance",
+      "EvilSeal"
+    ],
+    "requirements": {
+      "medallions": [
+        "Medallion_Forest",
+        "Medallion_Fire",
+        "Medallion_Water",
+        "Medallion_Shadow",
+        "Medallion_Spirit",
+        "Medallion_Light"
+      ],
+      "items": [
+        "LightArrows"
+      ],
+      "flags": [
+        "adultEra.ganondorfDefeated"
+      ]
+    }
+  }
+}

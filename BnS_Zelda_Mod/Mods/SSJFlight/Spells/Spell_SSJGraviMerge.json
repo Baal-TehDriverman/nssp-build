@@ -1,0 +1,23 @@
+{
+ "$type": "ThunderRoad.SpellMergeData, ThunderRoad",
+ "id": "Spell_SSJGraviMerge",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 0,
+ "leftSpellId": "Gravity",
+ "rightSpellId": "Base",
+ "chargeSpeed": 0.35,
+ "chargeSpeedPerSkill": 0.2,
+ "chargeStartHandsRatio": 0.4,
+ "stopSpeed": 0.6,
+ "stopIfManaDepleted": true,
+ "handEnterAngle": 30.0,
+ "handEnterDistance": 0.2,
+ "handExitAngle": 90.0,
+ "handExitDistance": 0.6,
+ "handCompletedDistance": 0.001,
+ "minCharge": 0.9,
+ "requireSkill": "Skill_SSJFlight",
+ "spawnEffectId": "SSJFlightAura",
+ "description": "Merge Gravity + base form to engage Super Saiyan flight."
+}

@@ -1,0 +1,57 @@
+{
+  "id": "Effect_SongOfStorms_Cast",
+  "name": "Song of Storms Cast Effect",
+  "type": "SpellEffect",
+  "description": "Massive storm erupts, revealing secrets and controlling water",
+  "particleSystems": [
+    {
+      "name": "StormExplosion",
+      "prefab": "Particles/Spells/StormExplosion",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 5.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 30.0
+    },
+    {
+      "name": "SecretReveal",
+      "prefab": "Particles/Spells/SecretReveal",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 10.0,
+      "loop": false,
+      "targetTags": ["HiddenGrotto", "FakeWall", "WaterLevel"]
+    },
+    {
+      "name": "LightningStrikes",
+      "prefab": "Particles/Spells/LightningStrikes",
+      "offset": [0, 0, 0],
+      "scale": 3.0,
+      "duration": 60.0,
+      "loop": true,
+      "interval": 3.0,
+      "chance": 0.3
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/SongOfStormsCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "thunderRoll": "Audio/Ambience/ThunderRoll",
+    "rainLoop": "Audio/Ambience/HeavyRain"
+  },
+  "visuals": {
+    "glowColor": [0.4, 0.4, 0.6, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.2, 0.4, 0.6],
+      "duration": 0.8
+    },
+    "weatherChange": {
+      "enabled": true,
+      "type": "Storm",
+      "duration": 60.0
+    }
+  }
+}

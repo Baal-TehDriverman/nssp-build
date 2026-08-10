@@ -1,0 +1,44 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_BloodBlade_Aura",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 1,
+  "name": "Bloodstone Knife aura",
+  "addressableName": "Lithosphere_BloodBlade_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticle, ThunderRoad",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Additive",
+      "effectParticleAddress": "Pilot.DBZ.Spell.VFX.Main.AroundBody.prefab",
+      "linkDestination": "Self",
+      "linkRotationType": "Self",
+      "linkScaleType": "World",
+      "playParticle": true,
+      "particleCount": 16,
+      "localScale": {
+        "x": 0.4,
+        "y": 0.4,
+        "z": 0.4
+      },
+      "mainGradient": {
+        "mainStart": {
+          "r": 0.85,
+          "g": 0.03,
+          "b": 0.04,
+          "a": 0.6
+        },
+        "mainEnd": {
+          "r": 0.9,
+          "g": 0.12,
+          "b": 0.08,
+          "a": 0.0
+        }
+      },
+      "note": "Bloodstone edge: dried blood binding, flesh-hungry"
+    }
+  ]
+}

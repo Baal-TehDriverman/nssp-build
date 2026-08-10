@@ -1,0 +1,53 @@
+{
+  "id": "Effect_SongOfStorms_Finger",
+  "name": "Song of Storms Finger Effect",
+  "type": "SpellEffect",
+  "description": "Storm particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerStormGlow",
+      "prefab": "Particles/Spells/SongOfStormsFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.6,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "MiniClouds",
+      "prefab": "Particles/Spells/MiniClouds",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    },
+    {
+      "name": "LightningFingers",
+      "prefab": "Particles/Spells/LightningFingers",
+      "offset": [0, 0, 0],
+      "scale": 0.4,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/SongOfStormsNote1",
+      "Audio/Spells/SongOfStormsNote2",
+      "Audio/Spells/SongOfStormsNote3",
+      "Audio/Spells/SongOfStormsNote4",
+      "Audio/Spells/SongOfStormsNote5",
+      "Audio/Spells/SongOfStormsNote6"
+    ],
+    "volume": 0.7,
+    "randomPitch": true,
+    "pitchRange": [0.8, 1.2]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.4, 0.4, 0.6, 0.9],
+    "trailColor": [0.5, 0.5, 0.7, 0.7]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "SSJFlight_SonicBoom",
+  "name": "Sonic Boom Dash",
+  "description": "Break the sound barrier mid-flight. Creates a shockwave that stuns enemies and clears projectiles.",
+  "type": "Spell",
+  "damage": 25,
+  "cooldown": 15,
+  "manaCost": 75,
+  "tags": ["SSJFlight", "SonicBoom", "Dash", "AOE"],
+  "customData": {
+    "requiresFlight": true,
+    "activation": "double_tap_forward_while_flying",
+    "effects": {
+      "shockwave": {
+        "radius": 10,
+        "stunDuration": 2.0,
+        "knockback": 15,
+        "clearsProjectiles": true,
+        "visualEffect": "sonic_boom_ring"
+      },
+      "dash": {
+        "speedMultiplier": 3.0,
+        "duration": 0.5,
+        "invincible": true
+      },
+      "sound": {
+        "boom": "sonic_boom_loud",
+        "trail": "mach_cone_audio"
+      }
+    },
+    "upgrades": {
+      "tier2": {
+        "name": "Mach 2",
+        "radius": 15,
+        "stunDuration": 3.0,
+        "damage": 40
+      },
+      "tier3": {
+        "name": "Light Breaker",
+        "radius": 25,
+        "stunDuration": 5.0,
+        "damage": 60,
+        "disintegratesWeakEnemies": true
+      }
+    },
+    "lore": "Only those who master flight at super-sonic speeds can shatter the air itself."
+  }
+}

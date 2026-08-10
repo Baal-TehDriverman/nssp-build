@@ -1,0 +1,44 @@
+{
+  "id": "Effect_SunsSong_Finger",
+  "name": "Sun's Song Finger Effect",
+  "type": "SpellEffect",
+  "description": "Golden sun particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerSunGlow",
+      "prefab": "Particles/Spells/SunsSongFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "SunTrails",
+      "prefab": "Particles/Spells/SunsSongFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/SunsSongNote1",
+      "Audio/Spells/SunsSongNote2",
+      "Audio/Spells/SunsSongNote3",
+      "Audio/Spells/SunsSongNote4",
+      "Audio/Spells/SunsSongNote5",
+      "Audio/Spells/SunsSongNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [1.0, 0.9, 0.3, 0.9],
+    "trailColor": [1.0, 1.0, 0.5, 0.7]
+  }
+}

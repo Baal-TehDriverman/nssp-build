@@ -1,0 +1,44 @@
+{
+  "id": "Effect_RequiemOfSpirit_Finger",
+  "name": "Requiem of Spirit Finger Effect",
+  "type": "SpellEffect",
+  "description": "Golden sand particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerSpiritGlow",
+      "prefab": "Particles/Spells/RequiemOfSpiritFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "SandTrails",
+      "prefab": "Particles/Spells/RequiemOfSpiritFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/RequiemOfSpiritNote1",
+      "Audio/Spells/RequiemOfSpiritNote2",
+      "Audio/Spells/RequiemOfSpiritNote3",
+      "Audio/Spells/RequiemOfSpiritNote4",
+      "Audio/Spells/RequiemOfSpiritNote5",
+      "Audio/Spells/RequiemOfSpiritNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.9, 0.7, 0.3, 0.9],
+    "trailColor": [1.0, 0.8, 0.4, 0.7]
+  }
+}

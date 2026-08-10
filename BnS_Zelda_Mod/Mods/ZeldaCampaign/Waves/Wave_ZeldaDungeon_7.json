@@ -1,0 +1,64 @@
+{
+  "id": "Wave_ZeldaDungeon_7",
+  "name": "Shadow Temple: The House of the Dead",
+  "description": "Beneath Kakariko Graveyard lies a temple of torture and death. Face Bongo Bongo, the phantom shadow beast.",
+  "difficulty": "Master",
+  "recommendedLevel": 55,
+  "tags": ["ZeldaCampaign", "ShadowTemple", "AdultEra", "Shadow", "Undead", "Horror", "InvisibleEnemies"],
+  "enemies": [
+    {
+      "type": "ReDead",
+      "count": 8,
+      "modifiers": ["ParalyzingScream", "DrainLife", "Slow", "SunSongStuns"]
+    },
+    {
+      "type": "Gibdo",
+      "count": 6,
+      "modifiers": ["MummyWrap", "FireWeakness", "DrainLife", "SunSongStuns"]
+    },
+    {
+      "type": "DeadHand",
+      "count": 2,
+      "modifiers": ["MiniBoss", "GroundHands", "BiteAttack", "InvisibleBody", "LensOfTruthReveals"]
+    },
+    {
+      "type": "Stalfos",
+      "count": 4,
+      "modifiers": ["SwordShield", "Parry", "JumpAttack", "WeakPointBack", "BombKnocksDown"]
+    },
+    {
+      "type": "BongoBongo",
+      "count": 1,
+      "modifiers": ["Boss", "PhantomDrummer", "InvisibleBody", "TwoHands", "HeadWeakPoint", "LensOfTruthRequired", "HoverBootsRequired", "DrumStage"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "Medallion_Shadow",
+      "HoverBoots",
+      "ShadowMedallion"
+    ],
+    "chance": [
+      { "item": "Fairy", "probability": 0.4, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.15 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 3 },
+      { "item": "ShadowMedallionFragment", "probability": 0.2, "count": 3 }
+    ],
+    "experience": 80000,
+    "rupees": 5000
+  },
+  "environment": {
+    "map": "ShadowTemple",
+    "music": "ShadowTemple_Dungeon",
+    "timeLimit": 2700,
+    "specialRules": [
+      "LensOfTruthRequired",
+      "HoverBootsRequiredForBongoBongo",
+      "InvisiblePlatformsAndEnemies",
+      "SunSongStunsReDeads",
+      "BongoBongoDrumStageCollapses",
+      "NoLockOnInvisibleEnemies"
+    ]
+  },
+  "lore": "The Shadow Temple, hidden beneath the graveyard, was built by the Sheikah as a prison for Hyrule's darkest secrets. Bongo Bongo, a phantom sealed long ago, has been released by Ganondorf's power. The Lens of Truth and Hover Boots are essential to navigate this realm of illusion."
+}

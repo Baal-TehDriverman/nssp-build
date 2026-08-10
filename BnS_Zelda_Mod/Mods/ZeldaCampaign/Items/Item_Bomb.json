@@ -1,0 +1,20 @@
+{
+  "id": "Bomb",
+  "name": "Bomb",
+  "type": "Consumable",
+  "description": "Explodes after short fuse. Blows up walls and enemies.",
+  "damage": 3,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Consumable",
+    "Explosive"
+  ],
+  "customData": {
+    "fuseTime": 3,
+    "explosionRadius": 3
+  }
+}

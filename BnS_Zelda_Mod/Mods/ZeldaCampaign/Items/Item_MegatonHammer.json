@@ -1,0 +1,22 @@
+{
+  "id": "MegatonHammer",
+  "name": "Megaton Hammer",
+  "type": "Tool",
+  "description": "Smashes heavy switches and enemies.",
+  "damage": 3,
+  "defense": 1,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Tool",
+    "Weapon",
+    "KeyItem",
+    "Heavy"
+  ],
+  "customData": {
+    "smashesSwitches": true,
+    "stunsEnemies": true
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "DungeonPuzzles_DekuTree",
+  "name": "Great Deku Tree Puzzles",
+  "dungeon": "DekuTree",
+  "era": "Child",
+  "difficulty": "Tutorial",
+  "puzzles": [
+    {
+      "id": "DekuTree_1_LobbyWeb",
+      "name": "Main Lobby Spider Web",
+      "type": "Torch",
+      "description": "Burn the giant spider web blocking the main path using a Deku Stick lit from the nearby torch.",
+      "location": "Main Lobby (1F)",
+      "requiredItems": ["DekuStick"],
+      "steps": [
+        "Light Deku Stick at nearby torch",
+        "Run to spider web before stick burns out",
+        "Attack web with lit stick"
+      ],
+      "reward": "Path to Basement 1",
+      "hints": ["Navi: \"That web looks flammable!\"", "Torch particle effect points toward web"]
+    },
+    {
+      "id": "DekuTree_2_CompassChest",
+      "name": "Compass Room Puzzle",
+      "type": "Switch",
+      "description": "Hit the crystal switch with the slingshot to lower the platform and access the compass chest.",
+      "location": "Basement 1 - Compass Room",
+      "requiredItems": ["Slingshot"],
+      "steps": [
+        "Target crystal switch with slingshot",
+        "Shoot switch - turns from blue to orange",
+        "Platform lowers allowing access"
+      ],
+      "reward": "Dungeon Map",
+      "hints": ["Crystal switch glints when targeted"]
+    },
+    {
+      "id": "DekuTree_3_BasementWeb",
+      "name": "Basement Spider Web",
+      "type": "Torch",
+      "description": "Burn the web covering the door to the Queen Gohma arena. Must carry lit Deku Stick through water.",
+      "location": "Basement 1 - Near Boss Door",
+      "requiredItems": ["DekuStick"],
+      "steps": [
+        "Light Deku Stick at torch in previous room",
+        "Quickly run through shallow water (stick won't extinguish in shallow water)",
+        "Burn web on boss door"
+      ],
+      "reward": "Access to Queen Gohma",
+      "hints": ["Shallow water doesn't extinguish fire", "Web pulses with red glow"]
+    },
+    {
+      "id": "DekuTree_4_GohmaEye",
+      "name": "Queen Gohma Eye Weak Point",
+      "type": "Target",
+      "description": "Shoot Gohma's eye with slingshot when it turns red to stun her, then attack with sword.",
+      "location": "Queen Gohma Arena",
+      "requiredItems": ["Slingshot", "KokiriSword"],
+      "steps": [
+        "Wait for Gohma to climb ceiling",
+        "Watch for eye to turn red",
+        "Shoot eye with slingshot",
+        "Gohma falls - attack with sword",
+        "Repeat 3 times"
+      ],
+      "reward": "Kokiri Emerald, Heart Container",
+      "hints": ["Eye glows bright red when vulnerable", "Navi: \"Aim for the eye!\""]
+    },
+    {
+      "id": "DekuTree_5_SecretGrotto",
+      "name": "Hidden Grotto Behind Web",
+      "type": "Torch",
+      "description": "Optional: Burn web in side room to find Gold Skulltula and recovery hearts.",
+      "location": "Basement 1 - Side Chamber",
+      "requiredItems": ["DekuStick"],
+      "steps": [
+        "Light Deku Stick",
+        "Enter side chamber",
+        "Burn web on wall",
+        "Enter grotto"
+      ],
+      "reward": "Gold Skulltula Token, Recovery Hearts",
+      "optional": true
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Queen Gohma",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Ceiling Crawler",
+        "mechanic": "Gohma crawls on ceiling, drops eggs that hatch into Baby Gohma",
+        "puzzle": "Shoot red eye with slingshot when exposed",
+        "vulnerability": "Eye turns red before charging"
+      },
+      {
+        "phase": 2,
+        "name": "Ground Charge",
+        "mechanic": "Gohma charges across floor, eye protected",
+        "puzzle": "Dodge charge, wait for eye to open after crash",
+        "vulnerability": "Eye opens briefly after wall crash"
+      },
+      {
+        "phase": 3,
+        "name": "Egg Laying Frenzy",
+        "mechanic": "Lays multiple eggs rapidly, Baby Gohma swarm",
+        "puzzle": "Clear babies, shoot eye during lay animation",
+        "vulnerability": "Eye stays red longer during egg laying"
+      }
+    ]
+  }
+}

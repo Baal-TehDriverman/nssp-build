@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_ColtNavy",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere Colt Navy Revolver",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "Black-powder obsidian cylinder",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_ColtNavy",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_ColtNavy_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 0.08,
+        "g": 0.07,
+        "b": 0.1,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 0.55,
+        "g": 0.05,
+        "b": 0.05,
+        "a": 1.0
+      },
+      "materialId": "obsidian"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

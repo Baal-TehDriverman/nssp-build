@@ -1,0 +1,44 @@
+{
+  "id": "Effect_NocturneOfShadow_Finger",
+  "name": "Nocturne of Shadow Finger Effect",
+  "type": "SpellEffect",
+  "description": "Shadow particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerShadowGlow",
+      "prefab": "Particles/Spells/NocturneOfShadowFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "ShadowTrails",
+      "prefab": "Particles/Spells/NocturneOfShadowFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/NocturneOfShadowNote1",
+      "Audio/Spells/NocturneOfShadowNote2",
+      "Audio/Spells/NocturneOfShadowNote3",
+      "Audio/Spells/NocturneOfShadowNote4",
+      "Audio/Spells/NocturneOfShadowNote5",
+      "Audio/Spells/NocturneOfShadowNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.8, 1.2]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.3, 0.0, 0.4, 0.9],
+    "trailColor": [0.4, 0.1, 0.5, 0.7]
+  }
+}

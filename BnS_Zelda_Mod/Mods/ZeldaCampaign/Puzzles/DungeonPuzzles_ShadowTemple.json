@@ -1,0 +1,139 @@
+{
+  "id": "DungeonPuzzles_ShadowTemple",
+  "name": "Shadow Temple Puzzles",
+  "dungeon": "ShadowTemple",
+  "era": "Adult",
+  "difficulty": "Master",
+  "puzzles": [
+    {
+      "id": "ShadowTemple_1_InvisiblePlatforms",
+      "name": "Invisible Platform Path",
+      "type": "ShadowIllusion",
+      "description": "Cross a seemingly empty chasm using invisible platforms only visible with Lens of Truth.",
+      "location": "Main Hall - Chasm Crossing",
+      "requiredItems": ["LensOfTruth", "HoverBoots"],
+      "steps": [
+        "Equip Lens of Truth",
+        "Platforms appear as translucent blue squares",
+        "Jump across platforms",
+        "Hover Boots help with gaps",
+        "Without Lens: leap of faith"
+      ],
+      "reward": "Access to deeper temple",
+      "hints": ["Sheik: \"Truth reveals the path...\"", "Faint shimmer without Lens"]
+    },
+    {
+      "id": "ShadowTemple_2_FakeWalls",
+      "name": "Fake Wall Maze",
+      "type": "ShadowIllusion",
+      "description": "Navigate maze where some walls are illusions. Lens of Truth reveals passable walls.",
+      "location": "Maze Corridors (B1)",
+      "requiredItems": ["LensOfTruth"],
+      "steps": [
+        "Equip Lens of Truth",
+        "Fake walls become translucent",
+        "Walk through fake walls",
+        "Real walls remain solid",
+        "Find correct path to switch"
+      ],
+      "reward": "Progress, small keys",
+      "hints": ["Fake walls don't cast shadows", "Lens shows them as ghostly"]
+    },
+    {
+      "id": "ShadowTemple_3_DeadHand",
+      "name": "Dead Hand Encounter",
+      "type": "ShadowIllusion",
+      "description": "Defeat Dead Hand - invisible body with visible hands. Lens of Truth reveals body.",
+      "location": "Dead Hand Room (B1)",
+      "requiredItems": ["LensOfTruth", "Hookshot"],
+      "steps": [
+        "Hands grab from floor - avoid",
+        "Equip Lens of Truth",
+        "Dead Hand body visible",
+        "Hookshot body to stun",
+        "Attack with sword",
+        "Repeat until defeated"
+      ],
+      "reward": "Hover Boots",
+      "hints": ["Hands retreat when body hit", "Lens essential for targeting"]
+    },
+    {
+      "id": "ShadowTemple_4_SunSongReDeads",
+      "name": "ReDead Sun Song Puzzle",
+      "type": "MusicPuzzle",
+      "description": "Stun ReDeads and Gibdos with Sun's Song to pass safely or attack.",
+      "location": "ReDead Corridors",
+      "requiredItems": ["OcarinaOfTime", "SunsSong"],
+      "steps": [
+        "Encounter ReDead/Gibdo",
+        "Play Sun's Song",
+        "Enemies stunned for 8 seconds",
+        "Run past or attack",
+        "Song also freezes time of day"
+      ],
+      "reward": "Safe passage",
+      "hints": ["ReDeads paralyze with scream", "Sun's Song particles stun them"]
+    },
+    {
+      "id": "ShadowTemple_5_SpikeTrapTiming",
+      "name": "Spike Trap Corridor",
+      "type": "Switch",
+      "description": "Navigate corridor with moving spike traps. Timing and Hover Boots required.",
+      "location": "Spike Trap Hallway (B2)",
+      "requiredItems": ["HoverBoots", "LensOfTruth"],
+      "steps": [
+        "Watch spike pattern",
+        "Hover Boots glide over spikes",
+        "Lens reveals hidden spikes",
+        "Reach switch at end",
+        "Hit switch to disable traps"
+      ],
+      "reward": "Access to Bongo Bongo area",
+      "hints": ["Spikes follow rhythm", "Hover Boots ignore floor spikes"]
+    },
+    {
+      "id": "ShadowTemple_6_BongoBongoDrum",
+      "name": "Bongo Bongo Drum Stage",
+      "type": "ShadowIllusion",
+      "description": "Fight Bongo Bongo on collapsing drum stage. Hover Boots essential. Lens reveals invisible body.",
+      "location": "Bongo Bongo Arena (B3)",
+      "requiredItems": ["HoverBoots", "LensOfTruth", "Longshot"],
+      "steps": [
+        "Stage is giant drum - collapses when hit",
+        "Equip Hover Boots - float above drum",
+        "Equip Lens of Truth - see invisible body",
+        "Bongo Bongo has two hands + invisible body",
+        "Longshot hands to stun",
+        "Attack body when both hands stunned"
+      ],
+      "reward": "Shadow Medallion, Heart Container",
+      "hints": ["Sheik: \"The drum beats for the dead...\"", "Hands drum on stage - body floats above"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Bongo Bongo",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Hand Drumming",
+        "mechanic": "Two giant hands drum on stage, creating shockwaves. Body invisible above.",
+        "puzzle": "Longshot hands to stun them simultaneously, then attack body",
+        "vulnerability": "Both hands stunned = body exposed"
+      },
+      {
+        "phase": 2,
+        "name": "Stage Collapse",
+        "mechanic": "Drum stage breaks into floating platforms",
+        "puzzle": "Hover Boots essential - float between platforms, Longshot hands",
+        "vulnerability": "Same - both hands stunned"
+      },
+      {
+        "phase": 3,
+        "name": "Frenzy",
+        "mechanic": "Low health - hands move faster, body teleports",
+        "puzzle": "Quick Longshots, Lens essential for tracking body",
+        "vulnerability": "Body teleport has tell - screen distortion"
+      }
+    ]
+  }
+}

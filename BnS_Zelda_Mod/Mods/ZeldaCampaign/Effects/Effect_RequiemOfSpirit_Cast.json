@@ -1,0 +1,62 @@
+{
+  "id": "Effect_RequiemOfSpirit_Cast",
+  "name": "Requiem of Spirit Cast Effect",
+  "type": "SpellEffect",
+  "description": "Warp to Spirit Temple, grants spirit form and time shift",
+  "particleSystems": [
+    {
+      "name": "SpiritWarp",
+      "prefab": "Particles/Spells/RequiemSpiritWarp",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 10.0
+    },
+    {
+      "name": "SpiritPortalOpen",
+      "prefab": "Particles/Spells/SpiritPortalOpen",
+      "offset": [0, 0, 5],
+      "scale": 4.0,
+      "duration": 5.0,
+      "loop": false
+    },
+    {
+      "name": "SpiritFormAura",
+      "prefab": "Particles/Spells/SpiritFormAura",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 30.0,
+      "loop": false
+    },
+    {
+      "name": "TimeShiftParticles",
+      "prefab": "Particles/Spells/TimeShiftParticles",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 5.0,
+      "loop": false
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/RequiemOfSpiritCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "warpSound": "Audio/Spells/SpiritWarp",
+    "desertAmbienceFade": "Audio/Ambience/DesertWind"
+  },
+  "visuals": {
+    "glowColor": [0.9, 0.7, 0.3, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 0.8, 0.4, 0.5],
+      "duration": 0.5
+    },
+    "sceneTransition": {
+      "enabled": true,
+      "targetScene": "Zelda_SpiritTemple",
+      "transitionType": "SpiritWarp"
+    }
+  }
+}

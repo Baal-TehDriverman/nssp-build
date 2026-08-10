@@ -1,0 +1,20 @@
+{
+  "id": "FireMedallion",
+  "name": "Fire Medallion",
+  "type": "Medallion",
+  "description": "Medallion of the Fire Sage.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 500,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Medallion"
+  ],
+  "customData": {
+    "sage": "Darunia",
+    "element": "Fire"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "HeartContainer",
+  "name": "Heart Container",
+  "type": "Upgrade",
+  "description": "Increases max health by 1 heart.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 200,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Upgrade",
+    "ChestLoot"
+  ],
+  "customData": {
+    "heartContainers": 1
+  }
+}

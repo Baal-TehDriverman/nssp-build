@@ -1,0 +1,20 @@
+{
+  "id": "Hookshot",
+  "name": "Hookshot",
+  "type": "Tool",
+  "description": "Grapple to surfaces and pull yourself or items.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Tool",
+    "KeyItem"
+  ],
+  "customData": {
+    "range": 15,
+    "pullsPlayer": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_Katanas",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere HankY's Katanas",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "Multi-iris opal steel - folded light",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_Katanas",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_Katanas_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 0.85,
+        "g": 0.9,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 1.0,
+        "g": 0.85,
+        "b": 0.5,
+        "a": 1.0
+      },
+      "materialId": "opal"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

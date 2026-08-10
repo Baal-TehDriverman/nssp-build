@@ -1,0 +1,60 @@
+{
+  "id": "Effect_PreludeOfLight_Ready",
+  "name": "Prelude of Light Ready Effect",
+  "type": "SpellEffect",
+  "description": "Sacred light pulses, ready to open Temple of Time",
+  "particleSystems": [
+    {
+      "name": "LightRays",
+      "prefab": "Particles/Spells/PreludeLightReadyRays",
+      "offset": [0, 0.5, 0],
+      "scale": 3.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "HolyParticles",
+      "prefab": "Particles/Spells/PreludeHolyReadyParticles",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 60
+    },
+    {
+      "name": "LightPortal",
+      "prefab": "Particles/Spells/LightPortal",
+      "offset": [0, 0, 3],
+      "scale": 2.5,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 5
+    },
+    {
+      "name": "TriforceSymbol",
+      "prefab": "Particles/Spells/TriforceSymbolLarge",
+      "offset": [0, 0.5, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 2
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/PreludeOfLightReady",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "sacredAmbience": "Audio/Ambience/SacredRealm"
+  },
+  "visuals": {
+    "glowColor": [1.0, 1.0, 0.9, 1.0],
+    "pulseSpeed": 2.0,
+    "pulseIntensity": 0.5,
+    "holyAura": true,
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 1.0, 0.9, 0.4],
+      "duration": 0.3
+    }
+  }
+}

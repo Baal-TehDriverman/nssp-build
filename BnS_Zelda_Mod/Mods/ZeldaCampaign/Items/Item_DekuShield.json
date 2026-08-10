@@ -1,0 +1,16 @@
+{
+  "id": "DekuShield",
+  "name": "Deku Shield",
+  "type": "Shield",
+  "description": "Wooden shield. Burns easily.",
+  "damage": 0,
+  "defense": 1,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Shield",
+    "Wooden"
+  ]
+}

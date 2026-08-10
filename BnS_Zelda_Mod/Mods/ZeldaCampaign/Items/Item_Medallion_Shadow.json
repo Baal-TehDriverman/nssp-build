@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Shadow",
+  "name": "Shadow Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Shadow Sage, Impa. Proof of awakening the Shadow Temple.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Shadow", "Sage"],
+  "customData": {
+    "sage": "Impa",
+    "element": "Shadow",
+    "temple": "ShadowTemple",
+    "lore": "Impa, the Sage of Shadow, bestows this medallion upon those who conquer the Shadow Temple. It holds the power of the silent shadows."
+  }
+}

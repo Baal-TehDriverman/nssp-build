@@ -1,0 +1,62 @@
+{
+  "id": "Wave_ZeldaDungeon_4",
+  "name": "Forest Temple: The Twisted Woods",
+  "description": "The Sacred Forest Meadow hides a twisted mansion. Face Phantom Ganon, the master of deception.",
+  "difficulty": "Adept",
+  "recommendedLevel": 35,
+  "tags": ["ZeldaCampaign", "ForestTemple", "AdultEra", "FirstAdultDungeon", "Wind", "Ghost"],
+  "enemies": [
+    {
+      "type": "Wolfos",
+      "count": 6,
+      "modifiers": ["PackHunter", "Dodge", "HowlBuff"]
+    },
+    {
+      "type": "Stalfos",
+      "count": 4,
+      "modifiers": ["SwordShield", "Parry", "JumpAttack", "WeakPointBack"]
+    },
+    {
+      "type": "Wallmaster",
+      "count": 3,
+      "modifiers": ["CeilingDrop", "WarpPlayer", "ShadowForm"]
+    },
+    {
+      "type": "Floormaster",
+      "count": 3,
+      "modifiers": ["SplitsOnHit", "DragsPlayer", "ShadowForm"]
+    },
+    {
+      "type": "PhantomGanon",
+      "count": 1,
+      "modifiers": ["Boss", "Paintings", "EnergyBall", "SwordFight", "Teleports", "BowRequired", "HorsebackPhase"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "Medallion_Forest",
+      "FairyBow",
+      "ForestMedallion"
+    ],
+    "chance": [
+      { "item": "Fairy", "probability": 0.4, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.15 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 2 },
+      { "item": "ForestMedallionFragment", "probability": 0.2, "count": 3 }
+    ],
+    "experience": 35000,
+    "rupees": 2000
+  },
+  "environment": {
+    "map": "ForestTemple",
+    "music": "ForestTemple_Dungeon",
+    "timeLimit": 1800,
+    "specialRules": [
+      "BowRequiredForPhantomGanon",
+      "TwistedCorridorsChangeLayout",
+      "PoeSistersPuzzle",
+      "PhantomGanonPaintings"
+    ]
+  },
+  "lore": "The Forest Temple, once a sacred site, has been corrupted by Ganondorf's influence. Phantom Ganon, a creation of dark magic, awaits in the twisted halls. The Fairy Bow is key to revealing his true form."
+}

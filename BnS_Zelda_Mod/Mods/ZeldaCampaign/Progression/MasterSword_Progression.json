@@ -1,0 +1,137 @@
+{
+  "id": "MasterSword_Progression",
+  "name": "Master Sword Progression Tracker",
+  "type": "WeaponProgression",
+  "description": "Tracks the Master Sword's evolution from Kokiri Sword to Master Sword to True Master Sword.",
+  "version": "1.0.0",
+  "forms": [
+    {
+      "id": "KokiriSword",
+      "name": "Kokiri Sword",
+      "era": "Child",
+      "damage": 1,
+      "beamAttack": false,
+      "sealingPower": false,
+      "timeTravel": false,
+      "requirements": {
+        "quest": "GreatDekuTree",
+        "items": [],
+        "flags": ["childEra.started"]
+      },
+      "unlocks": ["DodongosCavern"],
+      "lore": "The hero's first blade. Gifted by the Great Deku Tree. Small but mighty in a child's hands."
+    },
+    {
+      "id": "MasterSword",
+      "name": "Master Sword",
+      "era": "Adult",
+      "damage": 2,
+      "beamAttack": true,
+      "beamCondition": "health >= maxHealth",
+      "beamDamage": 2,
+      "beamRange": 8,
+      "sealingPower": true,
+      "timeTravel": true,
+      "requirements": {
+        "quest": "DoorOfTime",
+        "items": [
+          "SpiritualStone_Kokiri",
+          "SpiritualStone_Goron",
+          "SpiritualStone_Zora",
+          "OcarinaOfTime"
+        ],
+        "flags": [
+          "childEra.dekuTreeCompleted",
+          "childEra.dodongosCavernCompleted",
+          "childEra.jabuJabusBellyCompleted",
+          "childEra.doorOfTimeOpened"
+        ]
+      },
+      "unlocks": [
+        "AdultEra",
+        "TimeTravel",
+        "ForestTemple",
+        "FireTemple",
+        "WaterTemple",
+        "ShadowTemple",
+        "SpiritTemple"
+      ],
+      "lore": "The Blade of Evil's Bane. Forged by Hylia, tempered in Sacred Flames. Rests in Pedestal of Time. Only the Hero of Time with three Spiritual Stones and Ocarina of Time can draw it."
+    },
+    {
+      "id": "MasterSword_True",
+      "name": "Master Sword (True Power)",
+      "era": "Adult",
+      "damage": 45,
+      "beamAttack": true,
+      "beamCondition": "always",
+      "beamDamage": 30,
+      "beamRange": 15,
+      "sealingPower": true,
+      "timeTravel": true,
+      "infiniteDurability": true,
+      "requirements": {
+        "quest": "Wave_ZeldaDungeon_9",
+        "items": [
+          "Medallion_Forest",
+          "Medallion_Fire",
+          "Medallion_Water",
+          "Medallion_Shadow",
+          "Medallion_Spirit",
+          "Medallion_Light",
+          "LightArrows"
+        ],
+        "flags": [
+          "adultEra.forestTempleCompleted",
+          "adultEra.fireTempleCompleted",
+          "adultEra.waterTempleCompleted",
+          "adultEra.shadowTempleCompleted",
+          "adultEra.spiritTempleCompleted",
+          "adultEra.lightMedallionObtained",
+          "adultEra.ganondorfDefeated"
+        ]
+      },
+      "unlocks": [
+        "TrueEnding",
+        "NewGamePlus",
+        "GanonFight"
+      ],
+      "lore": "The Master Sword fully awakened by the hero who proved Courage, Wisdom, and Power. Bathed in the light of all Seven Sages. Only the true Hero of Time can wield its true power. Beams fire at any health. Infinite durability. Seals evil permanently."
+    }
+  ],
+  "progressionRewards": {
+    "KokiriSword_to_MasterSword": {
+      "experience": 15000,
+      "rupees": 1000,
+      "unlocks": ["AdultEra", "TimeTravel", "AllAdultTemples"]
+    },
+    "MasterSword_to_TrueMasterSword": {
+      "experience": 50000,
+      "rupees": 10000,
+      "unlocks": ["TrueEnding", "NewGamePlus", "GanonFight"]
+    }
+  },
+  "visualEvolution": {
+    "KokiriSword": {
+      "model": "KokiriSword",
+      "glow": "none",
+      "particles": "none",
+      "sound": "sword_swing_light"
+    },
+    "MasterSword": {
+      "model": "MasterSword",
+      "glow": "blue_holy",
+      "particles": "holy_sparkles",
+      "sound": "master_sword_hum",
+      "beamEffect": "holy_beam"
+    },
+    "MasterSword_True": {
+      "model": "MasterSword_True",
+      "glow": "golden_holy_intense",
+      "particles": "sage_light_union",
+      "sound": "master_sword_true_power",
+      "beamEffect": "true_master_beam",
+      "trailEffect": "sage_light_trail"
+    }
+  }
+}

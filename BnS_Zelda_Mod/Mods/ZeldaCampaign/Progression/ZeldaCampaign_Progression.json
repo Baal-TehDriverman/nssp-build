@@ -1,0 +1,182 @@
+{
+  "id": "ZeldaCampaign_Progression",
+  "name": "Zelda Campaign Progression System",
+  "type": "CampaignProgression",
+  "description": "Tracks player progress through the Zelda Campaign: Spiritual Stones, Sage Medallions, Temple unlocks, and story flags.",
+  "version": "1.0.0",
+  "progressionFlags": {
+    "childEra": {
+      "started": false,
+      "dekuTreeCompleted": false,
+      "dodongosCavernCompleted": false,
+      "jabuJabusBellyCompleted": false,
+      "spiritualStonesCollected": 0,
+      "doorOfTimeOpened": false,
+      "masterSwordPulled": false,
+      "timeTravelUnlocked": false
+    },
+    "adultEra": {
+      "started": false,
+      "forestTempleCompleted": false,
+      "fireTempleCompleted": false,
+      "waterTempleCompleted": false,
+      "shadowTempleCompleted": false,
+      "spiritTempleCompleted": false,
+      "medallionsCollected": 0,
+      "lightMedallionObtained": false,
+      "ganonsCastleUnlocked": false,
+      "ganondorfDefeated": false,
+      "ganonDefeated": false,
+      "triforceObtained": false
+    }
+  },
+  "templeUnlocks": {
+    "DekuTree": {
+      "requiredFlags": [],
+      "requiredItems": [],
+      "era": "Child",
+      "order": 1,
+      "warpSong": null
+    },
+    "DodongosCavern": {
+      "requiredFlags": ["childEra.dekuTreeCompleted"],
+      "requiredItems": [],
+      "era": "Child",
+      "order": 2,
+      "warpSong": null
+    },
+    "JabuJabusBelly": {
+      "requiredFlags": ["childEra.dodongosCavernCompleted"],
+      "requiredItems": [],
+      "era": "Child",
+      "order": 3,
+      "warpSong": null
+    },
+    "ForestTemple": {
+      "requiredFlags": ["adultEra.started"],
+      "requiredItems": ["Medallion_Forest"],
+      "era": "Adult",
+      "order": 4,
+      "warpSong": "MinuetOfForest"
+    },
+    "FireTemple": {
+      "requiredFlags": ["adultEra.forestTempleCompleted"],
+      "requiredItems": ["Medallion_Fire"],
+      "era": "Adult",
+      "order": 5,
+      "warpSong": "BoleroOfFire"
+    },
+    "WaterTemple": {
+      "requiredFlags": ["adultEra.fireTempleCompleted"],
+      "requiredItems": ["Medallion_Water", "IronBoots", "ZoraTunic"],
+      "era": "Adult",
+      "order": 6,
+      "warpSong": "SerenadeOfWater"
+    },
+    "ShadowTemple": {
+      "requiredFlags": ["adultEra.waterTempleCompleted"],
+      "requiredItems": ["Medallion_Shadow", "HoverBoots", "LensOfTruth"],
+      "era": "Adult",
+      "order": 7,
+      "warpSong": "NocturneOfShadow"
+    },
+    "SpiritTemple": {
+      "requiredFlags": ["adultEra.shadowTempleCompleted"],
+      "requiredItems": ["Medallion_Spirit", "SilverGauntlets", "MirrorShield"],
+      "era": "Adult",
+      "order": 8,
+      "warpSong": "RequiemOfSpirit"
+    },
+    "GanonsCastle": {
+      "requiredFlags": [
+        "adultEra.spiritTempleCompleted",
+        "adultEra.medallionsCollected >= 6"
+      ],
+      "requiredItems": [
+        "Medallion_Forest",
+        "Medallion_Fire",
+        "Medallion_Water",
+        "Medallion_Shadow",
+        "Medallion_Spirit",
+        "Medallion_Light"
+      ],
+      "era": "Adult",
+      "order": 9,
+      "warpSong": "PreludeOfLight"
+    }
+  },
+  "spiritualStones": [
+    "SpiritualStone_Kokiri",
+    "SpiritualStone_Goron",
+    "SpiritualStone_Zora"
+  ],
+  "sageMedallions": [
+    "Medallion_Forest",
+    "Medallion_Fire",
+    "Medallion_Water",
+    "Medallion_Shadow",
+    "Medallion_Spirit",
+    "Medallion_Light"
+  ],
+  "keyItemsProgression": [
+    "KokiriSword",
+    "MasterSword",
+    "MasterSword_True",
+    "DekuShield",
+    "HylianShield",
+    "MirrorShield",
+    "Hookshot",
+    "Longshot",
+    "Boomerang",
+    "Bow",
+    "FireArrows",
+    "IceArrows",
+    "LightArrows",
+    "BombBag",
+    "Quiver",
+    "Wallet",
+    "GoronTunic",
+    "ZoraTunic",
+    "IronBoots",
+    "HoverBoots",
+    "SilverGauntlets",
+    "GoldenGauntlets",
+    "LensOfTruth",
+    "MegatonHammer",
+    "FaroresWind",
+    "DinFire",
+    "NayrusLove"
+  ],
+  "rewards": {
+    "spiritualStone": {
+      "experience": 5000,
+      "rupees": 200,
+      "unlocks": ["DoorOfTime"]
+    },
+    "medallion": {
+      "experience": 10000,
+      "rupees": 500,
+      "unlocks": ["NextTemple"]
+    },
+    "masterSword": {
+      "experience": 15000,
+      "rupees": 1000,
+      "unlocks": ["AdultEra", "TimeTravel"]
+    },
+    "masterSwordTrue": {
+      "experience": 50000,
+      "rupees": 10000,
+      "unlocks": ["TrueEnding"]
+    },
+    "ganondorfDefeated": {
+      "experience": 100000,
+      "rupees": 50000,
+      "unlocks": ["GanonFight"]
+    },
+    "ganonDefeated": {
+      "experience": 200000,
+      "rupees": 100000,
+      "unlocks": ["TrueEnding", "NewGamePlus"]
+    }
+  }
+}

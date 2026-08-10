@@ -1,0 +1,185 @@
+{
+  "id": "DungeonPuzzles_GanonsCastle",
+  "name": "Ganon's Castle Puzzles",
+  "dungeon": "GanonsCastle",
+  "era": "Adult",
+  "difficulty": "Master",
+  "puzzles": [
+    {
+      "id": "GanonsCastle_1_ForestBarrier",
+      "name": "Forest Barrier",
+      "type": "MusicPuzzle",
+      "description": "Break the Forest Barrier using the Forest Medallion's power. Navigate wind maze.",
+      "location": "Forest Trial",
+      "requiredItems": ["Medallion_Forest", "Hookshot", "FairyBow"],
+      "steps": [
+        "Enter Forest Barrier portal",
+        "Wind pushes player - use Hookshot to anchor",
+        "Shoot eye switches with Bow",
+        "Navigate to barrier core",
+        "Forest Medallion resonates - barrier breaks"
+      ],
+      "reward": "Forest Barrier cleared",
+      "hints": ["Wind pattern predictable", "Medallion glows near core"]
+    },
+    {
+      "id": "GanonsCastle_2_FireBarrier",
+      "name": "Fire Barrier",
+      "type": "Torch",
+      "description": "Break the Fire Barrier using the Fire Medallion. Light torches in sequence.",
+      "location": "Fire Trial",
+      "requiredItems": ["Medallion_Fire", "FireArrow", "DinsFire", "GoronTunic", "MegatonHammer"],
+      "steps": [
+        "Enter Fire Barrier portal",
+        "Light 5 torches in order with Fire Arrows/Din's Fire",
+        "Megaton Hammer hits rusted switches",
+        "Goron Tunic for lava areas",
+        "Fire Medallion resonates - barrier breaks"
+      ],
+      "reward": "Fire Barrier cleared",
+      "hints": ["Torch sequence shown on wall mural", "Din's Fire lights multiple"]
+    },
+    {
+      "id": "GanonsCastle_3_WaterBarrier",
+      "name": "Water Barrier",
+      "type": "WaterLevel",
+      "description": "Break the Water Barrier using the Water Medallion. Water level puzzle with ice.",
+      "location": "Water Trial",
+      "requiredItems": ["Medallion_Water", "IronBoots", "ZoraTunic", "IceArrow", "Longshot"],
+      "steps": [
+        "Enter Water Barrier portal",
+        "Raise/lower water with switches",
+        "Freeze waterfalls with Ice Arrows to climb",
+        "Iron Boots for underwater switches",
+        "Water Medallion resonates - barrier breaks"
+      ],
+      "reward": "Water Barrier cleared",
+      "hints": ["Ice Arrows create platforms", "Water Medallion pulses near core"]
+    },
+    {
+      "id": "GanonsCastle_4_ShadowBarrier",
+      "name": "Shadow Barrier",
+      "type": "ShadowIllusion",
+      "description": "Break the Shadow Barrier using the Shadow Medallion. Invisible maze with illusions.",
+      "location": "Shadow Trial",
+      "requiredItems": ["Medallion_Shadow", "LensOfTruth", "HoverBoots", "Hookshot"],
+      "steps": [
+        "Enter Shadow Barrier portal",
+        "Lens of Truth essential - invisible paths",
+        "Hover Boots cross false floors",
+        "Navigate illusion maze",
+        "Shadow Medallion resonates - barrier breaks"
+      ],
+      "reward": "Shadow Barrier cleared",
+      "hints": ["Truth reveals the way", "Fake walls, real floors"]
+    },
+    {
+      "id": "GanonsCastle_5_SpiritBarrier",
+      "name": "Spirit Barrier",
+      "type": "DualEra",
+      "description": "Break the Spirit Barrier using the Spirit Medallion. Time-swap puzzle.",
+      "location": "Spirit Trial",
+      "requiredItems": ["Medallion_Spirit", "MirrorShield", "SilverGauntlets", "RequiemOfSpirit"],
+      "steps": [
+        "Enter Spirit Barrier portal",
+        "Switch between Child/Adult with Requiem",
+        "Child: small passages, Silver Gauntlets",
+        "Adult: Mirror Shield reflects beams",
+        "Spirit Medallion resonates - barrier breaks"
+      ],
+      "reward": "Spirit Barrier cleared",
+      "hints": ["Two eras, one solution", "Spirit transcends time"]
+    },
+    {
+      "id": "GanonsCastle_6_LightBarrier",
+      "name": "Light Barrier",
+      "type": "LaserMirror",
+      "description": "Break the Light Barrier using the Light Medallion. Mirror puzzle with Light Arrows.",
+      "location": "Light Trial",
+      "requiredItems": ["Medallion_Light", "MirrorShield", "LightArrows", "Bow"],
+      "steps": [
+        "Enter Light Barrier portal",
+        "Reflect light beams with Mirror Shield",
+        "Hit all prism targets",
+        "Light Arrows pierce final barrier",
+        "Light Medallion resonates - barrier breaks"
+      ],
+      "reward": "Light Barrier cleared, Tower Access",
+      "hints": ["Light reveals all", "Arrows of light pierce darkness"]
+    },
+    {
+      "id": "GanonsCastle_7_TowerAscent",
+      "name": "Tower Ascent - Stalfos Knights",
+      "type": "Target",
+      "description": "Ascend the tower fighting Stalfos knights. Parry and counter required.",
+      "location": "Ganon's Tower Staircase",
+      "requiredItems": ["MasterSword", "HylianShield", "LightArrows"],
+      "steps": [
+        "Climb staircase",
+        "Stalfos spawn in pairs",
+        "Parry attacks, counter strike",
+        "Light Arrows for quick kills",
+        "Reach top platform"
+      ],
+      "reward": "Ganondorf Arena Access",
+      "hints": ["Stalfos vulnerable after attack", "Light Arrows one-shot"]
+    },
+    {
+      "id": "GanonsCastle_8_GanondorfBarrier",
+      "name": "Ganondorf's Magical Barrier",
+      "type": "MusicPuzzle",
+      "description": "Break Ganondorf's barrier before final fight. Requires all 6 Medallions + Light Arrows.",
+      "location": "Ganondorf's Chamber",
+      "requiredItems": ["All 6 Medallions", "LightArrows", "MasterSword"],
+      "steps": [
+        "Ganondorf erects barrier",
+        "6 Sages channel power through Medallions",
+        "Barrier weakens - shoot Light Arrow",
+        "Repeat 3 times",
+        "Barrier shatters - fight begins"
+      ],
+      "reward": "Ganondorf Fight Access",
+      "hints": ["Sages' power combines", "Light Arrow pierces all"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Ganondorf / Ganon",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Ganondorf - Energy Tennis",
+        "mechanic": "Ganondorf floats, shoots energy balls - reflect with Master Sword",
+        "puzzle": "Perfect parry energy balls back. Zelda stuns with Light Arrow after 3-4 returns.",
+        "vulnerability": "Ball slows - time parry. Light Arrow stuns for sword combo."
+      },
+      {
+        "phase": 2,
+        "name": "Ganondorf - Ground Shockwaves",
+        "mechanic": "Ganondorf creates shockwaves, teleports",
+        "puzzle": "Jump shockwaves, L-target, strike after teleport",
+        "vulnerability": "Brief pause after teleport"
+      },
+      {
+        "phase": 3,
+        "name": "Ganon Transformation",
+        "mechanic": "Ganondorf transforms into Ganon. Master Sword knocked away.",
+        "puzzle": "Retrieve Master Sword while dodging Ganon",
+        "vulnerability": "Megaton Hammer stuns Ganon temporarily"
+      },
+      {
+        "phase": 4,
+        "name": "Ganon - Tail Strike",
+        "mechanic": "Ganon rampages, tail is weak point",
+        "puzzle": "Megaton Hammer stun -> run behind -> Master Sword tail strike",
+        "vulnerability": "Tail glows after hammer stun"
+      },
+      {
+        "phase": 5,
+        "name": "Final Seal",
+        "mechanic": "Zelda holds Ganon with Sages' power. Deliver final Master Sword strike.",
+        "puzzle": "Approach Ganon, Master Sword glows, final strike",
+        "vulnerability": "Ganon immobilized by Zelda/Sages"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_Loot_WhiteFire_Aura",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "WhiteFire (diamond)",
+  "addressableName": "Lithosphere_Loot_WhiteFire_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticleAdditive",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Additive",
+      "mainGradient": {
+        "mainStart": {
+          "r": 0.9,
+          "g": 0.95,
+          "b": 1.0,
+          "a": 0.05
+        },
+        "mainEnd": {
+          "r": 0.88,
+          "g": 0.91,
+          "b": 1.0,
+          "a": 0.0
+        }
+      },
+      "note": "Lithosphere effect: AdditiveParticle / diamond - Pure carbon crystal - brilliance and fire"
+    }
+  ]
+}

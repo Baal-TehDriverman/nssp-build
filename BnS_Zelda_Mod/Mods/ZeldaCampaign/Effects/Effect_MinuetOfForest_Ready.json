@@ -1,0 +1,50 @@
+{
+  "id": "Effect_MinuetOfForest_Ready",
+  "name": "Minuet of Forest Ready Effect",
+  "type": "SpellEffect",
+  "description": "Forest meadow calls, ready to warp",
+  "particleSystems": [
+    {
+      "name": "ForestWinds",
+      "prefab": "Particles/Spells/MinuetForestReadyWinds",
+      "offset": [0, 0.2, 0],
+      "scale": 2.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "LeafParticles",
+      "prefab": "Particles/Spells/MinuetForestReadyLeaves",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 50
+    },
+    {
+      "name": "ForestPortal",
+      "prefab": "Particles/Spells/ForestPortal",
+      "offset": [0, 0, 3],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 15
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/MinuetOfForestReady",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "forestAmbience": "Audio/Ambience/ForestMeadow"
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.8, 0.3, 1.0],
+    "pulseSpeed": 4.0,
+    "pulseIntensity": 0.5,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.8, 0.3, 0.4],
+      "duration": 0.3
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "SuperSaiyan_God_Ki",
+  "name": "God Ki Manifestation",
+  "description": "Channel divine ki beyond mortal limits. Grants God form with perfect ki control and divine sensing.",
+  "type": "Spell",
+  "damage": 0,
+  "cooldown": 120,
+  "manaCost": 200,
+  "tags": ["SuperSaiyan", "GodKi", "Divine", "Transformation"],
+  "customData": {
+    "requiresForm": "SSB",
+    "transformsTo": "God",
+    "duration": 300,
+    "effects": {
+      "kiControl": "perfect",
+      "divineSensing": true,
+      "godlyPressure": {
+        "radius": 20,
+        "weakensMortals": true,
+        "nullifiesMagic": true
+      },
+      "statMultipliers": {
+        "strength": 5.0,
+        "speed": 4.0,
+        "kiEfficiency": 10.0,
+        "regenRate": 50.0
+      },
+      "aura": {
+        "color": "#FF6BFF",
+        "particles": "divine_rose",
+        "sound": "god_ki_hum"
+      }
+    },
+    "unlockCondition": "Master SSB + Divine Training",
+    "lore": "The power of the Gods themselves. Achieved only through pure heart and divine training under an Angel or God of Destruction."
+  }
+}

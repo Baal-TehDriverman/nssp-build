@@ -1,0 +1,86 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_SunsSong",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Sun's Song - shifts day to night and stuns undead.",
+  "imbueDescription": "Golden light radiates from the ocarina.",
+  "chargeEffectId": "Effect_SunsSong_Charge",
+  "readyEffectId": "Effect_SunsSong_Ready",
+  "fingerEffectId": "Effect_SunsSong_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 2.0,
+  "orbVariationAmount": 0.05,
+  "chargeSpeed": 0.4,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.3,
+  "allowThrow": true,
+  "throwEffectId": "Effect_SunsSong_Cast",
+  "throwMinCharge": 0.6,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Sun's Song",
+  "hasOrder": true,
+  "order": 3,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 10.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Sun's Song",
+  "description": "A melody that calls the sun or moon. Instantly shifts day to night or night to day. Stuns ReDeads, Gibdos, and other undead. Reveals hidden chests in sunlight.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": false,
+  "ReadyThreshold": 0.6,
+  "Ready": false,
+  "Order": 3,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "SunsSong_Wave",
+    "spellKind": "TimeShift",
+    "color": [1.0, 0.9, 0.3],
+    "effects": {
+      "timeShift": {
+        "enabled": true,
+        "instantDayNightToggle": true,
+        "freezesTimeOfDay": 10.0
+      },
+      "undeadStun": {
+        "enabled": true,
+        "radius": 15.0,
+        "duration": 8.0,
+        "affectsTypes": ["ReDead", "Gibdo", "Stalfos", "Poe", "DeadHand", "BongoBongo"]
+      },
+      "revealHidden": {
+        "enabled": true,
+        "revealsSunChests": true,
+        "dispelsIllusions": true,
+        "radius": 10.0
+      },
+      "crossModSynergy": {
+        "superSaiyan": {
+          "spellId": "SuperSaiyan_SSG",
+          "effect": "HolySolarFlare",
+          "damageBonus": 2.5,
+          "holyDamage": true
+        },
+        "masterSword": {
+          "spellId": "ZeldaCampaign_EnergyBlast_1",
+          "effect": "MasterSwordSunBeam",
+          "beamDamage": 80,
+          "range": 25.0
+        }
+      }
+    }
+  }
+}

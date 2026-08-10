@@ -1,0 +1,46 @@
+{
+  "id": "Effect_SongOfStorms_Charge",
+  "name": "Song of Storms Charge Effect",
+  "type": "SpellEffect",
+  "description": "Dark clouds gather and lightning crackles while charging",
+  "particleSystems": [
+    {
+      "name": "StormClouds",
+      "prefab": "Particles/Spells/StormClouds",
+      "offset": [0, 0.5, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "LightningArcs",
+      "prefab": "Particles/Spells/LightningArcs",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 5
+    },
+    {
+      "name": "RainDrops",
+      "prefab": "Particles/Spells/RainDrops",
+      "offset": [0, 1.0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 50
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/SongOfStormsCharge",
+    "volume": 0.6,
+    "pitchRange": [0.8, 1.0],
+    "thunderRumble": "Audio/Ambience/ThunderDistant"
+  },
+  "visuals": {
+    "glowColor": [0.4, 0.4, 0.6, 0.8],
+    "pulseSpeed": 3.0,
+    "pulseIntensity": 0.4,
+    "skyDarken": true
+  }
+}

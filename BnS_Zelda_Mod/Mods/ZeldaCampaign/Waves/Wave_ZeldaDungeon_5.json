@@ -1,0 +1,64 @@
+{
+  "id": "Wave_ZeldaDungeon_5",
+  "name": "Fire Temple: The Volcanic Forge",
+  "description": "Deep within Death Mountain Crater lies the ancient Fire Temple. Face Volvagia, the subterranean dragon.",
+  "difficulty": "Expert",
+  "recommendedLevel": 45,
+  "tags": ["ZeldaCampaign", "FireTemple", "AdultEra", "Fire", "Dragon", "GoronRescue"],
+  "enemies": [
+    {
+      "type": "FireKeese",
+      "count": 10,
+      "modifiers": ["FireBody", "Fly", "Swarm", "IgniteOnHit"]
+    },
+    {
+      "type": "Lizalfos",
+      "count": 6,
+      "modifiers": ["DualWield", "Dodge", "FireResistant", "FireBreath"]
+    },
+    {
+      "type": "FlareDancer",
+      "count": 4,
+      "modifiers": ["SpinningAttack", "FireAura", "BombRequired", "HookshotStuns"]
+    },
+    {
+      "type": "Goron",
+      "count": 6,
+      "modifiers": ["Trapped", "RescueTarget", "RollingAttack"]
+    },
+    {
+      "type": "Volvagia",
+      "count": 1,
+      "modifiers": ["Boss", "Dragon", "FliesThroughRock", "FireBreath", "RockFall", "MegatonHammerRequired", "HeadWeakPoint"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "Medallion_Fire",
+      "MegatonHammer",
+      "FireMedallion"
+    ],
+    "chance": [
+      { "item": "Fairy", "probability": 0.4, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.15 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 2 },
+      { "item": "FireMedallionFragment", "probability": 0.2, "count": 3 },
+      { "item": "GoronRescueReward", "probability": 1.0 }
+    ],
+    "experience": 50000,
+    "rupees": 3000
+  },
+  "environment": {
+    "map": "FireTemple",
+    "music": "FireTemple_Dungeon",
+    "timeLimit": 2400,
+    "specialRules": [
+      "GoronTunicRequired",
+      "MegatonHammerRequiredForVolvagia",
+      "RescueAllGorons",
+      "LavaRisesAndFalls",
+      "TimeBlocksSongOfTime"
+    ]
+  },
+  "lore": "The Fire Temple, sacred to the Gorons, has been seized by Volvagia, an ancient dragon revived by Ganondorf. The Gorons are imprisoned throughout. The Megaton Hammer is the only weapon that can stun the dragon's rocky hide."
+}

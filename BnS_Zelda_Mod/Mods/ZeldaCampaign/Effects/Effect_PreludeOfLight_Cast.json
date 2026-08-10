@@ -1,0 +1,79 @@
+{
+  "id": "Effect_PreludeOfLight_Cast",
+  "name": "Prelude of Light Cast Effect",
+  "type": "SpellEffect",
+  "description": "Opens Door of Time, accesses Sacred Realm, requires Master Sword and all medallions",
+  "particleSystems": [
+    {
+      "name": "LightWarp",
+      "prefab": "Particles/Spells/PreludeLightWarp",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 15.0
+    },
+    {
+      "name": "DoorOfTimeOpen",
+      "prefab": "Particles/Spells/DoorOfTimeOpen",
+      "offset": [0, 0, 10],
+      "scale": 8.0,
+      "duration": 10.0,
+      "loop": false,
+      "targetTag": "DoorOfTime"
+    },
+    {
+      "name": "SacredRealmPortal",
+      "prefab": "Particles/Spells/SacredRealmPortal",
+      "offset": [0, 0, 5],
+      "scale": 6.0,
+      "duration": 15.0,
+      "loop": false
+    },
+    {
+      "name": "LightShieldAura",
+      "prefab": "Particles/Spells/LightShieldAura",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 60.0,
+      "loop": false
+    },
+    {
+      "name": "MasterSwordResonance",
+      "prefab": "Particles/Spells/MasterSwordResonance",
+      "offset": [0, 0, 0],
+      "scale": 3.0,
+      "duration": 5.0,
+      "loop": false,
+      "requiresItem": "MasterSword"
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/PreludeOfLightCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "warpSound": "Audio/Spells/LightWarp",
+    "sacredAmbienceFade": "Audio/Ambience/SacredRealm",
+    "doorOpenSound": "Audio/World/DoorOfTimeOpen",
+    "triforceChime": "Audio/Spells/TriforceChime"
+  },
+  "visuals": {
+    "glowColor": [1.0, 1.0, 0.9, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 1.0, 1.0, 0.7],
+      "duration": 1.0
+    },
+    "sceneTransition": {
+      "enabled": true,
+      "targetScene": "Zelda_TempleOfTime",
+      "transitionType": "LightWarp"
+    },
+    "holyAura": true,
+    "timeFreeze": {
+      "enabled": true,
+      "duration": 2.0
+    }
+  }
+}

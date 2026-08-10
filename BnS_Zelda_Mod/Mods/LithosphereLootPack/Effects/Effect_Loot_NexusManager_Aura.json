@@ -1,0 +1,32 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_Loot_NexusManager_Aura",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "HJ_NexusModManager (quartz)",
+  "addressableName": "Lithosphere_Loot_NexusManager_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticleNormal",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Normal",
+      "mainGradient": {
+        "mainStart": {
+          "r": 0.45,
+          "g": 0.6,
+          "b": 1.0,
+          "a": 0.35
+        },
+        "mainEnd": {
+          "r": 0.55,
+          "g": 0.7,
+          "b": 1.0,
+          "a": 0.0
+        }
+      },
+      "note": "Lithosphere effect: NormalParticle / quartz - Crystalline - piezoelectric resonance"
+    }
+  ]
+}

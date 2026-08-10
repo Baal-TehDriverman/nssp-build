@@ -1,0 +1,43 @@
+{
+  "id": "MirrorShield",
+  "name": "Mirror Shield",
+  "type": "Shield",
+  "description": "Polished to a perfect mirror finish, this shield reflects light, magic, and energy beams. Essential for Twinrova fight and Spirit Temple puzzles.",
+  "damage": 0,
+  "defense": 3,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Shield",
+    "KeyItem",
+    "PuzzleItem",
+    "MagicReflect",
+    "LightReflect",
+    "UltimateShield"
+  ],
+  "slot": "OffHand",
+  "customData": {
+    "reflectsMagic": true,
+    "reflectsLight": true,
+    "reflectsFire": true,
+    "reflectsIce": true,
+    "reflectsLaser": true,
+    "absorbCapacity": 3,
+    "chargeRelease": "CombinedBeam",
+    "requiredFor": ["SpiritTemple_Twinrova", "SpiritTemple_Beamos", "GanonsCastle_LightBarrier", "GanonsCastle_Ganondorf"],
+    "era": "Adult",
+    "upgradeFrom": "HylianShield",
+    "location": "Spirit Temple - Adult Section",
+    "lore": "Polished by the Gerudo's finest artisans using silver from the Spirit Temple. It reflects not just light, but magic itself.",
+    "puzzleUses": [
+      "Reflect Twinrova's fire/ice attacks",
+      "Absorb 3 fire + 3 ice -> reflect combined beam",
+      "Redirect Beamos lasers to switches",
+      "Reflect light beams in mirror puzzles",
+      "Deflect Ganondorf's energy balls",
+      "Break Light Barrier with Light Arrows"
+    ]
+  }
+}

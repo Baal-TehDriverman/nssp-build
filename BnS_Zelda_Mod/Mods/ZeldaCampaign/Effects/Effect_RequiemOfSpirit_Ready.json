@@ -1,0 +1,50 @@
+{
+  "id": "Effect_RequiemOfSpirit_Ready",
+  "name": "Requiem of Spirit Ready Effect",
+  "type": "SpellEffect",
+  "description": "Desert winds pulse, ready to warp to Spirit Temple",
+  "particleSystems": [
+    {
+      "name": "SpiritSands",
+      "prefab": "Particles/Spells/RequiemSpiritReadySands",
+      "offset": [0, 0.2, 0],
+      "scale": 2.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 80
+    },
+    {
+      "name": "SpiritGlow",
+      "prefab": "Particles/Spells/RequiemSpiritReadyGlow",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "SpiritPortal",
+      "prefab": "Particles/Spells/SpiritPortal",
+      "offset": [0, 0, 3],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 15
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/RequiemOfSpiritReady",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "desertAmbience": "Audio/Ambience/DesertWind"
+  },
+  "visuals": {
+    "glowColor": [0.9, 0.7, 0.3, 1.0],
+    "pulseSpeed": 4.0,
+    "pulseIntensity": 0.5,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.9, 0.7, 0.3, 0.4],
+      "duration": 0.3
+    }
+  }
+}

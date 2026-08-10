@@ -1,0 +1,46 @@
+{
+  "id": "SSJFlight_ZeldaCampaign_Hybrid",
+  "name": "Hero's Ascension",
+  "description": "The Hero of Time takes flight with Ocarina wind magic. Song of Soaring meets Super Saiyan flight.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_SSJBoost",
+    "spellB": "Spell_ZeldaCampaign_EnergyBlast_1",
+    "itemRequired": "Item_OcarinaOfTime"
+  },
+  "result": {
+    "spellId": "Spell_SSJFlight_Ocarina_Wind",
+    "name": "Ocarina Wind Flight",
+    "description": "Play the Song of Soaring to warp while flying. Divine wind carries you instantly.",
+    "damage": 0,
+    "cooldown": 10,
+    "manaCost": 40,
+    "effects": {
+      "flight": {
+        "enabled": true,
+        "speedMultiplier": 2.5,
+        "warpPoints": [
+          "TempleOfTime",
+          "ForestTemple",
+          "FireTemple",
+          "WaterTemple",
+          "ShadowTemple",
+          "SpiritTemple",
+          "TempleOfTime"
+        ],
+        "instantWarp": true
+      },
+      "aura": {
+        "color": "#00BFFF",
+        "particles": "wind_notes",
+        "sound": "ocarina_wind"
+      },
+      "songOfSoaring": {
+        "autoPlay": true,
+        "warpAnimation": "farores_wind"
+      }
+    }
+  },
+  "tags": ["SSJFlight", "ZeldaCampaign", "CrossMod", "SpellMerge"],
+  "lore": "The wind obeys the hero who plays the Ocarina. When Super Saiyan ki meets ancient melody, the sky becomes a pathway."
+}

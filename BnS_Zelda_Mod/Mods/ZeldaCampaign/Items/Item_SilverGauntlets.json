@@ -1,0 +1,34 @@
+{
+  "id": "SilverGauntlets",
+  "name": "Silver Gauntlets",
+  "type": "Gauntlets",
+  "description": "Ancient Goron gauntlets that grant the strength to lift heavy blocks and push silver-colored obstacles. Found in the Spirit Temple as a child.",
+  "damage": 1,
+  "defense": 1,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Gauntlets",
+    "KeyItem",
+    "PuzzleItem",
+    "StrengthUpgrade"
+  ],
+  "slot": "Hands",
+  "customData": {
+    "liftStrength": "Heavy",
+    "pushTypes": ["SilverBlock", "StandardBlock", "StatueBlock"],
+    "requiredFor": ["SpiritTemple_AdultSection", "GerudoTrainingGround", "GanonsCastle_SpiritBarrier"],
+    "era": "Adult",
+    "obtainedAs": "Child",
+    "location": "Spirit Temple - Child Section",
+    "lore": "Forged by the ancient Gorons for their strongest warriors. Only a child can reach them, but only an adult can use their full potential.",
+    "puzzleUses": [
+      "Push silver blocks in Spirit Temple",
+      "Move armored statues",
+      "Hold heavy pressure plates",
+      "Lift Goron-sized objects"
+    ]
+  }
+}

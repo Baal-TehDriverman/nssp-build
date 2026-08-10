@@ -1,0 +1,43 @@
+{
+  "id": "SuperSaiyan_SSJFlight_Hybrid",
+  "name": "Celestial Saiyan",
+  "description": "Unite the Super Saiyan's divine power with gravity-defying flight. Soar through heavens with godly might.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell.SuperSaiyan_SSJ2",
+    "spellB": "Spell_SSJBoost",
+    "minForm": "SSJ2"
+  },
+  "result": {
+    "spellId": "Spell_SuperSaiyan_Celestial_Flight",
+    "name": "Celestial Flight",
+    "description": "Flight powered by Super Saiyan 2 energy. Leaves trails of divine lightning.",
+    "damage": 0,
+    "cooldown": 5,
+    "manaCost": 30,
+    "effects": {
+      "flight": {
+        "enabled": true,
+        "speedMultiplier": 3.0,
+        "unlimitedStamina": true,
+        "hover": true
+      },
+      "aura": {
+        "color": "#00FFFF",
+        "particles": "divine_lightning",
+        "sound": "celestial_hum"
+      },
+      "lightningTrail": {
+        "damage": 20,
+        "interval": 0.2,
+        "stunsOnContact": true
+      },
+      "gravityControl": {
+        "immuneToGravity": true,
+        "canWalkOnAir": true
+      }
+    }
+  },
+  "tags": ["SuperSaiyanTransformations", "SSJFlight", "CrossMod", "SpellMerge"],
+  "lore": "The Saiyans who touched the heavens became gods. Those who master both ki and gravity transcend mortal limits."
+}

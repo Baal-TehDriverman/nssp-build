@@ -1,0 +1,19 @@
+{
+ "$type": "SpellCastCharge, ThunderRoad",
+ "id": "Spell_SSJBoost",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 0,
+ "shardId": "Crystal_Small_01_Shard",
+ "prefabAddress": "Bas.Item.Misc.SkillOrb",
+ "orbLinkEffectId": "SkillTreeOrbLink",
+ "chargeEffectId": "SSJFlightAura",
+ "allowCharge": true,
+ "chargeSpeed": 0.5,
+ "description": "Super Saiyan boost dash \u2014 propel forward with a burst of ki.",
+ "skillTreeDisplayName": "SSJ Boost",
+ "allowSkill": true,
+ "hideInSkillMenu": false,
+ "primarySkillTreeId": "Gravity",
+ "minMana": 10.0
+}

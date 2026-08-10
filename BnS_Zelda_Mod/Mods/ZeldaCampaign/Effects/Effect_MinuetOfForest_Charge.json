@@ -1,0 +1,35 @@
+{
+  "id": "Effect_MinuetOfForest_Charge",
+  "name": "Minuet of Forest Charge Effect",
+  "type": "SpellEffect",
+  "description": "Emerald winds swirl while charging",
+  "particleSystems": [
+    {
+      "name": "ForestWinds",
+      "prefab": "Particles/Spells/MinuetForestWinds",
+      "offset": [0, 0.1, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "LeafParticles",
+      "prefab": "Particles/Spells/LeafParticles",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 20
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/MinuetOfForestCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.8, 0.3, 0.8],
+    "pulseSpeed": 3.0,
+    "pulseIntensity": 0.3
+  }
+}

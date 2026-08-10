@@ -1,0 +1,43 @@
+{
+ "$type": "ThunderRoad.EffectData",
+ "id": "Lithosphere_Synergy_ZeldaCampaign_Aura",
+ "sensitiveContent": "None",
+ "version": 1,
+ "name": "ZeldaCampaign Synergy (amber)",
+ "addressableName": "Lithosphere_Synergy_ZeldaCampaign_Aura",
+ "modules": [
+  {
+   "$type": "ThunderRoad.EffectModuleParticle, ThunderRoad",
+   "loop": true,
+   "duration": 0.0,
+   "isStickToObject": true,
+   "particleMaterial": "Additive",
+   "mainGradient": {
+    "mainStart": {
+     "r": 0.9,
+     "g": 0.1,
+     "b": 0.1,
+     "a": 0.9
+    },
+    "mainEnd": {
+     "r": 1,
+     "g": 0.30000000000000004,
+     "b": 0.30000000000000004,
+     "a": 0.0
+    }
+   },
+   "note": "Lithosphere synergy effect: amber",
+   "effectParticleAddress": "Pilot.DBZ.Spell.VFX.Main.AroundBody.prefab",
+   "linkDestination": "Self",
+   "linkRotationType": "Self",
+   "linkScaleType": "World",
+   "playParticle": true,
+   "particleCount": 26,
+   "localScale": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.6
+   }
+  }
+ ]
+}

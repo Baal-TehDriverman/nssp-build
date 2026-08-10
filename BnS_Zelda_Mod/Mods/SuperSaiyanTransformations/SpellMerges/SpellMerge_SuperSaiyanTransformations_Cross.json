@@ -1,0 +1,55 @@
+{
+ "$type": "ThunderRoad.Skill.SpellMerge.SpellMergeFire, ThunderRoad",
+ "id": "SuperSaiyanTransformations_CrossMerge",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 0,
+ "leftSpellId": "SuperSaiyan_SSJ1",
+ "rightSpellId": "Water",
+ "chargeSpeed": 0.35,
+ "chargeSpeedPerSkill": 0.2,
+ "chargeStartHandsRatio": 0.4,
+ "stopSpeed": 0.6,
+ "stopIfManaDepleted": true,
+ "handEnterAngle": 30.0,
+ "handEnterDistance": 0.2,
+ "handExitAngle": 90.0,
+ "handExitDistance": 0.6,
+ "handCompletedDistance": 0.001,
+ "minCharge": 0.9,
+ "hapticIntensityCurve": {
+  "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
+  "keys": [
+   {
+    "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+    "time": 0.0,
+    "value": 0.0,
+    "inTangent": 0.0,
+    "outTangent": 0.0,
+    "inWeight": 0.0,
+    "outWeight": 0.0,
+    "weightedMode": "None",
+    "tangentMode": 0
+   },
+   {
+    "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+    "time": 1.0,
+    "value": 1.0,
+    "inTangent": 0.0,
+    "outTangent": 0.0,
+    "inWeight": 0.0,
+    "outWeight": 0.0,
+    "weightedMode": "None",
+    "tangentMode": 0
+   }
+  ],
+  "length": 2,
+  "preWrapMode": "ClampForever",
+  "postWrapMode": "ClampForever"
+ },
+ "requireSkill": "SuperSaiyan",
+ "resultSpellId": "SuperSaiyan_SSJ2",
+ "description": "Cross-mod synergy: SuperSaiyan_SSJ1 + Water -> SuperSaiyan_SSJ2.",
+ "_nssp_cross": true,
+ "_nssp_result": "SuperSaiyan_SSJ2"
+}

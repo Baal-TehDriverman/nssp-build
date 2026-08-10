@@ -1,0 +1,32 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_Loot_BillyClub_Aura",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Blaze's Billy Club (amber)",
+  "addressableName": "Lithosphere_Loot_BillyClub_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticleAdditive",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Additive",
+      "mainGradient": {
+        "mainStart": {
+          "r": 1.0,
+          "g": 0.5,
+          "b": 0.15,
+          "a": 0.55
+        },
+        "mainEnd": {
+          "r": 1.0,
+          "g": 0.75,
+          "b": 0.35,
+          "a": 0.0
+        }
+      },
+      "note": "Lithosphere effect: AdditiveParticle / amber - Organic resin - trapped particles, warm glow"
+    }
+  ]
+}

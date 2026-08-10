@@ -1,0 +1,44 @@
+{
+  "id": "Effect_SerenadeOfWater_Finger",
+  "name": "Serenade of Water Finger Effect",
+  "type": "SpellEffect",
+  "description": "Water droplets on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerWaterGlow",
+      "prefab": "Particles/Spells/SerenadeOfWaterFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "WaterTrails",
+      "prefab": "Particles/Spells/SerenadeOfWaterFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/SerenadeOfWaterNote1",
+      "Audio/Spells/SerenadeOfWaterNote2",
+      "Audio/Spells/SerenadeOfWaterNote3",
+      "Audio/Spells/SerenadeOfWaterNote4",
+      "Audio/Spells/SerenadeOfWaterNote5",
+      "Audio/Spells/SerenadeOfWaterNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.0, 0.6, 1.0, 0.9],
+    "trailColor": [0.2, 0.8, 1.0, 0.7]
+  }
+}

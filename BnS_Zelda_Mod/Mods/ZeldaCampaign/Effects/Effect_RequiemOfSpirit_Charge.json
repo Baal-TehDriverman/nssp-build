@@ -1,0 +1,35 @@
+{
+  "id": "Effect_RequiemOfSpirit_Charge",
+  "name": "Requiem of Spirit Charge Effect",
+  "type": "SpellEffect",
+  "description": "Golden sands swirl around ocarina while charging",
+  "particleSystems": [
+    {
+      "name": "SpiritSands",
+      "prefab": "Particles/Spells/RequiemSpiritSands",
+      "offset": [0, 0.1, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 25
+    },
+    {
+      "name": "SpiritGlow",
+      "prefab": "Particles/Spells/SpiritGlow",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/RequiemOfSpiritCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [0.9, 0.7, 0.3, 0.8],
+    "pulseSpeed": 3.0,
+    "pulseIntensity": 0.3
+  }
+}

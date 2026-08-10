@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_SetPhysicsHigh",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere SetPhysicsToHigh",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "Crystalline physics stabilizer",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_SetPhysicsHigh",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_SetPhysicsHigh_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 0.75,
+        "g": 0.8,
+        "b": 0.95,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 0.45,
+        "g": 0.6,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "materialId": "quartz"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

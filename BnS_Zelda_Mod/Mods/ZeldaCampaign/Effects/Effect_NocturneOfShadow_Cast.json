@@ -1,0 +1,63 @@
+{
+  "id": "Effect_NocturneOfShadow_Cast",
+  "name": "Nocturne of Shadow Cast Effect",
+  "type": "SpellEffect",
+  "description": "Warp to Shadow Temple, grants shadow sight and undead command",
+  "particleSystems": [
+    {
+      "name": "ShadowWarp",
+      "prefab": "Particles/Spells/NocturneShadowWarp",
+      "offset": [0, 0, 0],
+      "scale": 5.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 10.0
+    },
+    {
+      "name": "ShadowPortalOpen",
+      "prefab": "Particles/Spells/ShadowPortalOpen",
+      "offset": [0, 0, 5],
+      "scale": 4.0,
+      "duration": 5.0,
+      "loop": false
+    },
+    {
+      "name": "ShadowSightAura",
+      "prefab": "Particles/Spells/ShadowSightAura",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 45.0,
+      "loop": false
+    },
+    {
+      "name": "UndeadCharm",
+      "prefab": "Particles/Spells/UndeadCharm",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 20.0,
+      "loop": false,
+      "targetTags": ["ReDead", "Gibdo", "Stalfos", "Poe", "DeadHand"]
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/NocturneOfShadowCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "warpSound": "Audio/Spells/ShadowWarp",
+    "shadowAmbienceFade": "Audio/Ambience/ShadowRealm"
+  },
+  "visuals": {
+    "glowColor": [0.3, 0.0, 0.4, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.0, 0.3, 0.6],
+      "duration": 0.5
+    },
+    "sceneTransition": {
+      "enabled": true,
+      "targetScene": "Zelda_ShadowTemple",
+      "transitionType": "ShadowWarp"
+    }
+  }
+}

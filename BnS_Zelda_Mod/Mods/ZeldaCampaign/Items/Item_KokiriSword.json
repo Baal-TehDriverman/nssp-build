@@ -1,0 +1,30 @@
+{
+  "id": "KokiriSword",
+  "name": "Kokiri Sword",
+  "type": "Sword",
+  "description": "A small sword given to Link by the Great Deku Tree. Fits a child's hand perfectly. The first step on the hero's journey.",
+  "damage": 1,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Sword",
+    "Weapon",
+    "ChildEra",
+    "StarterWeapon"
+  ],
+  "slot": "RightHand",
+  "customData": {
+    "isTwoHanded": false,
+    "era": "Child",
+    "upgradePath": "MasterSword",
+    "lore": "Forged by the Kokiri for their champion. Though small, it carries the blessing of the Great Deku Tree. Only a child of the forest can wield it effectively.",
+    "skills": [
+      "BasicSlash",
+      "SpinAttack",
+      "JumpAttack"
+    ]
+  }
+}

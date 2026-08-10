@@ -1,0 +1,36 @@
+{
+  "id": "Effect_NocturneOfShadow_Charge",
+  "name": "Nocturne of Shadow Charge Effect",
+  "type": "SpellEffect",
+  "description": "Darkness swallows ocarina's light while charging",
+  "particleSystems": [
+    {
+      "name": "ShadowMist",
+      "prefab": "Particles/Spells/NocturneShadowMist",
+      "offset": [0, 0.1, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "VoidParticles",
+      "prefab": "Particles/Spells/VoidParticles",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 15
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/NocturneOfShadowCharge",
+    "volume": 0.5,
+    "pitchRange": [0.8, 1.0]
+  },
+  "visuals": {
+    "glowColor": [0.3, 0.0, 0.4, 0.8],
+    "pulseSpeed": 2.0,
+    "pulseIntensity": 0.3,
+    "lightAbsorb": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "Effect_BoleroOfFire_Ready",
+  "name": "Bolero of Fire Ready Effect",
+  "type": "SpellEffect",
+  "description": "Intense flames pulse, ready to warp to Fire Temple",
+  "particleSystems": [
+    {
+      "name": "FireParticles",
+      "prefab": "Particles/Spells/BoleroFireReadyParticles",
+      "offset": [0, 0.2, 0],
+      "scale": 2.5,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 80
+    },
+    {
+      "name": "HeatDistortion",
+      "prefab": "Particles/Spells/BoleroHeatDistortion",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "FirePortal",
+      "prefab": "Particles/Spells/FirePortal",
+      "offset": [0, 0, 3],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 30
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/BoleroOfFireReady",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "fireAmbience": "Audio/Ambience/Volcano"
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.4, 0.0, 1.0],
+    "pulseSpeed": 5.0,
+    "pulseIntensity": 0.6,
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 0.4, 0.0, 0.5],
+      "duration": 0.3
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "Wave_ZeldaDungeon_8",
+  "name": "Spirit Temple: The Desert Colossus",
+  "description": "Twin temples of the Gerudo, separated by time. Face Twinrova, the ancient witch sisters.",
+  "difficulty": "Master",
+  "recommendedLevel": 60,
+  "tags": ["ZeldaCampaign", "SpiritTemple", "AdultEra", "Desert", "TimeTravel", "Gerudo", "MirrorShield", "TwinBoss"],
+  "enemies": [
+    {
+      "type": "GerudoGuard",
+      "count": 8,
+      "modifiers": ["DualScimitar", "Block", "Kick", "CapturePlayer", "GerudoOnly"]
+    },
+    {
+      "type": "Anubis",
+      "count": 4,
+      "modifiers": ["MirrorsMovement", "FireWeakness", "InvulnerableToPhysical", "DinFireRequired"]
+    },
+    {
+      "type": "IronKnuckle",
+      "count": 3,
+      "modifiers": ["MiniBoss", "HeavyAxe", "HighDamage", "ArmorPlated", "Slow", "HelmetFallsOff"]
+    },
+    {
+      "type": "Beamos",
+      "count": 4,
+      "modifiers": ["RotatingEye", "LaserBeam", "BombWeakPoint", "InvulnerableBody"]
+    },
+    {
+      "type": "Twinrova",
+      "count": 1,
+      "modifiers": ["Boss", "TwinSisters", "KotakeFire", "KoumeIce", "MergePhase", "MirrorShieldRequired", "ReflectAttacks", "AbsorbElemental"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "Medallion_Spirit",
+      "MirrorShield",
+      "SpiritMedallion"
+    ],
+    "chance": [
+      { "item": "Fairy", "probability": 0.4, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.15 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 3 },
+      { "item": "SpiritMedallionFragment", "probability": 0.2, "count": 3 },
+      { "item": "SilverGauntlets", "probability": 1.0 }
+    ],
+    "experience": 100000,
+    "rupees": 6000
+  },
+  "environment": {
+    "map": "SpiritTemple",
+    "music": "SpiritTemple_Dungeon",
+    "timeLimit": 3600,
+    "specialRules": [
+      "ChildAndAdultSections",
+      "RequiemOfSpiritSwitchesTime",
+      "SilverGauntletsChildSection",
+      "MirrorShieldAdultSection",
+      "TwinrovaReflectWithMirrorShield",
+      "DinFireRequiredForAnubis",
+      "GerudoFortressAccess"
+    ]
+  },
+  "lore": "The Spirit Temple, carved by the Gerudo, exists in two time periods. Young Link and Adult Link must both navigate its halls. Twinrova, surrogate mothers of Ganondorf, merge into a being of pure fire and ice. The Mirror Shield reflects their elemental attacks."
+}

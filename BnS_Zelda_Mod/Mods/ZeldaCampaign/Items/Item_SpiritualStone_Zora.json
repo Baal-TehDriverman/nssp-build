@@ -1,0 +1,15 @@
+{
+  "id": "SpiritualStone_Zora",
+  "name": "Zora Sapphire",
+  "type": "KeyItem",
+  "description": "The Spiritual Stone of Water, entrusted to the Zoras. One of three keys to open the Door of Time.",
+  "weight": 0.5,
+  "value": 100,
+  "tags": ["Zelda", "Campaign", "KeyItem", "SpiritualStone", "Water"],
+  "customData": {
+    "stoneType": "Water",
+    "guardian": "Princess Ruto",
+    "dungeon": "JabuJabusBelly",
+    "lore": "The Zora Sapphire was given to the Zoras by the ancient hero. It represents the wisdom of the water people."
+  }
+}

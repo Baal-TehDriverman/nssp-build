@@ -1,0 +1,43 @@
+{
+  "id": "LensOfTruth",
+  "name": "Lens of Truth",
+  "type": "Tool",
+  "description": "Sheikah artifact that reveals invisible platforms, fake walls, hidden enemies, and illusions. Essential for Shadow Temple and Spirit Temple.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Tool",
+    "KeyItem",
+    "PuzzleItem",
+    "IllusionReveal",
+    "SheikahTech"
+  ],
+  "slot": "Face",
+  "customData": {
+    "revealsInvisible": true,
+    "magicDrain": 1.0,
+    "revealRadius": 10.0,
+    "reveals": ["InvisiblePlatform", "FakeWall", "HiddenEnemy", "IllusionPath", "InvisibleSwitch", "HiddenChest", "TruePath"],
+    "activeEffect": {
+      "screenTint": [0.2, 0.4, 0.8, 0.3],
+      "sound": "lens_hum",
+      "particle": "truth_reveal"
+    },
+    "requiredFor": ["ShadowTemple", "SpiritTemple_Anubis", "GanonsCastle_ShadowBarrier", "GerudoTrainingGround", "BottomOfWell"],
+    "era": "Adult",
+    "location": "Bottom of the Well (Kakariko)",
+    "lore": "Created by the Sheikah to see through deception. The eye sees what the mind cannot. Drains magic while active.",
+    "puzzleUses": [
+      "Reveal invisible platforms in Shadow Temple",
+      "See through fake walls",
+      "Expose hidden enemies (Dead Hand, Bongo Bongo)",
+      "Find true path in illusion mazes",
+      "Reveal invisible switches",
+      "Find hidden chests"
+    ]
+  }
+}

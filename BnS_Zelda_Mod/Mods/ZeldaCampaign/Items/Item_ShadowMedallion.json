@@ -1,0 +1,20 @@
+{
+  "id": "ShadowMedallion",
+  "name": "Shadow Medallion",
+  "type": "Medallion",
+  "description": "Medallion of the Shadow Sage.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 500,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Medallion"
+  ],
+  "customData": {
+    "sage": "Impa",
+    "element": "Shadow"
+  }
+}

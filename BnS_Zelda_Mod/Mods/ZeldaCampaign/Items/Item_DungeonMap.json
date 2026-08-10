@@ -1,0 +1,19 @@
+{
+  "id": "DungeonMap",
+  "name": "Dungeon Map",
+  "type": "Map",
+  "description": "Reveals the full dungeon layout.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Dungeon"
+  ],
+  "customData": {
+    "revealsAllRooms": true
+  }
+}

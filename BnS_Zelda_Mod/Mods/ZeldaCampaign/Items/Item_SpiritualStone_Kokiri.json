@@ -1,0 +1,15 @@
+{
+  "id": "SpiritualStone_Kokiri",
+  "name": "Kokiri Emerald",
+  "type": "KeyItem",
+  "description": "The Spiritual Stone of the Forest, entrusted to the Kokiri. One of three keys to open the Door of Time.",
+  "weight": 0.5,
+  "value": 100,
+  "tags": ["Zelda", "Campaign", "KeyItem", "SpiritualStone", "Forest"],
+  "customData": {
+    "stoneType": "Forest",
+    "guardian": "Great Deku Tree",
+    "dungeon": "DekuTree",
+    "lore": "The Kokiri Emerald was given to the Kokiri by the Great Deku Tree. It represents the courage of the forest children."
+  }
+}

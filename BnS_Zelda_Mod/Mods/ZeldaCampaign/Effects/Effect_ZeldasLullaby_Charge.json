@@ -1,0 +1,35 @@
+{
+  "id": "Effect_ZeldasLullaby_Charge",
+  "name": "Zelda's Lullaby Charge Effect",
+  "type": "SpellEffect",
+  "description": "Soft blue notes drift while charging",
+  "particleSystems": [
+    {
+      "name": "BlueNotes",
+      "prefab": "Particles/Spells/ZeldasLullabyNotes",
+      "offset": [0, 0.1, 0],
+      "scale": 0.8,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 8
+    },
+    {
+      "name": "RoyalGlow",
+      "prefab": "Particles/Spells/RoyalGlow",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/ZeldasLullabyCharge",
+    "volume": 0.4,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.5, 1.0, 0.7],
+    "pulseSpeed": 1.5,
+    "pulseIntensity": 0.2
+  }
+}

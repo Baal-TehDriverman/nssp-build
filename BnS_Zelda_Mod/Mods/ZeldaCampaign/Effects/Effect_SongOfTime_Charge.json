@@ -1,0 +1,36 @@
+{
+  "id": "Effect_SongOfTime_Charge",
+  "name": "Song of Time Charge Effect",
+  "type": "SpellEffect",
+  "description": "Golden notes swirl while charging Song of Time",
+  "particleSystems": [
+    {
+      "name": "GoldenNotes",
+      "prefab": "Particles/Spells/SongOfTimeNotes",
+      "offset": [0, 0.1, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 15
+    },
+    {
+      "name": "TimeDistortion",
+      "prefab": "Particles/Spells/TimeDistortion",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/SongOfTimeCharge",
+    "volume": 0.6,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.85, 0.2, 0.8],
+    "pulseSpeed": 2.5,
+    "pulseIntensity": 0.4,
+    "timeDistortion": true
+  }
+}

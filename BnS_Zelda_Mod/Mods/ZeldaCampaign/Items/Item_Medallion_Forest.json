@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Forest",
+  "name": "Forest Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Forest Sage, Saria. Proof of awakening the Forest Temple.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Forest", "Sage"],
+  "customData": {
+    "sage": "Saria",
+    "element": "Forest",
+    "temple": "ForestTemple",
+    "lore": "Saria, the Sage of Forest, bestows this medallion upon those who conquer the Forest Temple. It holds the power of the forest winds."
+  }
+}

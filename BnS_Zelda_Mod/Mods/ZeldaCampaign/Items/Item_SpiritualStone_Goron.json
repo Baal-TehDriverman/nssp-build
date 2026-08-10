@@ -1,0 +1,15 @@
+{
+  "id": "SpiritualStone_Goron",
+  "name": "Goron Ruby",
+  "type": "KeyItem",
+  "description": "The Spiritual Stone of Fire, entrusted to the Gorons. One of three keys to open the Door of Time.",
+  "weight": 0.5,
+  "value": 100,
+  "tags": ["Zelda", "Campaign", "KeyItem", "SpiritualStone", "Fire"],
+  "customData": {
+    "stoneType": "Fire",
+    "guardian": "Darunia",
+    "dungeon": "DodongosCavern",
+    "lore": "The Goron Ruby was given to the Gorons by the ancient hero. It represents the power of the mountain people."
+  }
+}

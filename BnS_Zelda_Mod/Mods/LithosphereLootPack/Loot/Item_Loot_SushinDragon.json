@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_SushinDragon",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere Sushin's Dragon Slayer Nomad",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "Dragonscale amber - dragon's last ember",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_SushinDragon",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_SushinDragon_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 1.0,
+        "g": 0.6,
+        "b": 0.2,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 1.0,
+        "g": 0.5,
+        "b": 0.15,
+        "a": 1.0
+      },
+      "materialId": "amber"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

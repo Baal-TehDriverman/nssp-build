@@ -1,0 +1,134 @@
+{
+  "id": "DungeonPuzzles_FireTemple",
+  "name": "Fire Temple Puzzles",
+  "dungeon": "FireTemple",
+  "era": "Adult",
+  "difficulty": "Expert",
+  "puzzles": [
+    {
+      "id": "FireTemple_1_GoronRescue",
+      "name": "Goron Rescue Cells",
+      "type": "Switch",
+      "description": "Free 6 Gorons from cells by hitting switches, bombing walls, and using Megaton Hammer on rusted switches.",
+      "location": "Throughout Temple",
+      "requiredItems": ["MegatonHammer", "Bomb", "GoronTunic"],
+      "steps": [
+        "Find each Goron cell (6 total)",
+        "Cell 1: Bomb cracked wall",
+        "Cell 2: Hit switch through bars with Hookshot",
+        "Cell 3: Megaton Hammer rusted switch",
+        "Cell 4: Push block onto pressure plate",
+        "Cell 5: Song of Time on Time Block",
+        "Cell 6: Hookshot to ceiling, drop behind bars"
+      ],
+      "reward": "Each Goron gives hint/key, all 6 needed for Boss Key",
+      "hints": ["Gorons: \"Listen to the sound...\"", "Rusted switches need Megaton Hammer"]
+    },
+    {
+      "id": "FireTemple_2_MegatonHammerRoom",
+      "name": "Megaton Hammer Acquisition",
+      "type": "Target",
+      "description": "Navigate flame maze to reach Megaton Hammer chest. Requires precise timing through rotating fire bars.",
+      "location": "Flame Maze (B1)",
+      "requiredItems": ["GoronTunic", "Hookshot"],
+      "steps": [
+        "Enter flame maze with Goron Tunic",
+        "Time runs through rotating fire bars",
+        "Hookshot across lava gaps",
+        "Reach chest platform",
+        "Get Megaton Hammer"
+      ],
+      "reward": "Megaton Hammer",
+      "hints": ["Fire bars have predictable pattern", "Hookshot targets on walls"]
+    },
+    {
+      "id": "FireTemple_3_TimeBlockPuzzle",
+      "name": "Song of Time Blocks",
+      "type": "TimePuzzle",
+      "description": "Use Song of Time to make Time Blocks appear/disappear to create paths and access switches.",
+      "location": "Multiple Rooms",
+      "requiredItems": ["OcarinaOfTime", "SongOfTime"],
+      "steps": [
+        "Play Song of Time near Time Block (blue block with symbol)",
+        "Block appears/disappears",
+        "Use as platform or to hold switch",
+        "Some puzzles require toggling multiple times"
+      ],
+      "reward": "Access to new areas, Goron cells",
+      "hints": ["Time Blocks glow faintly", "Song of Time particles reveal them"]
+    },
+    {
+      "id": "FireTemple_4_FlareDancer",
+      "name": "Flare Dancer Puzzle",
+      "type": "Target",
+      "description": "Defeat Flare Dancers by hookshotting their spinning core, then attacking.",
+      "location": "Various Rooms",
+      "requiredItems": ["Hookshot", "MegatonHammer"],
+      "steps": [
+        "Flare Dancer spins with fire aura",
+        "Hookshot core when exposed",
+        "Dancer falls - attack with sword/hammer",
+        "Megaton Hammer stuns instantly"
+      ],
+      "reward": "Progress, small keys",
+      "hints": ["Core glows when vulnerable", "Hammer ends spin immediately"]
+    },
+    {
+      "id": "FireTemple_5_BossKeyBoulder",
+      "name": "Boss Key Boulder Maze",
+      "type": "BlockPush",
+      "description": "Push boulders in lava maze to create path to Boss Key. Boulders sink in lava but create temporary platforms.",
+      "location": "Boulder Maze (B2)",
+      "requiredItems": ["MegatonHammer", "GoronTunic", "Hookshot"],
+      "steps": [
+        "Push boulders into lava to form path",
+        "Boulders sink slowly - move fast",
+        "Hookshot to stable platforms",
+        "Reach Boss Key chest"
+      ],
+      "reward": "Boss Key",
+      "hints": ["Boulders float for ~5 seconds", "Megaton Hammer can push faster"]
+    },
+    {
+      "id": "FireTemple_6_VolvagiaPath",
+      "name": "Volvagia Arena Access",
+      "type": "Switch",
+      "description": "Hit crystal switch sequence to open path to Volvagia. Wrong order resets.",
+      "location": "Pre-Boss Corridor",
+      "requiredItems": ["MegatonHammer", "Bow"],
+      "steps": [
+        "Observe switch symbols (3 switches)",
+        "Hit in order: Hammer, Bow, Sword",
+        "Door to Volvagia opens"
+      ],
+      "reward": "Volvagia Arena Access",
+      "hints": ["Goron hint: \"Hammer strikes first, then arrow flies, sword finishes\""]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Volvagia",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Rock Emergence",
+        "mechanic": "Volvagia flies through rock ceiling/floor, emerges to breathe fire",
+        "puzzle": "Megaton Hammer strike head when emerging from rock",
+        "vulnerability": "Head dazed after rock impact - hammer stuns"
+      },
+      {
+        "phase": 2,
+        "name": "Fire Breath Sweep",
+        "mechanic": "Volvagia sweeps fire breath across arena",
+        "puzzle": "Hide behind rocks, hammer head when close",
+        "vulnerability": "Brief hover before breath - hammer window"
+      },
+      {
+        "phase": 3,
+        "name": "Rock Fall Rain",
+        "mechanic": "Low health - Volvagia circles, rocks fall from ceiling",
+        "puzzle": "Dodge rocks, hammer head during low passes",
+        "vulnerability": "Flies lower, longer hover"
+      }
+    ]
+  }
+}

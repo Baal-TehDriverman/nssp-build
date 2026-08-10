@@ -1,0 +1,55 @@
+{
+  "id": "Effect_SongOfTime_Cast",
+  "name": "Song of Time Cast Effect",
+  "type": "SpellEffect",
+  "description": "Time wave expands from ocarina, affecting time blocks and opening Door of Time",
+  "particleSystems": [
+    {
+      "name": "TimeWave",
+      "prefab": "Particles/Spells/SongOfTimeCastWave",
+      "offset": [0, 0, 0],
+      "scale": 3.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 15.0
+    },
+    {
+      "name": "TimeBlocksReveal",
+      "prefab": "Particles/Spells/TimeBlocksReveal",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 5.0,
+      "loop": false
+    },
+    {
+      "name": "DoorOfTimeGlow",
+      "prefab": "Particles/Spells/DoorOfTimeGlow",
+      "offset": [0, 0, 5],
+      "scale": 5.0,
+      "duration": 10.0,
+      "loop": false,
+      "targetTag": "DoorOfTime"
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/SongOfTimeCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "echo": true,
+    "reverbZone": "LargeCave"
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.85, 0.2, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 0.9, 0.4, 0.5],
+      "duration": 0.5
+    },
+    "timeSlowEffect": {
+      "enabled": true,
+      "duration": 2.0,
+      "slowFactor": 0.1
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Fire",
+  "name": "Fire Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Fire Sage, Darunia. Proof of awakening the Fire Temple.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Fire", "Sage"],
+  "customData": {
+    "sage": "Darunia",
+    "element": "Fire",
+    "temple": "FireTemple",
+    "lore": "Darunia, the Sage of Fire, bestows this medallion upon those who conquer the Fire Temple. It holds the power of the volcanic flame."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "ZeldaCampaign_SSJFlight_Hybrid",
+  "name": "Hero's Flight",
+  "description": "Combine the Ocarina's wind songs with SSJ Flight. Soar on the winds of Hyrule with Super Saiyan speed.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_MinuetOfForest",
+    "spellB": "Spell_SSJFlight_Ocarina_Wind",
+    "minForm": "SSJ1"
+  },
+  "result": {
+    "spellId": "Spell_ZeldaCampaign_SSJFlight_Wind",
+    "name": "Minuet of Wind Flight",
+    "description": "Forest winds carry you at Super Saiyan speeds. Green aura trail marks your passage.",
+    "damage": 40,
+    "cooldown": 5,
+    "manaCost": 30,
+    "effects": {
+      "flight": {
+        "enabled": true,
+        "speedMultiplier": 3.0,
+        "windTrail": true,
+        "forestParticles": true
+      },
+      "warpSynergy": {
+        "enabled": true,
+        "warpSongsBoostFlight": true,
+        "flightBoostsWarp": true
+      },
+      "aura": {
+        "color": "#00FF7F",
+        "particles": "forest_wind_ki",
+        "sound": "wind_flight_super"
+      },
+      "crossModSynergy": {
+        "zeldaCampaign": {
+          "spellId": "Spell_MinuetOfForest",
+          "effect": "ForestWindFlight",
+          "speedMultiplier": 2.0
+        },
+        "ssjFlight": {
+          "spellId": "Spell_SSJFlight_Ocarina_Wind",
+          "effect": "SaiyanWindMastery",
+          "kiEfficiency": 1.5
+        }
+      }
+    }
+  },
+  "tags": ["ZeldaCampaign", "SSJFlight", "CrossMod", "SpellMerge", "Wind", "Flight"],
+  "lore": "When the Hero of Time takes to the skies with the warrior's spirit, the very winds of Hyrule bend to their will. The Minuet of Forest becomes a conduit for golden ki."
+}

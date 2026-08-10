@@ -1,0 +1,233 @@
+{
+  "$type": "ThunderRoad.ItemData, ThunderRoad",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 4,
+  "groupPath": null,
+  "localizationId": "Lithosphere_BloodOrb",
+  "author": "Lilith",
+  "rewardValue": 0.0,
+  "iconEffectId": null,
+  "preferredItemCenter": "Mass",
+  "drainImbueWhenIdle": true,
+  "forceImbueUseButton": "None",
+  "iconAddress": null,
+  "closeUpIconAddress": null,
+  "pooledCount": 50,
+  "androidPooledCount": 30,
+  "despawnOnStoredInInventory": false,
+  "isStackable": false,
+  "consumableId": null,
+  "inventoryAudioContainerAddress": null,
+  "inventoryAudioVolume_dB": 0.0,
+  "snapAudioContainerAddress": null,
+  "snapAudioVolume_dB": 0.0,
+  "overrideMassAndDrag": true,
+  "drag": 0.0,
+  "angularDrag": 0.0,
+  "density": 1000.0,
+  "focusRegenMultiplier": 1.0,
+  "spellChargeSpeedPlayerMultiplier": 1.0,
+  "spellChargeSpeedNPCMultiplier": 1.0,
+  "collisionMaxOverride": 0,
+  "collisionEnterOnly": false,
+  "collisionNoMinVelocityCheck": true,
+  "forceLayer": "None",
+  "diffForceLayerWhenHeld": false,
+  "forceLayerHeld": "None",
+  "waterHandSpringMultiplierCurve": {
+    "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
+    "keys": [
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 0.0,
+        "value": 0.3,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      },
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 1.0,
+        "value": 0.15,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      }
+    ],
+    "length": 2,
+    "preWrapMode": "ClampForever",
+    "postWrapMode": "ClampForever"
+  },
+  "waterDragMultiplierCurve": {
+    "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
+    "keys": [
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 0.0,
+        "value": 1.0,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      },
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 1.0,
+        "value": 10.0,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      }
+    ],
+    "length": 2,
+    "preWrapMode": "ClampForever",
+    "postWrapMode": "ClampForever"
+  },
+  "waterSampleMinRadius": 0.2,
+  "throwMultiplier": 1.0,
+  "runSpeedMultiplier": 1.0,
+  "flyRotationSpeed": 3.0,
+  "flyThrowAngle": 145.0,
+  "allowFlyBackwards": false,
+  "telekinesisSafeDistance": 1.0,
+  "telekinesisThrowRatio": 1.0,
+  "telekinesisAutoGrabAnyHandle": false,
+  "grippable": true,
+  "grabAndGripClimb": false,
+  "playerGrabAndGripChangeLayer": true,
+  "customSnaps": [],
+  "drainImbueOnSnap": true,
+  "imbueEnergyOverTimeOnSnap": {
+    "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
+    "keys": [
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 0.0,
+        "value": 1.0,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      },
+      {
+        "$type": "UnityEngine.Keyframe, UnityEngine.CoreModule",
+        "time": 3.0,
+        "value": 0.0,
+        "inTangent": 0.0,
+        "outTangent": 0.0,
+        "inWeight": 0.0,
+        "outWeight": 0.0,
+        "weightedMode": "None",
+        "tangentMode": 0
+      }
+    ],
+    "length": 2,
+    "preWrapMode": "ClampForever",
+    "postWrapMode": "ClampForever"
+  },
+  "colliderGroups": [],
+  "effectHinges": [],
+  "entityModules": [],
+  "id": "Lithosphere_BloodOrb",
+  "displayName": "Blood Crystal",
+  "description": "A volatile bloodstone orb. Throw it to splash pressurized blood that carves several kilograms off whatever it hits.",
+  "valueType": "Gold",
+  "value": 120.0,
+  "tier": 3,
+  "flags": "Throwable",
+  "type": "Misc",
+  "category": null,
+  "prefabAddress": "Bas.Item.Misc.Projectile",
+  "allowedStorage": "SandboxAllItems",
+  "slot": "",
+  "mass": 1.0,
+  "damagers": [
+    {
+      "$type": "ThunderRoad.ItemData+Damager, ThunderRoad",
+      "transformName": "Damager",
+      "damagerID": "Fireball"
+    }
+  ],
+  "Interactables": [
+    {
+      "$type": "ThunderRoad.ItemData+Interactable, ThunderRoad",
+      "transformName": "Handle",
+      "interactableId": "ObjectHandleTKOnly"
+    }
+  ],
+  "whooshs": [
+    {
+      "$type": "ThunderRoad.ItemData+Whoosh, ThunderRoad",
+      "transformName": "Whoosh",
+      "effectId": null,
+      "trigger": "OnFly",
+      "stopOnSnap": true,
+      "minVelocity": 5.0,
+      "maxVelocity": 20.0,
+      "dampening": 0.1
+    }
+  ],
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleAI, ThunderRoad",
+      "primaryClass": "Arrow",
+      "secondaryClass": "None",
+      "weaponHandling": "OneHanded",
+      "secondaryHandling": "None",
+      "weaponAttackTypes": "None",
+      "alwaysPrimary": false,
+      "defaultStanceInfo": null,
+      "stanceInfosByOffhand": null,
+      "rangedWeaponData": null,
+      "ignoredByDefense": false,
+      "armResistanceMultiplier": 1.0,
+      "allowDynamicHeight": false,
+      "defenseHasPriority": false,
+      "transferPushToBlocker": false,
+      "transferVelocityModifier": -8.0,
+      "transferredPushModifier": -1,
+      "minTransferredPush": 2,
+      "maxTransferredPush": 4
+    },
+    {
+      "$type": "ThunderRoad.ItemModuleMagicProjectile, ThunderRoad"
+    },
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_BloodOrb_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 0.85,
+        "g": 0.03,
+        "b": 0.04,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 0.9,
+        "g": 0.12,
+        "b": 0.08,
+        "a": 1.0
+      },
+      "materialId": "obsidian"
+    }
+  ],
+  "_nssp_gore": {
+    "kind": "blood_projectile",
+    "dropPool": "RealisticBleeding"
+  }
+}

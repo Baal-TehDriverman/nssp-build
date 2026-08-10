@@ -1,0 +1,20 @@
+{
+  "id": "ZoraSapphire",
+  "name": "Zora Sapphire",
+  "type": "SpiritualStone",
+  "description": "Spiritual Stone of Water.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 1000,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "SpiritualStone"
+  ],
+  "customData": {
+    "element": "Water",
+    "opens": "DoorOfTime"
+  }
+}

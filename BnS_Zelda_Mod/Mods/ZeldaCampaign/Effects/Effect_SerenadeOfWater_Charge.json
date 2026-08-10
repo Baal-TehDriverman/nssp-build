@@ -1,0 +1,35 @@
+{
+  "id": "Effect_SerenadeOfWater_Charge",
+  "name": "Serenade of Water Charge Effect",
+  "type": "SpellEffect",
+  "description": "Crystal droplets orbit ocarina while charging",
+  "particleSystems": [
+    {
+      "name": "WaterDroplets",
+      "prefab": "Particles/Spells/SerenadeWaterDroplets",
+      "offset": [0, 0.1, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 20
+    },
+    {
+      "name": "WaterRipples",
+      "prefab": "Particles/Spells/WaterRipples",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/SerenadeOfWaterCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [0.0, 0.6, 1.0, 0.8],
+    "pulseSpeed": 2.5,
+    "pulseIntensity": 0.3
+  }
+}

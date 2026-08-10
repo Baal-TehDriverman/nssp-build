@@ -1,0 +1,62 @@
+{
+ "$type": "ThunderRoad.DamageModifierData, ThunderRoad",
+ "id": "SuperSaiyan_SSJ2_Modifier",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 1,
+ "damageType": "Physical",
+ "collisions": [
+  {
+   "$type": "ThunderRoad.DamageModifierData+Collision, ThunderRoad",
+   "sourceMaterialIds": [],
+   "targetMaterialIds": [
+    "Flesh"
+   ],
+   "modifiers": [
+    {
+     "$type": "ThunderRoad.DamageModifierData+Modifier, ThunderRoad",
+     "tierFilter": 0,
+     "imbuesFilterLogic": "NoneExcept",
+     "imbuesFilter": [],
+     "minVelocity": 0.0,
+     "damageMultiplier": 3,
+     "allowKnockout": true,
+     "allowPenetration": true,
+     "pressureAllowed": true,
+     "knockoutAllowedMinVelocity": "Infinity",
+     "knockoutForcedMinVelocity": "Infinity",
+     "knockoutThrowAllowedMinVelocity": "Infinity",
+     "knockoutThrowForcedMinVelocity": "Infinity",
+     "knockoutDurationMultiplier": 1.0,
+     "pushLevels": [
+      {
+       "$type": "ThunderRoad.DamageModifierData+Modifier+PushLevel, ThunderRoad",
+       "hitVelocity": 1.5,
+       "throwVelocity": 1.5
+      },
+      {
+       "$type": "ThunderRoad.DamageModifierData+Modifier+PushLevel, ThunderRoad",
+       "hitVelocity": 3.0,
+       "throwVelocity": 3.0
+      },
+      {
+       "$type": "ThunderRoad.DamageModifierData+Modifier+PushLevel, ThunderRoad",
+       "hitVelocity": 4.5,
+       "throwVelocity": 4.5
+      },
+      {
+       "$type": "ThunderRoad.DamageModifierData+Modifier+PushLevel, ThunderRoad",
+       "hitVelocity": 6.0,
+       "throwVelocity": 6.0
+      },
+      {
+       "$type": "ThunderRoad.DamageModifierData+Modifier+PushLevel, ThunderRoad",
+       "hitVelocity": 7.5,
+       "throwVelocity": 7.5
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

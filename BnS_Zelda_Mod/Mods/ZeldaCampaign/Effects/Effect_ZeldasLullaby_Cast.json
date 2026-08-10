@@ -1,0 +1,51 @@
+{
+  "id": "Effect_ZeldasLullaby_Cast",
+  "name": "Zelda's Lullaby Cast Effect",
+  "type": "SpellEffect",
+  "description": "Royal authority wave opens passages and calms spirits",
+  "particleSystems": [
+    {
+      "name": "RoyalWave",
+      "prefab": "Particles/Spells/ZeldasLullabyCastWave",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 3.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 15.0
+    },
+    {
+      "name": "PassageOpen",
+      "prefab": "Particles/Spells/PassageOpen",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 10.0,
+      "loop": false,
+      "targetTags": ["RoyalPassage", "TimeBlock", "SealedDoor"]
+    },
+    {
+      "name": "SpiritCalm",
+      "prefab": "Particles/Spells/SpiritCalm",
+      "offset": [0, 0, 0],
+      "scale": 3.0,
+      "duration": 20.0,
+      "loop": false,
+      "targetTags": ["RestlessSpirit", "Poe", "Ghost"]
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/ZeldasLullabyCast",
+    "volume": 0.8,
+    "pitch": 1.0,
+    "echo": true,
+    "reverbZone": "Temple"
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.5, 1.0, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.5, 1.0, 0.4],
+      "duration": 0.4
+    }
+  }
+}

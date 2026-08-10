@@ -1,0 +1,20 @@
+{
+  "id": "ZeldasLullaby",
+  "name": "Zelda's Lullaby",
+  "type": "Song",
+  "description": "Opens royal paths, proves identity",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Song",
+    "KeyItem"
+  ],
+  "customData": {
+    "ocarinaSong": true,
+    "magicCost": 10
+  }
+}

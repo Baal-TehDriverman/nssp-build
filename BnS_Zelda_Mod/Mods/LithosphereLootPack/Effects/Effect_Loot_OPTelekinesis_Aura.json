@@ -1,0 +1,32 @@
+{
+  "$type": "ThunderRoad.EffectData",
+  "id": "Lithosphere_Loot_OPTelekinesis_Aura",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "OP Telekinesis (opal)",
+  "addressableName": "Lithosphere_Loot_OPTelekinesis_Aura",
+  "modules": [
+    {
+      "$type": "ThunderRoad.EffectModuleParticleAdditive",
+      "loop": true,
+      "duration": 0.0,
+      "isStickToObject": true,
+      "particleMaterial": "Additive",
+      "mainGradient": {
+        "mainStart": {
+          "r": 1.0,
+          "g": 0.85,
+          "b": 0.5,
+          "a": 0.4
+        },
+        "mainEnd": {
+          "r": 0.95,
+          "g": 0.7,
+          "b": 1.0,
+          "a": 0.0
+        }
+      },
+      "note": "Lithosphere effect: AdditiveParticle / opal - Exotic - play-of-color, iridescence"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "OcarinaOfTime",
+  "name": "Ocarina of Time",
+  "type": "Instrument",
+  "description": "Play songs to warp, change time, control weather, and more.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Instrument",
+    "KeyItem"
+  ],
+  "slot": "OffHand",
+  "customData": {
+    "songs": [
+      "SongOfTime",
+      "SongOfStorms",
+      "EponasSong",
+      "SunsSong",
+      "ZeldasLullaby",
+      "MinuetOfForest",
+      "BoleroOfFire",
+      "SerenadeOfWater",
+      "NocturneOfShadow",
+      "RequiemOfSpirit",
+      "PreludeOfLight"
+    ],
+    "usesMagic": true,
+    "magicCost": 5
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "IronBoots",
+  "name": "Iron Boots",
+  "type": "Boots",
+  "description": "Heavy iron boots that make the wearer sink in water and resist strong winds. Essential for Water Temple navigation and wind puzzles.",
+  "damage": 1,
+  "defense": 2,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Boots",
+    "KeyItem",
+    "PuzzleItem",
+    "WaterNavigation",
+    "WindResist"
+  ],
+  "slot": "Feet",
+  "customData": {
+    "sinksInWater": true,
+    "windResist": true,
+    "moveSpeed": -0.5,
+    "jumpHeight": -0.8,
+    "underwaterWalk": true,
+    "currentResist": true,
+    "fanResist": true,
+    "pressurePlateWeight": "Heavy",
+    "requiredFor": ["WaterTemple", "IceCavern", "ShadowTemple_FanRoom", "GanonsCastle_WaterBarrier"],
+    "era": "Adult",
+    "location": "Ice Cavern",
+    "lore": "Crafted by the ancient Gorons for deep-earth mining. The weight anchors the wearer against any current.",
+    "puzzleUses": [
+      "Walk on lake/river beds",
+      "Resist water currents",
+      "Activate heavy pressure plates",
+      "Resist wind/fan pushes",
+      "Sink through false floors",
+      "Stabilize on moving platforms"
+    ]
+  }
+}

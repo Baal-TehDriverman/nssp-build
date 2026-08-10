@@ -1,0 +1,43 @@
+{
+ "$type": "ThunderRoad.EffectData",
+ "id": "Lithosphere_Synergy_SSJFlight_Aura",
+ "sensitiveContent": "None",
+ "version": 1,
+ "name": "SSJFlight Synergy (opal)",
+ "addressableName": "Lithosphere_Synergy_SSJFlight_Aura",
+ "modules": [
+  {
+   "$type": "ThunderRoad.EffectModuleParticle, ThunderRoad",
+   "loop": true,
+   "duration": 0.0,
+   "isStickToObject": true,
+   "particleMaterial": "Additive",
+   "mainGradient": {
+    "mainStart": {
+     "r": 0.45,
+     "g": 0.6,
+     "b": 1.0,
+     "a": 0.9
+    },
+    "mainEnd": {
+     "r": 0.65,
+     "g": 0.8,
+     "b": 1,
+     "a": 0.0
+    }
+   },
+   "note": "Lithosphere synergy effect: opal",
+   "effectParticleAddress": "Pilot.DBZ.Spell.VFX.Main.AroundBody.prefab",
+   "linkDestination": "Self",
+   "linkRotationType": "Self",
+   "linkScaleType": "World",
+   "playParticle": true,
+   "particleCount": 26,
+   "localScale": {
+    "x": 0.6,
+    "y": 0.6,
+    "z": 0.6
+   }
+  }
+ ]
+}

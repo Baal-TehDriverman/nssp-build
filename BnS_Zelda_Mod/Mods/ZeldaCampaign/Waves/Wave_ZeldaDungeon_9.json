@@ -1,0 +1,53 @@
+{
+  "id": "Wave_ZeldaDungeon_9",
+  "name": "Temple of Time: Final Trial",
+  "description": "The ultimate test in the Temple of Time. Face phantom versions of every boss, then the Hero's Shade.",
+  "difficulty": "Master",
+  "recommendedLevel": 80,
+  "tags": ["ZeldaCampaign", "TempleOfTime", "FinalTrial", "BossRush"],
+  "enemies": [
+    {
+      "type": "PhantomGanon",
+      "count": 1,
+      "modifiers": ["Enraged", "Teleports", "HolyWeakness"]
+    },
+    {
+      "type": "PhantomGhirahim",
+      "count": 1,
+      "modifiers": ["DualWield", "TeleportSlash", "DarkMagic"]
+    },
+    {
+      "type": "PhantomDemise",
+      "count": 1,
+      "modifiers": ["SwordBeam", "LeviathanForm", "TimeStop"]
+    },
+    {
+      "type": "HeroShade",
+      "count": 1,
+      "modifiers": ["AllHiddenSkills", "MasterSwordBeams", "InvincibleUntilParried", "TeachesFinalTechnique"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "MasterSword_True",
+      "Item_Lithosphere_Origin_Heart"
+    ],
+    "chance": [
+      { "item": "HylianShield", "probability": 0.5 },
+      { "item": "GoldSkulltula", "probability": 0.3, "count": 10 }
+    ],
+    "experience": 50000,
+    "rupees": 10000
+  },
+  "environment": {
+    "map": "TempleOfTime",
+    "music": "TempleOfTime_Final",
+    "timeLimit": 1800,
+    "specialRules": [
+      "NoHealingItems",
+      "OneLife",
+      "PerfectParryRequiredForHeroShade"
+    ]
+  },
+  "lore": "The Temple of Time remembers all who have passed. Only the true Hero can face the shade of the past and claim the blade's true power."
+}

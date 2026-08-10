@@ -1,0 +1,61 @@
+{
+  "id": "MasterSword",
+  "name": "Master Sword",
+  "type": "Sword",
+  "description": "The Blade of Evil's Bane. Forged by the Goddess Hylia, tempered in the Sacred Flames. Rests in the Pedestal of Time, awaiting the Hero of Time. Fires beams of light when at full health.",
+  "damage": 2,
+  "defense": 1,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Sword",
+    "Weapon",
+    "KeyItem",
+    "Holy",
+    "Legendary",
+    "AdultEra"
+  ],
+  "slot": "RightHand",
+  "customData": {
+    "isTwoHanded": false,
+    "era": "Adult",
+    "upgradePath": "MasterSword_True",
+    "previousForm": "KokiriSword",
+    "beamAttack": {
+      "enabled": true,
+      "condition": "health >= maxHealth",
+      "damage": 2,
+      "range": 8,
+      "speed": 25,
+      "effect": "HolyLight",
+      "cooldown": 1.0
+    },
+    "sealingPower": {
+      "sealsEvil": true,
+      "weakensGanon": true,
+      "repelsDarkMagic": true
+    },
+    "timeTravel": {
+      "enabled": true,
+      "returnToPedestal": true,
+      "childEraAccess": true
+    },
+    "lore": "Forged by the Goddess Hylia as the Goddess Sword. Tempered in the three Sacred Flames - Farore's Flame, Din's Flame, Nayru's Flame - by the chosen hero. It became the Master Sword, the Blade of Evil's Bane. The Pedestal of Time is its resting place. Only one with the three Spiritual Stones and the Ocarina of Time can draw it.",
+    "skills": [
+      "MasterSlash",
+      "SpinAttack",
+      "JumpAttack",
+      "SwordBeam",
+      "Parry",
+      "MortalDraw"
+    ],
+    "requirements": {
+      "spiritualStones": 3,
+      "ocarinaOfTime": true,
+      "songOfTime": true,
+      "minAge": "Adult"
+    }
+  }
+}

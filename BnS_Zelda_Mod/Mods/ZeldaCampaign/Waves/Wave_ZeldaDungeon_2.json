@@ -1,0 +1,57 @@
+{
+  "id": "Wave_ZeldaDungeon_2",
+  "name": "Dodongo's Cavern: The Goron's Lair",
+  "description": "Enter the lava-filled cavern to destroy the Dodongo infestation. Face King Dodongo, the ancient dinosaur king.",
+  "difficulty": "Apprentice",
+  "recommendedLevel": 15,
+  "tags": ["ZeldaCampaign", "DodongosCavern", "ChildEra", "SecondDungeon", "Fire"],
+  "enemies": [
+    {
+      "type": "Dodongo",
+      "count": 6,
+      "modifiers": ["FireBreath", "TailWeakPoint", "ArmorPlated"]
+    },
+    {
+      "type": "BabyDodongo",
+      "count": 10,
+      "modifiers": ["ExplodesOnDeath", "Swarm"]
+    },
+    {
+      "type": "Lizalfos",
+      "count": 4,
+      "modifiers": ["DualWield", "Dodge", "FireResistant"]
+    },
+    {
+      "type": "KingDodongo",
+      "count": 1,
+      "modifiers": ["Boss", "MouthWeakPoint", "RollAttack", "FireBreath", "LavaImmune", "ExplodesOnDeath"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "SpiritualStone_Goron",
+      "GoronTunic",
+      "BombBag"
+    ],
+    "chance": [
+      { "item": "Bomb", "probability": 0.8, "count": 30 },
+      { "item": "Bombchu", "probability": 0.4, "count": 10 },
+      { "item": "Fairy", "probability": 0.3, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.1 },
+      { "item": "GoronRubyFragment", "probability": 0.2, "count": 3 }
+    ],
+    "experience": 15000,
+    "rupees": 800
+  },
+  "environment": {
+    "map": "DodongosCavern",
+    "music": "DodongosCavern_Dungeon",
+    "timeLimit": 900,
+    "specialRules": [
+      "BombFlowersRequired",
+      "LavaDamageWithoutTunic",
+      "KingDodongoBombInMouth"
+    ]
+  },
+  "lore": "The Gorons' sacred cavern has been overrun by Dodongos. Their leader, Darunia, seals himself away in shame. Blast through the infestation and defeat King Dodongo to earn the Goron Ruby."
+}

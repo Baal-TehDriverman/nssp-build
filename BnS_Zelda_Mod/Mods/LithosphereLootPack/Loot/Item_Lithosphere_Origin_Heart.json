@@ -1,0 +1,57 @@
+{
+  "id": "Lithosphere_Origin_Heart",
+  "name": "Origin Heart",
+  "description": "The crystallized essence of the Lithosphere itself. Grants mastery over all lithosphere resonances and creates permanent synergy bonds with all equipped mods.",
+  "type": "Artifact",
+  "damage": 0,
+  "defense": 0,
+  "weight": 0.1,
+  "value": 99999,
+  "tags": ["Lithosphere", "Artifact", "Legendary", "CrossMod", "Origin"],
+  "slot": "Amulet",
+  "customData": {
+    "unique": true,
+    "maxStack": 1,
+    "effects": {
+      "universalResonance": {
+        "description": "All lithosphere effects gain +50% potency and duration",
+        "modifiesAllLithosphere": true,
+        "potencyMultiplier": 1.5
+      },
+      "permanentSynergy": {
+        "description": "All cross-mod synergies (SSJFlight, SuperSaiyan, ZeldaCampaign, etc.) are permanently active without needing individual synergy items",
+        "autoActivates": true,
+        "affectedMods": [
+          "SuperSaiyanTransformations",
+          "SSJFlight",
+          "ZeldaCampaign",
+          "LithosphereLootPack"
+        ]
+      },
+      "originAwareness": {
+        "description": "Grants passive awareness of all lithosphere energies in range",
+        "range": 50,
+        "detectsHidden": true,
+        "revealsWeaknesses": true
+      },
+      "masteryGrant": {
+        "description": "Instantly unlocks all lithosphere gem tiers and resonance combinations",
+        "unlocksAllGems": true,
+        "unlocksAllResonances": true
+      }
+    },
+    "acquisition": {
+      "method": "craft",
+      "requires": [
+        "Lithosphere_BloodBlade",
+        "Lithosphere_BloodOrb",
+        "Item_Lithosphere_Synergy_SuperSaiyanTransformations",
+        "Item_Lithosphere_Synergy_SSJFlight",
+        "Item_Lithosphere_Synergy_ZeldaCampaign",
+        "Item_Lithosphere_Synergy_LithosphereLootPack"
+      ],
+      "craftingStation": "Lithosphere_Forge",
+      "lore": "The heart from which all lithosphere energies flow. Only one exists in all of creation."
+    }
+  }
+}

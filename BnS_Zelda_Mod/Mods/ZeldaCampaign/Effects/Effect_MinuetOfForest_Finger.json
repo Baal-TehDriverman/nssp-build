@@ -1,0 +1,44 @@
+{
+  "id": "Effect_MinuetOfForest_Finger",
+  "name": "Minuet of Forest Finger Effect",
+  "type": "SpellEffect",
+  "description": "Emerald wind particles on fingers while playing",
+  "particleSystems": [
+    {
+      "name": "FingerForestGlow",
+      "prefab": "Particles/Spells/MinuetOfForestFingerGlow",
+      "offset": [0, 0, 0],
+      "scale": 0.5,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true
+    },
+    {
+      "name": "LeafTrails",
+      "prefab": "Particles/Spells/MinuetOfForestFingerTrails",
+      "offset": [0, 0, 0],
+      "scale": 0.3,
+      "duration": -1,
+      "loop": true,
+      "attachToFingers": true,
+      "emissionRate": 5
+    }
+  ],
+  "audio": {
+    "noteSounds": [
+      "Audio/Spells/MinuetOfForestNote1",
+      "Audio/Spells/MinuetOfForestNote2",
+      "Audio/Spells/MinuetOfForestNote3",
+      "Audio/Spells/MinuetOfForestNote4",
+      "Audio/Spells/MinuetOfForestNote5",
+      "Audio/Spells/MinuetOfForestNote6"
+    ],
+    "volume": 0.6,
+    "randomPitch": true,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "fingerGlowColor": [0.2, 0.8, 0.3, 0.9],
+    "trailColor": [0.4, 1.0, 0.5, 0.7]
+  }
+}

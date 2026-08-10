@@ -1,0 +1,56 @@
+{
+  "id": "Wave_ZeldaDungeon_1",
+  "name": "Great Deku Tree: Inside the Guardian",
+  "description": "Journey inside the Great Deku Tree to break the curse. Face Queen Gohma, the parasitic arachnid.",
+  "difficulty": "Novice",
+  "recommendedLevel": 10,
+  "tags": ["ZeldaCampaign", "DekuTree", "ChildEra", "FirstDungeon"],
+  "enemies": [
+    {
+      "type": "DekuBaba",
+      "count": 8,
+      "modifiers": ["WeakPoint"]
+    },
+    {
+      "type": "DekuScrub",
+      "count": 6,
+      "modifiers": ["HideInGround", "SpitNuts"]
+    },
+    {
+      "type": "Skulltula",
+      "count": 4,
+      "modifiers": ["HangFromCeiling", "WeakPointBack"]
+    },
+    {
+      "type": "QueenGohma",
+      "count": 1,
+      "modifiers": ["Boss", "EyeWeakPoint", "LaysEggs", "Charges", "FireResistant"]
+    }
+  ],
+  "rewards": {
+    "guaranteed": [
+      "SpiritualStone_Kokiri",
+      "KokiriSword",
+      "DekuShield"
+    ],
+    "chance": [
+      { "item": "DekuStick", "probability": 0.8, "count": 10 },
+      { "item": "DekuNut", "probability": 0.6, "count": 20 },
+      { "item": "Fairy", "probability": 0.3, "count": 1 },
+      { "item": "PieceOfHeart", "probability": 0.1 }
+    ],
+    "experience": 10000,
+    "rupees": 500
+  },
+  "environment": {
+    "map": "DekuTree_Interior",
+    "music": "DekuTree_Dungeon",
+    "timeLimit": 600,
+    "specialRules": [
+      "BreakWebWithFire",
+      "UseDekuSticksForTorches",
+      "QueenGohmaEyeShotRequired"
+    ]
+  },
+  "lore": "The Great Deku Tree, guardian of the Kokiri Forest, has been cursed by Ganondorf's dark magic. Venture inside to destroy the parasite Queen Gohma and claim the Kokiri Emerald."
+}

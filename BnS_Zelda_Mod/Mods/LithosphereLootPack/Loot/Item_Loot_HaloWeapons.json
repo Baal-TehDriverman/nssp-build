@@ -1,0 +1,39 @@
+{
+  "$type": "ThunderRoad.ItemData",
+  "id": "Lithosphere_Loot_HaloWeapons",
+  "sensitiveContent": "None",
+  "version": 1,
+  "name": "Lithosphere I Need a Weapon - Halo Weapons Pack",
+  "category": "Misc",
+  "itemType": "Prop",
+  "description": "UNSC-diamond alloy - holy light",
+  "prefabAddress": null,
+  "bundles": [],
+  "addressableName": "Lithosphere_Loot_HaloWeapons",
+  "contentAddress": null,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleEffect",
+      "effectId": "Lithosphere_Loot_HaloWeapons_Aura",
+      "effectDuration": 0.0,
+      "loop": true,
+      "mainStart": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "mainEnd": {
+        "r": 0.9,
+        "g": 0.95,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "materialId": "diamond"
+    }
+  ],
+  "drops": [],
+  "damagers": [],
+  "colliderGroup": "Blade",
+  "dissolution": 0.2
+}

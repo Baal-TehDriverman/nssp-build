@@ -1,0 +1,19 @@
+{
+  "id": "PieceOfHeart",
+  "name": "Piece of Heart",
+  "type": "Upgrade",
+  "description": "Collect 4 for a Heart Container.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 50,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Upgrade",
+    "ChestLoot"
+  ],
+  "customData": {
+    "heartPieces": 1
+  }
+}

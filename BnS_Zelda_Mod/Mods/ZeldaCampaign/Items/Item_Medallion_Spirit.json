@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Spirit",
+  "name": "Spirit Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Spirit Sage, Nabooru. Proof of awakening the Spirit Temple.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Spirit", "Sage"],
+  "customData": {
+    "sage": "Nabooru",
+    "element": "Spirit",
+    "temple": "SpiritTemple",
+    "lore": "Nabooru, the Sage of Spirit, bestows this medallion upon those who conquer the Spirit Temple. It holds the power of the desert spirit."
+  }
+}

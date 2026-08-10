@@ -1,0 +1,20 @@
+{
+  "id": "SerenadeOfWater",
+  "name": "Serenade of Water",
+  "type": "Song",
+  "description": "Warps to Water Temple",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Song",
+    "KeyItem"
+  ],
+  "customData": {
+    "ocarinaSong": true,
+    "magicCost": 10
+  }
+}

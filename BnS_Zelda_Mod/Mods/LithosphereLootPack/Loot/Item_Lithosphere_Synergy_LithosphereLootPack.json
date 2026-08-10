@@ -1,0 +1,39 @@
+{
+ "$type": "ThunderRoad.ItemData",
+ "id": "Lithosphere_Synergy_LithosphereLootPack",
+ "sensitiveContent": "None",
+ "version": 1,
+ "name": "Lithosphere Synergy (LithosphereLootPack)",
+ "category": "Misc",
+ "itemType": "Prop",
+ "description": "A crystallized shard of synergistic power from the LithosphereLootPack stack.",
+ "prefabAddress": null,
+ "bundles": [],
+ "addressableName": "Lithosphere_Synergy_LithosphereLootPack",
+ "contentAddress": null,
+ "modules": [
+  {
+   "$type": "ThunderRoad.ItemModuleEffect",
+   "effectId": "Lithosphere_Synergy_LithosphereLootPack_Aura",
+   "effectDuration": 0.0,
+   "loop": true,
+   "mainStart": {
+    "r": 0.85,
+    "g": 0.9,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "mainEnd": {
+    "r": 0.85,
+    "g": 0.9,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "materialId": "diamond"
+  }
+ ],
+ "drops": [],
+ "damagers": [],
+ "colliderGroup": "Blade",
+ "dissolution": 0.2
+}

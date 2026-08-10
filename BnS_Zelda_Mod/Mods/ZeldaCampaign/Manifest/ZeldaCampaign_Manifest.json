@@ -1,0 +1,613 @@
+{
+  "id": "ZeldaCampaign_Manifest",
+  "name": "Zelda Campaign Manifest",
+  "type": "CampaignManifest",
+  "version": "1.0.0",
+  "description": "Complete campaign manifest including quest log, dungeon tracker, rewards, and progression tracking for the full Zelda Campaign experience.",
+  "campaignInfo": {
+    "title": "The Legend of Zelda: Ocarina of Time Campaign",
+    "author": "Baal-TehDriverman",
+    "version": "1.0.0",
+    "estimatedPlaytime": "40-60 hours",
+    "difficulty": "Normal",
+    "requiredMods": [
+      "ZeldaCampaign",
+      "SuperSaiyanTransformations",
+      "SSJFlight",
+      "LithosphereLootPack"
+    ],
+    "optionalMods": [
+      "PilotsSuperSayanSpell",
+      "WaterSpell",
+      "BlackFire",
+      "WhiteFire",
+      "DBmapPackNOMAD"
+    ],
+    "loadOrder": [
+      "Pilots Super Sayan Spell",
+      "WaterSpell",
+      "BlackFire",
+      "WhiteFire",
+      "DBmapPackNOMAD",
+      "ZeldaCampaign",
+      "SuperSaiyanTransformations",
+      "SSJFlight",
+      "LithosphereLootPack"
+    ]
+  },
+  "questLog": {
+    "mainQuests": [
+      {
+        "id": "Prologue",
+        "title": "The Dream and the Summons",
+        "description": "Awaken in Kokiri Forest. Navi delivers the Great Deku Tree's summons.",
+        "objectives": [
+          "Talk to Saria",
+          "Get Kokiri Sword",
+          "Get Deku Shield",
+          "Enter Great Deku Tree"
+        ],
+        "rewards": ["KokiriSword", "DekuShield"],
+        "unlocks": ["GreatDekuTree"],
+        "era": "Child",
+        "requiredLevel": 1
+      },
+      {
+        "id": "GreatDekuTree",
+        "title": "Break the Curse",
+        "description": "Enter the Great Deku Tree, defeat Queen Gohma, and receive the Kokiri Emerald.",
+        "objectives": [
+          "Navigate the Deku Tree interior",
+          "Defeat Queen Gohma",
+          "Receive Kokiri Emerald",
+          "Hear Great Deku Tree's final words"
+        ],
+        "rewards": ["SpiritualStone_Kokiri", "KokiriSword", "DekuShield"],
+        "unlocks": ["DodongosCavern"],
+        "era": "Child",
+        "requiredLevel": 10,
+        "wave": "Wave_ZeldaDungeon_1"
+      },
+      {
+        "id": "DodongosCavern",
+        "title": "The Goron's Lament",
+        "description": "Help Darunia clear Dodongo's Cavern. Defeat King Dodongo for the Goron Ruby.",
+        "objectives": [
+          "Meet Darunia in Goron City",
+          "Enter Dodongo's Cavern",
+          "Use Bomb Flowers to progress",
+          "Defeat King Dodongo",
+          "Receive Goron Ruby and Bomb Bag"
+        ],
+        "rewards": ["SpiritualStone_Goron", "GoronTunic", "BombBag"],
+        "unlocks": ["JabuJabusBelly"],
+        "era": "Child",
+        "requiredLevel": 15,
+        "wave": "Wave_ZeldaDungeon_2"
+      },
+      {
+        "id": "JabuJabusBelly",
+        "title": "Inside the Great Fish",
+        "description": "Rescue Princess Ruto from Lord Jabu-Jabu. Defeat Barinade for the Zora Sapphire.",
+        "objectives": [
+          "Get Zora Tunic from King Zora",
+          "Catch fish in bottle for Ruto",
+          "Enter Jabu-Jabu's Belly",
+          "Carry Ruto through dungeon",
+          "Get Boomerang",
+          "Defeat Barinade",
+          "Receive Zora Sapphire"
+        ],
+        "rewards": ["SpiritualStone_Zora", "ZoraTunic", "Boomerang"],
+        "unlocks": ["DoorOfTime"],
+        "era": "Child",
+        "requiredLevel": 20,
+        "wave": "Wave_ZeldaDungeon_3"
+      },
+      {
+        "id": "DoorOfTime",
+        "title": "The Door of Time",
+        "description": "Play the Song of Time at the Temple of Time. Draw the Master Sword. Sleep seven years.",
+        "objectives": [
+          "Return to Temple of Time",
+          "Play Song of Time with Ocarina",
+          "Watch Door of Time open",
+          "Approach Pedestal of Time",
+          "Draw Master Sword",
+          "Awaken in Sacred Realm"
+        ],
+        "rewards": ["MasterSword", "LightMedallion"],
+        "unlocks": ["AdultEra", "TimeTravel", "ForestTemple"],
+        "era": "Transition",
+        "requiredLevel": 20,
+        "cutscene": true
+      },
+      {
+        "id": "ForestTemple",
+        "title": "The Forest Sage",
+        "description": "Navigate the twisted Forest Temple. Defeat Phantom Ganon. Awaken Saria as Sage of Forest.",
+        "objectives": [
+          "Learn Minuet of Forest from Sheik",
+          "Enter Forest Temple via Sacred Forest Meadow",
+          "Get Fairy Bow",
+          "Defeat Poe Sisters",
+          "Defeat Phantom Ganon",
+          "Receive Forest Medallion"
+        ],
+        "rewards": ["Medallion_Forest", "FairyBow"],
+        "unlocks": ["FireTemple", "MinuetOfForest"],
+        "era": "Adult",
+        "requiredLevel": 35,
+        "wave": "Wave_ZeldaDungeon_4"
+      },
+      {
+        "id": "FireTemple",
+        "title": "The Fire Sage",
+        "description": "Rescue Gorons in the Fire Temple. Defeat Volvagia. Awaken Darunia as Sage of Fire.",
+        "objectives": [
+          "Learn Bolero of Fire from Sheik",
+          "Enter Fire Temple at Death Mountain Crater",
+          "Get Megaton Hammer",
+          "Rescue all 6 Gorons",
+          "Defeat Volvagia",
+          "Receive Fire Medallion"
+        ],
+        "rewards": ["Medallion_Fire", "MegatonHammer"],
+        "unlocks": ["WaterTemple", "BoleroOfFire"],
+        "era": "Adult",
+        "requiredLevel": 45,
+        "wave": "Wave_ZeldaDungeon_5"
+      },
+      {
+        "id": "WaterTemple",
+        "title": "The Water Sage",
+        "description": "Master the Water Temple's shifting water levels. Defeat Morpha. Awaken Ruto as Sage of Water.",
+        "objectives": [
+          "Learn Serenade of Water from Sheik",
+          "Enter Water Temple at Lake Hylia",
+          "Get Longshot",
+          "Manipulate water levels (3 positions)",
+          "Defeat Dark Link",
+          "Defeat Morpha",
+          "Receive Water Medallion"
+        ],
+        "rewards": ["Medallion_Water", "Longshot"],
+        "unlocks": ["ShadowTemple", "SerenadeOfWater"],
+        "era": "Adult",
+        "requiredLevel": 50,
+        "wave": "Wave_ZeldaDungeon_6"
+      },
+      {
+        "id": "ShadowTemple",
+        "title": "The Shadow Sage",
+        "description": "Navigate the Shadow Temple's illusions. Defeat Bongo Bongo. Awaken Impa as Sage of Shadow.",
+        "objectives": [
+          "Learn Nocturne of Shadow from Sheik",
+          "Enter Shadow Temple beneath Kakariko Graveyard",
+          "Get Hover Boots",
+          "Use Lens of Truth throughout",
+          "Defeat Dead Hand",
+          "Defeat Bongo Bongo on drum stage",
+          "Receive Shadow Medallion"
+        ],
+        "rewards": ["Medallion_Shadow", "HoverBoots"],
+        "unlocks": ["SpiritTemple", "NocturneOfShadow"],
+        "era": "Adult",
+        "requiredLevel": 55,
+        "wave": "Wave_ZeldaDungeon_7"
+      },
+      {
+        "id": "SpiritTemple",
+        "title": "The Spirit Sage",
+        "description": "Navigate the Spirit Temple across time. Defeat Twinrova. Awaken Nabooru as Sage of Spirit.",
+        "objectives": [
+          "Learn Requiem of Spirit from Sheik",
+          "Enter Spirit Temple at Desert Colossus",
+          "Child section: Get Silver Gauntlets",
+          "Adult section: Get Mirror Shield",
+          "Defeat Iron Knuckles",
+          "Defeat Twinrova (reflect with Mirror Shield)",
+          "Receive Spirit Medallion"
+        ],
+        "rewards": ["Medallion_Spirit", "MirrorShield", "SilverGauntlets"],
+        "unlocks": ["GanonsCastle", "RequiemOfSpirit"],
+        "era": "Adult",
+        "requiredLevel": 60,
+        "wave": "Wave_ZeldaDungeon_8"
+      },
+      {
+        "id": "GanonsCastle",
+        "title": "Ganon's Castle",
+        "description": "Break the six barriers using the Sage Medallions. Ascend the tower. Face Ganondorf.",
+        "objectives": [
+          "Learn Prelude of Light from Sheik/Zelda",
+          "Enter Ganon's Castle",
+          "Break Forest Barrier (Forest Medallion)",
+          "Break Fire Barrier (Fire Medallion)",
+          "Break Water Barrier (Water Medallion)",
+          "Break Shadow Barrier (Shadow Medallion)",
+          "Break Spirit Barrier (Spirit Medallion)",
+          "Break Light Barrier (Light Medallion)",
+          "Ascend tower",
+          "Face Ganondorf",
+          "Defeat Ganondorf with Master Sword and Light Arrows"
+        ],
+        "rewards": ["Access to Ganon Fight"],
+        "unlocks": ["GanonFight"],
+        "era": "Adult",
+        "requiredLevel": 70,
+        "wave": "Wave_ZeldaDungeon_9"
+      },
+      {
+        "id": "GanonFight",
+        "title": "Final Battle - Ganon",
+        "description": "Ganondorf transforms into Ganon. Master Sword knocked away. Stun with Megaton Hammer. Retrieve Master Sword. Deliver final blow. Zelda seals Ganon.",
+        "objectives": [
+          "Survive Ganon's attacks",
+          "Master Sword knocked away",
+          "Stun Ganon with Megaton Hammer",
+          "Retrieve Master Sword",
+          "Strike Ganon's tail weak point",
+          "Zelda holds Ganon with Sages' power",
+          "Deliver final Master Sword strike",
+          "Watch sealing cutscene"
+        ],
+        "rewards": ["MasterSword_True", "TrueEnding", "NewGamePlus"],
+        "unlocks": ["Credits", "NewGamePlus"],
+        "era": "Adult",
+        "requiredLevel": 80,
+        "wave": "Wave_ZeldaDungeon_9",
+        "finalBoss": true
+      }
+    ],
+    "sideQuests": [
+      {
+        "id": "GoldSkulltulas",
+        "title": "Curse of the Skulltula",
+        "description": "Collect 100 Gold Skulltulas to break the curse on the Kakariko family.",
+        "objectives": [
+          "Find Gold Skulltulas in dungeons and overworld",
+          "Collect tokens",
+          "Return to Kakariko House of Skulltula",
+          "Break curse at 10, 20, 30, 40, 50, 100 tokens"
+        ],
+        "rewards": [
+          "10: Adult's Wallet",
+          "20: Stone of Agony",
+          "30: Giant's Wallet",
+          "40: Bombchu Drop",
+          "50: Piece of Heart",
+          "100: 200 Rupees (repeatable)"
+        ],
+        "totalSkulltulas": 100
+      },
+      {
+        "id": "BiggoronSword",
+        "title": "Biggoron's Sword",
+        "description": "Complete the trading sequence to obtain the unbreakable two-handed Biggoron's Sword.",
+        "objectives": [
+          "Weird Egg -> Cucco",
+          "Cucco -> Cojiro",
+          "Cojiro -> Odd Mushroom",
+          "Odd Mushroom -> Odd Potion",
+          "Odd Potion -> Poacher's Saw",
+          "Poacher's Saw -> Broken Sword",
+          "Broken Sword -> Prescription",
+          "Prescription -> Eyeball Frog",
+          "Eyeball Frog -> World's Finest Eye Drops",
+          "World's Finest Eye Drops -> Claim Check",
+          "Claim Check -> Biggoron's Sword"
+        ],
+        "rewards": ["BiggoronSword"],
+        "requiredItems": ["OcarinaOfTime", "EponasSong", "SunsSong"]
+      },
+      {
+        "id": "HeartPieces",
+        "title": "Pieces of Heart",
+        "description": "Collect 36 Pieces of Heart to gain 9 additional Heart Containers.",
+        "objectives": [
+          "Find Pieces of Heart in dungeons, overworld, minigames",
+          "Trade for some via side quests",
+          "Win some in mini-games",
+          "4 Pieces = 1 Heart Container"
+        ],
+        "rewards": ["HeartContainer (x9)"],
+        "totalPieces": 36
+      },
+      {
+        "id": "EponaQuest",
+        "title": "Epona's Rescue",
+        "description": "Win Epona from Ingo at Lon Lon Ranch.",
+        "objectives": [
+          "Learn Epona's Song from Malon as child",
+          "Return as adult",
+          "Talk to Ingo",
+          "Pay 10 rupees to ride",
+          "Race Ingo twice",
+          "Win both races",
+          "Jump fence to escape with Epona"
+        ],
+        "rewards": ["Epona (mount)", "EponasSong"],
+        "requiredItems": ["OcarinaOfTime"]
+      }
+    ]
+  },
+  "dungeonTracker": {
+    "dungeons": [
+      {
+        "id": "DekuTree",
+        "name": "Great Deku Tree",
+        "era": "Child",
+        "order": 1,
+        "completed": false,
+        "boss": "Queen Gohma",
+        "warpSong": null,
+        "requiredItems": ["KokiriSword", "DekuShield"],
+        "rewards": ["SpiritualStone_Kokiri"],
+        "map": "DekuTree_Interior",
+        "estimatedTime": "30-45 min"
+      },
+      {
+        "id": "DodongosCavern",
+        "name": "Dodongo's Cavern",
+        "era": "Child",
+        "order": 2,
+        "completed": false,
+        "boss": "King Dodongo",
+        "warpSong": null,
+        "requiredItems": ["BombBag"],
+        "rewards": ["SpiritualStone_Goron", "GoronTunic", "BombBag"],
+        "map": "DodongosCavern",
+        "estimatedTime": "45-60 min"
+      },
+      {
+        "id": "JabuJabusBelly",
+        "name": "Jabu-Jabu's Belly",
+        "era": "Child",
+        "order": 3,
+        "completed": false,
+        "boss": "Barinade",
+        "warpSong": null,
+        "requiredItems": ["Boomerang", "ZoraTunic"],
+        "rewards": ["SpiritualStone_Zora", "ZoraTunic", "Boomerang"],
+        "map": "JabuJabusBelly",
+        "estimatedTime": "45-60 min"
+      },
+      {
+        "id": "ForestTemple",
+        "name": "Forest Temple",
+        "era": "Adult",
+        "order": 4,
+        "completed": false,
+        "boss": "Phantom Ganon",
+        "warpSong": "MinuetOfForest",
+        "requiredItems": ["FairyBow", "Hookshot"],
+        "rewards": ["Medallion_Forest", "FairyBow"],
+        "map": "ForestTemple",
+        "estimatedTime": "60-90 min"
+      },
+      {
+        "id": "FireTemple",
+        "name": "Fire Temple",
+        "era": "Adult",
+        "order": 5,
+        "completed": false,
+        "boss": "Volvagia",
+        "warpSong": "BoleroOfFire",
+        "requiredItems": ["MegatonHammer", "GoronTunic"],
+        "rewards": ["Medallion_Fire", "MegatonHammer"],
+        "map": "FireTemple",
+        "estimatedTime": "90-120 min"
+      },
+      {
+        "id": "WaterTemple",
+        "name": "Water Temple",
+        "era": "Adult",
+        "order": 6,
+        "completed": false,
+        "boss": "Morpha",
+        "warpSong": "SerenadeOfWater",
+        "requiredItems": ["Longshot", "IronBoots", "ZoraTunic"],
+        "rewards": ["Medallion_Water", "Longshot"],
+        "map": "WaterTemple",
+        "estimatedTime": "120-180 min"
+      },
+      {
+        "id": "ShadowTemple",
+        "name": "Shadow Temple",
+        "era": "Adult",
+        "order": 7,
+        "completed": false,
+        "boss": "Bongo Bongo",
+        "warpSong": "NocturneOfShadow",
+        "requiredItems": ["HoverBoots", "LensOfTruth"],
+        "rewards": ["Medallion_Shadow", "HoverBoots"],
+        "map": "ShadowTemple",
+        "estimatedTime": "90-120 min"
+      },
+      {
+        "id": "SpiritTemple",
+        "name": "Spirit Temple",
+        "era": "Adult",
+        "order": 8,
+        "completed": false,
+        "boss": "Twinrova",
+        "warpSong": "RequiemOfSpirit",
+        "requiredItems": ["MirrorShield", "SilverGauntlets"],
+        "rewards": ["Medallion_Spirit", "MirrorShield", "SilverGauntlets"],
+        "map": "SpiritTemple",
+        "estimatedTime": "120-180 min"
+      },
+      {
+        "id": "GanonsCastle",
+        "name": "Ganon's Castle",
+        "era": "Adult",
+        "order": 9,
+        "completed": false,
+        "boss": "Ganondorf / Ganon",
+        "warpSong": "PreludeOfLight",
+        "requiredItems": ["All 6 Medallions", "LightArrows", "MasterSword"],
+        "rewards": ["MasterSword_True", "TrueEnding"],
+        "map": "GanonsCastle",
+        "estimatedTime": "60-90 min"
+      }
+    ]
+  },
+  "rewards": {
+    "completionRewards": {
+      "allSpiritualStones": {
+        "title": "Hero of Time",
+        "description": "Collected all three Spiritual Stones",
+        "experience": 15000,
+        "rupees": 1000,
+        "unlocks": ["DoorOfTime", "MasterSword", "AdultEra"]
+      },
+      "allMedallions": {
+        "title": "Sage's Champion",
+        "description": "Awakened all six Sages",
+        "experience": 50000,
+        "rupees": 5000,
+        "unlocks": ["GanonsCastle", "PreludeOfLight"]
+      },
+      "masterSwordTrue": {
+        "title": "True Hero of Time",
+        "description": "Awakened the Master Sword's true power",
+        "experience": 100000,
+        "rupees": 20000,
+        "unlocks": ["NewGamePlus", "MasterSword_True"]
+      },
+      "ganonDefeated": {
+        "title": "King of Evil Vanquished",
+        "description": "Defeated Ganon and saved Hyrule",
+        "experience": 200000,
+        "rupees": 50000,
+        "unlocks": ["TrueEnding", "Credits", "NewGamePlus"]
+      },
+      "allGoldSkulltulas": {
+        "title": "Skulltula Hunter",
+        "description": "Collected all 100 Gold Skulltula tokens",
+        "experience": 50000,
+        "rupees": 10000,
+        "unlocks": ["InfiniteRupees"]
+      },
+      "allHeartPieces": {
+        "title": "Heart of a Hero",
+        "description": "Collected all 36 Pieces of Heart (20 Hearts total)",
+        "experience": 25000,
+        "rupees": 5000,
+        "unlocks": ["MaxHealth"]
+      },
+      "biggoronSword": {
+        "title": "Goron's Pride",
+        "description": "Completed the trading sequence for Biggoron's Sword",
+        "experience": 10000,
+        "rupees": 2000,
+        "unlocks": ["BiggoronSword"]
+      }
+    },
+    "dungeonRewards": {
+      "DekuTree": {
+        "firstClear": ["SpiritualStone_Kokiri", "KokiriSword", "DekuShield", "10000 XP", "500 Rupees"],
+        "repeatClear": ["5000 XP", "200 Rupees", "DekuSticks", "DekuNuts"]
+      },
+      "DodongosCavern": {
+        "firstClear": ["SpiritualStone_Goron", "GoronTunic", "BombBag", "15000 XP", "800 Rupees"],
+        "repeatClear": ["7500 XP", "300 Rupees", "Bombs", "Bombchus"]
+      },
+      "JabuJabusBelly": {
+        "firstClear": ["SpiritualStone_Zora", "ZoraTunic", "Boomerang", "20000 XP", "1000 Rupees"],
+        "repeatClear": ["10000 XP", "400 Rupees", "Fish", "Fairies"]
+      },
+      "ForestTemple": {
+        "firstClear": ["Medallion_Forest", "FairyBow", "35000 XP", "2000 Rupees"],
+        "repeatClear": ["17500 XP", "800 Rupees", "Arrows", "Fairies"]
+      },
+      "FireTemple": {
+        "firstClear": ["Medallion_Fire", "MegatonHammer", "50000 XP", "3000 Rupees"],
+        "repeatClear": ["25000 XP", "1200 Rupees", "FireArrows", "MagicJars"]
+      },
+      "WaterTemple": {
+        "firstClear": ["Medallion_Water", "Longshot", "65000 XP", "4000 Rupees"],
+        "repeatClear": ["32500 XP", "1600 Rupees", "IceArrows", "MagicJars"]
+      },
+      "ShadowTemple": {
+        "firstClear": ["Medallion_Shadow", "HoverBoots", "80000 XP", "5000 Rupees"],
+        "repeatClear": ["40000 XP", "2000 Rupees", "ShadowArrows", "Fairies"]
+      },
+      "SpiritTemple": {
+        "firstClear": ["Medallion_Spirit", "MirrorShield", "SilverGauntlets", "100000 XP", "6000 Rupees"],
+        "repeatClear": ["50000 XP", "2500 Rupees", "LightArrows", "MagicJars"]
+      },
+      "GanonsCastle": {
+        "firstClear": ["MasterSword_True", "TrueEnding", "NewGamePlus", "200000 XP", "50000 Rupees"],
+        "repeatClear": ["100000 XP", "25000 Rupees", "AllItems"]
+      }
+    },
+    "crossModRewards": {
+      "superSaiyanMasterSword": {
+        "title": "Saiyan Hero of Time",
+        "description": "Fused Master Sword with Super Saiyan power",
+        "requires": ["MasterSword", "SuperSaiyan_SSJ1"],
+        "rewards": ["Spell_ZeldaCampaign_SuperSaiyan_Blade", "20000 XP"]
+      },
+      "ssjFlightOcarina": {
+        "title": "Wind Sage Saiyan",
+        "description": "Combined Ocarina warp songs with SSJ Flight",
+        "requires": ["MinuetOfForest", "SSJFlight"],
+        "rewards": ["Spell_ZeldaCampaign_SSJFlight_Wind", "15000 XP"]
+      },
+      "lithosphereUnion": {
+        "title": "Origin Hero",
+        "description": "United Master Sword with Origin Heart",
+        "requires": ["MasterSword", "Lithosphere_OriginHeart"],
+        "rewards": ["Spell_ZeldaCampaign_Lithosphere_Union", "30000 XP"]
+      },
+      "fourModUnion": {
+        "title": "Transcendent Hero",
+        "description": "Achieved Four Mod Union with all mods active",
+        "requires": ["ZeldaCampaign", "SuperSaiyanTransformations", "SSJFlight", "LithosphereLootPack"],
+        "rewards": ["Effect_Lithosphere_Synergy_FourMod_Union", "100000 XP", "UltimateForm"]
+      }
+    }
+  },
+  "settings": {
+    "difficultyOptions": {
+      "Normal": {
+        "enemyHealthMultiplier": 1.0,
+        "enemyDamageMultiplier": 1.0,
+        "playerDamageMultiplier": 1.0,
+        "healingEffectiveness": 1.0,
+        "timeLimitsEnabled": true
+      },
+      "Hero": {
+        "enemyHealthMultiplier": 1.5,
+        "enemyDamageMultiplier": 1.5,
+        "playerDamageMultiplier": 0.8,
+        "healingEffectiveness": 0.7,
+        "timeLimitsEnabled": true
+      },
+      "Master": {
+        "enemyHealthMultiplier": 2.0,
+        "enemyDamageMultiplier": 2.0,
+        "playerDamageMultiplier": 0.6,
+        "healingEffectiveness": 0.5,
+        "timeLimitsEnabled": true,
+        "oneLifeMode": true
+      }
+    },
+    "accessibilityOptions": {
+      "autoTargeting": true,
+      "simplifiedControls": false,
+      "visualAssists": true,
+      "audioCues": true,
+      "timeLimitExtensions": false
+    },
+    "crossModSettings": {
+      "superSaiyanIntegration": true,
+      "ssjFlightIntegration": true,
+      "lithosphereIntegration": true,
+      "blackFireIntegration": true,
+      "waterSpellIntegration": true
+    }
+  }
+}

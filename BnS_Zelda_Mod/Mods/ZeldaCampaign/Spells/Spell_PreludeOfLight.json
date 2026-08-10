@@ -1,0 +1,94 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_PreludeOfLight",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Prelude of Light - warps to the Temple of Time.",
+  "imbueDescription": "Pure light radiates from the ocarina.",
+  "chargeEffectId": "Effect_PreludeOfLight_Charge",
+  "readyEffectId": "Effect_PreludeOfLight_Ready",
+  "fingerEffectId": "Effect_PreludeOfLight_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 1.5,
+  "orbVariationAmount": 0.05,
+  "chargeSpeed": 0.4,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.3,
+  "allowThrow": true,
+  "throwEffectId": "Effect_PreludeOfLight_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Prelude of Light",
+  "hasOrder": true,
+  "order": 11,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 30.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Prelude of Light",
+  "description": "The ancient melody that opens the path to the Sacred Realm. Warps you to the Temple of Time. Only the chosen hero may play this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 11,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "PreludeOfLight_Warp",
+    "spellKind": "Warp",
+    "color": [1.0, 1.0, 0.9],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "TempleOfTime",
+        "sceneName": "Zelda_TempleOfTime",
+        "particleEffect": "LightWarp",
+        "soundEffect": "PreludeWarp"
+      },
+      "sacredRealmAccess": {
+        "enabled": true,
+        "opensDoorOfTime": true,
+        "requiresMasterSword": true,
+        "requiresSpiritualStones": 3,
+        "requiresMedallions": 6
+      },
+      "lightShield": {
+        "enabled": true,
+        "duration": 60.0,
+        "reflectsDarkMagic": true,
+        "holyAura": true
+      },
+      "crossModSynergy": {
+        "masterSwordTrue": {
+          "spellId": "Spell_ZeldaCampaign_EnergyBlast_1",
+          "effect": "MasterSwordTruePower",
+          "damageBonus": 3.0,
+          "beamDamage": 100,
+          "range": 30.0
+        },
+        "superSaiyan": {
+          "spellId": "Spell.SuperSaiyan_MUI",
+          "effect": "AngelicMasterSword",
+          "damageBonus": 4.0,
+          "perfectUltraInstinct": true
+        },
+        "lithosphere": {
+          "effectId": "Effect_Lithosphere_Synergy_FourMod_Union",
+          "potencyBonus": 2.0
+        }
+      }
+    }
+  }
+}

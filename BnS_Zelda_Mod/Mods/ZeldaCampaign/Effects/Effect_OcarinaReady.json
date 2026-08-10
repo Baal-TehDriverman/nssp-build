@@ -1,0 +1,49 @@
+{
+  "id": "Effect_OcarinaReady",
+  "name": "Ocarina Ready Effect",
+  "type": "SpellEffect",
+  "description": "Ocarina pulses with full power, ready to cast",
+  "particleSystems": [
+    {
+      "name": "OcarinaGlow",
+      "prefab": "Particles/Spells/OcarinaReadyGlow",
+      "offset": [0, 0, 0],
+      "scale": 1.2,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "MusicNotes",
+      "prefab": "Particles/Spells/OcarinaReadyNotes",
+      "offset": [0, 0.15, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 20
+    },
+    {
+      "name": "RingPulse",
+      "prefab": "Particles/Spells/OcarinaReadyRing",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": 1.0,
+      "loop": true,
+      "interval": 2.0
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/OcarinaReadyChime",
+    "volume": 0.7,
+    "pitch": 1.0
+  },
+  "visuals": {
+    "glowColor": [0.2, 0.6, 1.0, 1.0],
+    "pulseSpeed": 3.0,
+    "pulseIntensity": 0.5,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.2, 0.6, 1.0, 0.3],
+      "duration": 0.2
+    }
+  }
+}

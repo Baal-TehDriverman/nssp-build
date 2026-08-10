@@ -1,0 +1,79 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_BoleroOfFire",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Bolero of Fire - warps to the Fire Temple.",
+  "imbueDescription": "Flames dance around the ocarina.",
+  "chargeEffectId": "Effect_BoleroOfFire_Charge",
+  "readyEffectId": "Effect_BoleroOfFire_Ready",
+  "fingerEffectId": "Effect_BoleroOfFire_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 3.5,
+  "orbVariationAmount": 0.2,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.5,
+  "allowThrow": true,
+  "throwEffectId": "Effect_BoleroOfFire_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Bolero of Fire",
+  "hasOrder": true,
+  "order": 7,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 20.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Bolero of Fire",
+  "description": "A passionate melody taught by the ancient Goron hero. Warps you to the Fire Temple entrance at Death Mountain Crater. The heat parts for this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 7,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "BoleroOfFire_Warp",
+    "spellKind": "Warp",
+    "color": [1.0, 0.4, 0.0],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "DeathMountainCrater",
+        "sceneName": "Zelda_FireTemple",
+        "particleEffect": "FireWarp",
+        "soundEffect": "BoleroWarp"
+      },
+      "fireImmunity": {
+        "enabled": true,
+        "duration": 30.0,
+        "grantsGoronTunicEffect": true
+      },
+      "crossModSynergy": {
+        "superSaiyan": {
+          "spellId": "Spell.SuperSaiyan_SSB",
+          "effect": "SolarFlareBolero",
+          "damageBonus": 2.0,
+          "fireKiBonus": true
+        },
+        "lithosphere": {
+          "effectId": "Effect_Loot_BlackFire_Aura",
+          "potencyBonus": 1.5
+        }
+      }
+    }
+  }
+}

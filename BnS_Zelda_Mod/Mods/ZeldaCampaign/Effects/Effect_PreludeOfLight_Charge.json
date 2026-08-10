@@ -1,0 +1,36 @@
+{
+  "id": "Effect_PreludeOfLight_Charge",
+  "name": "Prelude of Light Charge Effect",
+  "type": "SpellEffect",
+  "description": "Pure light radiates from ocarina while charging",
+  "particleSystems": [
+    {
+      "name": "LightRays",
+      "prefab": "Particles/Spells/PreludeLightRays",
+      "offset": [0, 0.2, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "HolyParticles",
+      "prefab": "Particles/Spells/HolyParticles",
+      "offset": [0, 0, 0],
+      "scale": 1.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 20
+    }
+  ],
+  "audio": {
+    "chargeLoop": "Audio/Spells/PreludeOfLightCharge",
+    "volume": 0.5,
+    "pitchRange": [0.9, 1.1]
+  },
+  "visuals": {
+    "glowColor": [1.0, 1.0, 0.9, 0.8],
+    "pulseSpeed": 1.5,
+    "pulseIntensity": 0.3,
+    "holyAura": true
+  }
+}

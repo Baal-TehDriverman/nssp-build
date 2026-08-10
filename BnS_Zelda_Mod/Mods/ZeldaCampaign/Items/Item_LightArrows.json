@@ -1,0 +1,22 @@
+{
+  "id": "LightArrows",
+  "name": "Light Arrows",
+  "type": "Arrow",
+  "description": "Pierces evil. Required for Ganon.",
+  "damage": 3,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Arrow",
+    "Magic",
+    "Holy",
+    "KeyItem"
+  ],
+  "customData": {
+    "element": "Light",
+    "piercesEvil": true
+  }
+}

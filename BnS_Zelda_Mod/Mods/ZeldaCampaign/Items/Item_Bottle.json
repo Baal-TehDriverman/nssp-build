@@ -1,0 +1,26 @@
+{
+  "id": "Bottle",
+  "name": "Empty Bottle",
+  "type": "Container",
+  "description": "Catch fairies, potions, bugs, fish.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Container",
+    "KeyItem"
+  ],
+  "customData": {
+    "canHold": [
+      "Fairy",
+      "Potion",
+      "Bug",
+      "Fish",
+      "Milk",
+      "Poe"
+    ]
+  }
+}

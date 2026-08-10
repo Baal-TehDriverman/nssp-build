@@ -1,0 +1,64 @@
+{
+  "id": "ZeldaCampaign_Lithosphere_Hybrid",
+  "name": "Lithosphere's Blessing",
+  "description": "Fuse Zelda Campaign items with Lithosphere Loot Pack effects. Ancient Hyrulean technology meets forbidden artifacts.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_ZeldaCampaign_EnergyBlast_1",
+    "spellB": "Spell_Lithosphere_Origin_Heart",
+    "minForm": "Base"
+  },
+  "result": {
+    "spellId": "Spell_ZeldaCampaign_Lithosphere_Union",
+    "name": "Master Sword: Lithosphere Union",
+    "description": "The Master Sword resonates with the Origin Heart. Reality bends around the blade.",
+    "damage": 80,
+    "cooldown": 10,
+    "manaCost": 60,
+    "effects": {
+      "beamAttack": {
+        "enabled": true,
+        "damage": 60,
+        "range": 25,
+        "holy": true,
+        "realityWarping": true,
+        "penetratesDefenses": true
+      },
+      "aura": {
+        "color": "#FFD700",
+        "particles": "holy_lithosphere_union",
+        "sound": "master_sword_origin_resonance"
+      },
+      "originHeart": {
+        "enabled": true,
+        "healthRegen": 5.0,
+        "manaRegen": 3.0,
+        "damageReduction": 0.3,
+        "autoRevive": {
+          "enabled": true,
+          "cooldown": 300,
+          "healthPercent": 0.5
+        }
+      },
+      "fourModUnion": {
+        "enabled": true,
+        "requires": ["ZeldaCampaign", "SuperSaiyanTransformations", "SSJFlight", "LithosphereLootPack"],
+        "potencyBonus": 2.0,
+        "unlocks": ["UltimateForm"]
+      },
+      "crossModSynergy": {
+        "lithosphere": {
+          "effectId": "Effect_Lithosphere_Synergy_FourMod_Union",
+          "potencyBonus": 2.0
+        },
+        "superSaiyan": {
+          "spellId": "Spell.SuperSaiyan_MUI",
+          "effect": "AngelicOriginUnion",
+          "damageBonus": 3.0
+        }
+      }
+    }
+  },
+  "tags": ["ZeldaCampaign", "LithosphereLootPack", "CrossMod", "SpellMerge", "OriginHeart", "MasterSword"],
+  "lore": "The Origin Heart, a fragment of creation itself, recognizes the Master Sword as a kindred artifact. Together they channel the fundamental forces of the universe."
+}

@@ -1,0 +1,39 @@
+{
+ "$type": "ThunderRoad.ItemData",
+ "id": "Lithosphere_Synergy_SSJFlight",
+ "sensitiveContent": "None",
+ "version": 1,
+ "name": "Lithosphere Synergy (SSJFlight)",
+ "category": "Misc",
+ "itemType": "Prop",
+ "description": "A crystallized shard of synergistic power from the SSJFlight stack.",
+ "prefabAddress": null,
+ "bundles": [],
+ "addressableName": "Lithosphere_Synergy_SSJFlight",
+ "contentAddress": null,
+ "modules": [
+  {
+   "$type": "ThunderRoad.ItemModuleEffect",
+   "effectId": "Lithosphere_Synergy_SSJFlight_Aura",
+   "effectDuration": 0.0,
+   "loop": true,
+   "mainStart": {
+    "r": 0.45,
+    "g": 0.6,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "mainEnd": {
+    "r": 0.45,
+    "g": 0.6,
+    "b": 1.0,
+    "a": 1.0
+   },
+   "materialId": "opal"
+  }
+ ],
+ "drops": [],
+ "damagers": [],
+ "colliderGroup": "Blade",
+ "dissolution": 0.2
+}

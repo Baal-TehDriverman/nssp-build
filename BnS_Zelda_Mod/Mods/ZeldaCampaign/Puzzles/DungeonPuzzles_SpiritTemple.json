@@ -1,0 +1,157 @@
+{
+  "id": "DungeonPuzzles_SpiritTemple",
+  "name": "Spirit Temple Puzzles",
+  "dungeon": "SpiritTemple",
+  "era": "Both",
+  "difficulty": "Master",
+  "puzzles": [
+    {
+      "id": "SpiritTemple_1_ChildSilverGauntlets",
+      "name": "Child Link - Silver Gauntlets",
+      "type": "DualEra",
+      "description": "As Child Link, navigate small passages to reach Silver Gauntlets. Required for Adult Link puzzles.",
+      "location": "Child Section - Silver Gauntlets Chamber",
+      "requiredItems": ["RequiemOfSpirit", "Slingshot", "Bombchu"],
+      "steps": [
+        "Play Requiem of Spirit as Adult",
+        "Switch to Child Link",
+        "Enter Spirit Temple child entrance",
+        "Crawl through small tunnels",
+        "Bombchu through hole to hit switch",
+        "Slingshot eye switch through grate",
+        "Navigate to Silver Gauntlets chest"
+      ],
+      "reward": "Silver Gauntlets",
+      "hints": ["Nabooru: \"Only a child can reach them...\"", "Small tunnels marked by cobwebs"]
+    },
+    {
+      "id": "SpiritTemple_2_AdultMirrorShield",
+      "name": "Adult Link - Mirror Shield",
+      "type": "DualEra",
+      "description": "As Adult Link, use Silver Gauntlets to move heavy blocks and reach Mirror Shield.",
+      "location": "Adult Section - Mirror Shield Chamber",
+      "requiredItems": ["SilverGauntlets", "Hookshot", "Longshot", "MirrorShield (after)"],
+      "steps": [
+        "Return as Adult Link",
+        "Use Silver Gauntlets to push silver blocks",
+        "Hookshot/Longshot across gaps",
+        "Navigate to Mirror Shield chest",
+        "Get Mirror Shield - reflects light/energy"
+      ],
+      "reward": "Mirror Shield",
+      "hints": ["Silver blocks need Silver Gauntlets", "Mirror Shield reflects beams"]
+    },
+    {
+      "id": "SpiritTemple_3_AnubisDinFire",
+      "name": "Anubis Mirror Puzzle",
+      "type": "Target",
+      "description": "Anubis mirrors movements and is invulnerable to physical attacks. Use Din's Fire to damage.",
+      "location": "Anubis Rooms",
+      "requiredItems": ["DinsFire"],
+      "steps": [
+        "Anubis copies all movements",
+        "Sword/bow ineffective",
+        "Cast Din's Fire - AoE damages Anubis",
+        "Repeat until defeated"
+      ],
+      "reward": "Progress, small keys",
+      "hints": ["Anubis: \"I mimic all...\"", "Fire is its weakness"]
+    },
+    {
+      "id": "SpiritTemple_4_IronKnuckle",
+      "name": "Iron Knuckle Mini-Boss",
+      "type": "BlockPush",
+      "description": "Heavy armored enemy. Attack removes armor pieces. Helmet falls off revealing weak point.",
+      "location": "Iron Knuckle Chambers (3 total)",
+      "requiredItems": ["MegatonHammer", "MirrorShield", "Longshot"],
+      "steps": [
+        "Attack armor with sword/hammer",
+        "Armor pieces fall off",
+        "Helmet falls last - reveals face",
+        "Attack face for critical damage",
+        "Megaton Hammer strips armor faster"
+      ],
+      "reward": "Keys, progress",
+      "hints": ["Armor clanks when hit", "Face is weak point"]
+    },
+    {
+      "id": "SpiritTemple_5_BeamosLaser",
+      "name": "Beamos Laser Puzzle",
+      "type": "LaserMirror",
+      "description": "Redirect Beamos lasers with Mirror Shield to hit switches and open doors.",
+      "location": "Beamos Corridors",
+      "requiredItems": ["MirrorShield", "Bomb"],
+      "steps": [
+        "Beamos rotates laser eye",
+        "Equip Mirror Shield",
+        "Stand in laser path - reflects",
+        "Angle shield to hit switch",
+        "Bomb Beamos eye to destroy"
+      ],
+      "reward": "Door access",
+      "hints": ["Mirror Shield reflects light", "Laser hits switch across room"]
+    },
+    {
+      "id": "SpiritTemple_6_StatuePuzzle",
+      "name": "Armored Statue Puzzle",
+      "type": "BlockPush",
+      "description": "Push massive armored statues with Silver/Golden Gauntlets onto switches.",
+      "location": "Statue Rooms",
+      "requiredItems": ["SilverGauntlets", "GoldenGauntlets (optional)"],
+      "steps": [
+        "Silver Gauntlets push standard statues",
+        "Golden Gauntlets push massive statues",
+        "Position on pressure plates",
+        "Doors unlock"
+      ],
+      "reward": "Progress, Boss Key access",
+      "hints": ["Statues have flat bases", "Plates need heavy weight"]
+    },
+    {
+      "id": "SpiritTemple_7_TwinrovaMirror",
+      "name": "Twinrova Mirror Shield Battle",
+      "type": "LaserMirror",
+      "description": "Reflect Kotake's fire and Koume's ice with Mirror Shield. Absorb 3 of each, then reflect combined beam.",
+      "location": "Twinrova Arena",
+      "requiredItems": ["MirrorShield", "Longshot"],
+      "steps": [
+        "Phase 1: Sisters separate",
+        "Kotake (fire) shoots fire - reflect with shield",
+        "Koume (ice) shoots ice - reflect with shield",
+        "Absorb 3 fire + 3 ice",
+        "Phase 2: Sisters merge into Twinrova",
+        "Twinrova shoots combined beam",
+        "Reflect back with Mirror Shield",
+        "Stunned - attack with sword"
+      ],
+      "reward": "Spirit Medallion, Heart Container",
+      "hints": ["Shield glows when absorbing", "Absorb 3 each to charge", "Reflect combined beam"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Twinrova",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Separate Sisters",
+        "mechanic": "Kotake (fire) and Koume (ice) attack from platforms",
+        "puzzle": "Mirror Shield absorb 3 fire + 3 ice attacks",
+        "vulnerability": "Shield charged = reflect combined beam"
+      },
+      {
+        "phase": 2,
+        "name": "Twinrova Merged",
+        "mechanic": "Merged form alternates fire/ice, creates floor hazards",
+        "puzzle": "Reflect combined elemental beam, attack while stunned",
+        "vulnerability": "Stunned after reflected beam hits"
+      },
+      {
+        "phase": 3,
+        "name": "Desperation",
+        "mechanic": "Low health - faster attacks, floor lava/ice",
+        "puzzle": "Quick reflects, Iron Boots for floor hazards",
+        "vulnerability": "Same but tighter timing"
+      }
+    ]
+  }
+}

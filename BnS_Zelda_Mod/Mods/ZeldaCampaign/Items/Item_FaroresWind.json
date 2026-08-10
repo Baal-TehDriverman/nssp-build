@@ -1,0 +1,20 @@
+{
+  "id": "FaroresWind",
+  "name": "Farore's Wind",
+  "type": "Magic",
+  "description": "Sets a warp point and returns to it.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Magic",
+    "Utility"
+  ],
+  "customData": {
+    "magicCost": 16,
+    "setsWarpPoint": true
+  }
+}

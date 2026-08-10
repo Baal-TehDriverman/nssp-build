@@ -1,0 +1,20 @@
+{
+  "id": "Fairy",
+  "name": "Fairy",
+  "type": "Consumable",
+  "description": "Revives you on death or heals fully.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 100,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Consumable",
+    "ChestLoot"
+  ],
+  "customData": {
+    "autoRevive": true,
+    "healAmount": 100
+  }
+}

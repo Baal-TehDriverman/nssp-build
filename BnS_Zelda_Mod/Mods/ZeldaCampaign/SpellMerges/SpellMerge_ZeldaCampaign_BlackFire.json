@@ -1,0 +1,61 @@
+{
+  "id": "ZeldaCampaign_BlackFire_Hybrid",
+  "name": "Shadow Flame Ocarina",
+  "description": "Fuse the Song of Storms and Shadow magic with Black Fire. Storms of black flame consume all.",
+  "type": "SpellMerge",
+  "requires": {
+    "spellA": "Spell_SongOfStorms",
+    "spellB": "BlackFire",
+    "minForm": "Base"
+  },
+  "result": {
+    "spellId": "Spell_ZeldaCampaign_BlackFire_Storm",
+    "name": "Song of Black Storms",
+    "description": "Black flames rain from storm clouds. Lightning strikes with void fire.",
+    "damage": 70,
+    "cooldown": 8,
+    "manaCost": 50,
+    "effects": {
+      "stormSummon": {
+        "enabled": true,
+        "radius": 40,
+        "duration": 60,
+        "blackRain": true,
+        "voidLightning": true,
+        "corruptsArea": true
+      },
+      "blackFireMerge": {
+        "enabled": true,
+        "spellId": "BlackFire",
+        "damageBonus": 2.0,
+        "voidDamage": true,
+        "burnsThroughImmunity": true
+      },
+      "crossModSynergy": {
+        "songOfStorms": {
+          "spellId": "Spell_SongOfStorms",
+          "effect": "StormFireMerge",
+          "damageBonus": 1.5
+        },
+        "blackFire": {
+          "spellId": "BlackFire",
+          "effect": "BlackStormAmplification",
+          "damageBonus": 2.5
+        },
+        "nocturneOfShadow": {
+          "spellId": "Spell_NocturneOfShadow",
+          "effect": "ShadowStormUnion",
+          "voidDamage": true,
+          "invisibleEnemiesRevealed": true
+        }
+      },
+      "aura": {
+        "color": "#1A0033",
+        "particles": "black_fire_storm",
+        "sound": "black_storm_howl"
+      }
+    }
+  },
+  "tags": ["ZeldaCampaign", "LithosphereLootPack", "CrossMod", "SpellMerge", "BlackFire", "SongOfStorms", "Shadow"],
+  "lore": "The Song of Storms, a melody of chaos, finds a dark mirror in the Black Fire. Together they summon storms that burn with the void itself - rain that sears, lightning that erases."
+}

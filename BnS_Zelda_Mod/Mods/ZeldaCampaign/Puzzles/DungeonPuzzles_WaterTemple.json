@@ -1,0 +1,138 @@
+{
+  "id": "DungeonPuzzles_WaterTemple",
+  "name": "Water Temple Puzzles",
+  "dungeon": "WaterTemple",
+  "era": "Adult",
+  "difficulty": "Expert",
+  "puzzles": [
+    {
+      "id": "WaterTemple_1_WaterLevelControl",
+      "name": "Central Pillar Water Level",
+      "type": "WaterLevel",
+      "description": "Manipulate water level to 3 positions (High, Medium, Low) using the central pillar mechanism to access different floors.",
+      "location": "Central Pillar Room (All Floors)",
+      "requiredItems": ["IronBoots", "ZoraTunic", "Longshot"],
+      "steps": [
+        "Dive to bottom (Iron Boots required)",
+        "Play Zelda's Lullaby at Triforce symbol",
+        "Water level cycles: High -> Medium -> Low",
+        "High: Access 2F rooms, Boss Key area",
+        "Medium: Access 1F main hall, central pillar",
+        "Low: Access B1, B2 basement areas"
+      ],
+      "reward": "Full dungeon access",
+      "hints": ["Sheik: \"The water level holds the key...\"", "Triforce symbol glows at each level"]
+    },
+    {
+      "id": "WaterTemple_2_LongshotAcquisition",
+      "name": "Longshot Chest Puzzle",
+      "type": "Target",
+      "description": "Use Hookshot to reach Longshot chest in the rising water room. Requires precise water level timing.",
+      "location": "Rising Water Room (1F)",
+      "requiredItems": ["Hookshot", "IronBoots"],
+      "steps": [
+        "Set water to Medium",
+        "Enter room - water rises slowly",
+        "Hookshot to chest platform before submerged",
+        "Get Longshot",
+        "Longshot reaches further targets"
+      ],
+      "reward": "Longshot",
+      "hints": ["Water rises on timer", "Chest platform has Hookshot target"]
+    },
+    {
+      "id": "WaterTemple_3_CrackedWallBombs",
+      "name": "Cracked Wall Navigation",
+      "type": "Bomb",
+      "description": "Bomb cracked walls at different water levels to create shortcuts and access new areas.",
+      "location": "Throughout Dungeon",
+      "requiredItems": ["Bomb", "IronBoots", "ZoraTunic"],
+      "steps": [
+        "Set water to Low",
+        "Bomb B1 cracked wall -> Shortcut to Central Pillar",
+        "Set water to High",
+        "Bomb 2F cracked wall -> Access to Dark Link room",
+        "Bomb B2 wall -> Access to Morpha corridor"
+      ],
+      "reward": "Shortcuts, Morpha access",
+      "hints": ["Cracked walls have faint outline", "Bomb flowers nearby"]
+    },
+    {
+      "id": "WaterTemple_4_DarkLinkRoom",
+      "name": "Dark Link Illusion Room",
+      "type": "ShadowIllusion",
+      "description": "Fight Dark Link in mirrored room. No Z-targeting. Use environment and timing.",
+      "location": "Dark Link Room (2F - High Water)",
+      "requiredItems": ["Longshot", "Bow", "Hookshot"],
+      "steps": [
+        "Enter room - Dark Link appears",
+        "No lock-on available",
+        "Dark Link mirrors movements",
+        "Attack when he attacks (parry)",
+        "Use Longshot to create distance",
+        "Defeat to unlock path"
+      ],
+      "reward": "Path to Boss Key",
+      "hints": ["Room is perfectly mirrored", "Dark Link waits for player attack"]
+    },
+    {
+      "id": "WaterTemple_5_BossKeyWhirlpool",
+      "name": "Boss Key Whirlpool Puzzle",
+      "type": "WaterLevel",
+      "description": "Navigate whirlpools at Low water to reach Boss Key chest on central pillar.",
+      "location": "Central Pillar Base (B2 - Low Water)",
+      "requiredItems": ["IronBoots", "Longshot", "ZoraTunic"],
+      "steps": [
+        "Set water to Low",
+        "Dive to bottom with Iron Boots",
+        "Navigate between whirlpools (timing)",
+        "Longshot to central pillar platforms",
+        "Climb to Boss Key chest"
+      ],
+      "reward": "Boss Key",
+      "hints": ["Whirlpools have rotation pattern", "Longshot targets on pillar"]
+    },
+    {
+      "id": "WaterTemple_6_MorphaCorridor",
+      "name": "Morpha Corridor Water Tunnel",
+      "type": "WaterLevel",
+      "description": "Swim through underwater tunnel at High water to reach Morpha arena.",
+      "location": "Morpha Corridor (2F - High Water)",
+      "requiredItems": ["ZoraTunic", "IronBoots"],
+      "steps": [
+        "Set water to High",
+        "Dive into tunnel entrance",
+        "Swim through (Iron Boots for control)",
+        "Surface in Morpha arena"
+      ],
+      "reward": "Morpha Arena Access",
+      "hints": ["Tunnel only accessible at High water", "Zora Tunic prevents drowning"]
+    }
+  ],
+  "bossPuzzle": {
+    "name": "Morpha",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Water Tentacles",
+        "mechanic": "Morpha creates water tentacles from pool, nucleus hidden in water",
+        "puzzle": "Longshot nucleus directly through water",
+        "vulnerability": "Nucleus visible briefly when tentacles retract"
+      },
+      {
+        "phase": 2,
+        "name": "Tentacle Slam",
+        "mechanic": "Tentacles slam platform, creating waves",
+        "puzzle": "Dodge slams, Longshot nucleus during recovery",
+        "vulnerability": "Nucleus exposed after slam combo"
+      },
+      {
+        "phase": 3,
+        "name": "Whirlpool Form",
+        "mechanic": "Low health - Morpha creates whirlpool, pulls player",
+        "puzzle": "Iron Boots to resist pull, Longshot nucleus",
+        "vulnerability": "Nucleus centered in whirlpool"
+      }
+    ]
+  }
+}

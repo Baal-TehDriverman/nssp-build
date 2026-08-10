@@ -1,0 +1,73 @@
+{
+  "$type": "DragonBall.SuperSayan, DBZ",
+  "id": "Spell_MinuetOfForest",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 0,
+  "castDescription": "Play the Minuet of Forest - warps to the Forest Temple.",
+  "imbueDescription": "Emerald winds swirl around the ocarina.",
+  "chargeEffectId": "Effect_MinuetOfForest_Charge",
+  "readyEffectId": "Effect_MinuetOfForest_Ready",
+  "fingerEffectId": "Effect_MinuetOfForest_Finger",
+  "closeHandPoseId": "ChargeClose",
+  "openHandPoseId": "ChargeOpen",
+  "doReadyHaptic": true,
+  "orbVariationSpeed": 3.0,
+  "orbVariationAmount": 0.15,
+  "chargeSpeed": 0.5,
+  "allowStaffBuff": false,
+  "endOnGrip": true,
+  "allowCharge": true,
+  "chargeMinHaptic": 0.1,
+  "chargeMaxHaptic": 0.4,
+  "allowThrow": true,
+  "throwEffectId": "Effect_MinuetOfForest_Cast",
+  "throwMinCharge": 0.8,
+  "allowSpray": false,
+  "imbueEnabled": false,
+  "wallDisplayName": "Minuet of Forest",
+  "hasOrder": true,
+  "order": 6,
+  "iconEffectId": "SpellOrbTest",
+  "aiCastType": "CastSimple",
+  "minMana": 20.0,
+  "shardId": "Crystal_Small_01_Shard",
+  "prefabAddress": "Bas.Item.Misc.SkillOrb",
+  "allowSkill": true,
+  "showInTree": false,
+  "hideInSkillMenu": true,
+  "skillTreeDisplayName": "Minuet of Forest",
+  "description": "Saria's sacred melody. Warps you to the Forest Temple entrance in the Sacred Forest Meadow. The lost woods part for this song.",
+  "isDefaultSkill": false,
+  "primarySkillTreeId": "ZeldaCampaign",
+  "isTierBlocker": true,
+  "ReadyThreshold": 0.8,
+  "Ready": false,
+  "Order": 6,
+  "IsCombinedSkill": false,
+  "nssp": {
+    "projectileId": "MinuetOfForest_Warp",
+    "spellKind": "Warp",
+    "color": [0.2, 0.8, 0.3],
+    "effects": {
+      "warp": {
+        "enabled": true,
+        "destination": "SacredForestMeadow",
+        "sceneName": "Zelda_ForestTemple",
+        "particleEffect": "ForestWarp",
+        "soundEffect": "MinuetWarp"
+      },
+      "crossModSynergy": {
+        "lithosphere": {
+          "effectId": "Effect_Lithosphere_Synergy_ZeldaCampaign",
+          "potencyBonus": 1.5
+        },
+        "ssjFlight": {
+          "spellId": "Spell_SSJFlight_Ocarina_Wind",
+          "effect": "ForestWindFlight",
+          "speedMultiplier": 2.0
+        }
+      }
+    }
+  }
+}

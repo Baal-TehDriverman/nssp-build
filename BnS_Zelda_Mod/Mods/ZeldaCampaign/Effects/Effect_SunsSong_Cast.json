@@ -1,0 +1,64 @@
+{
+  "id": "Effect_SunsSong_Cast",
+  "name": "Sun's Song Cast Effect",
+  "type": "SpellEffect",
+  "description": "Instant day/night shift, stuns undead, reveals sun chests",
+  "particleSystems": [
+    {
+      "name": "SunBurst",
+      "prefab": "Particles/Spells/SunsSongCastBurst",
+      "offset": [0, 0, 0],
+      "scale": 4.0,
+      "duration": 2.0,
+      "loop": false,
+      "expands": true,
+      "maxRadius": 20.0
+    },
+    {
+      "name": "UndeadStun",
+      "prefab": "Particles/Spells/UndeadStun",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": 8.0,
+      "loop": false,
+      "targetTags": ["ReDead", "Gibdo", "Stalfos", "Poe", "DeadHand", "BongoBongo"]
+    },
+    {
+      "name": "SunChestReveal",
+      "prefab": "Particles/Spells/SunChestReveal",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": 10.0,
+      "loop": false,
+      "targetTags": ["SunChest", "IllusionWall"]
+    },
+    {
+      "name": "DayNightShift",
+      "prefab": "Particles/Spells/DayNightShift",
+      "offset": [0, 0, 0],
+      "scale": 100.0,
+      "duration": 10.0,
+      "loop": false
+    }
+  ],
+  "audio": {
+    "castSound": "Audio/Spells/SunsSongCast",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "timeShiftSound": "Audio/Ambience/TimeShift",
+    "undeadScream": "Audio/Enemies/UndeadScream"
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.9, 0.3, 1.0],
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 1.0, 0.5, 0.6],
+      "duration": 0.5
+    },
+    "timeOfDayShift": {
+      "enabled": true,
+      "instant": true,
+      "freezeDuration": 10.0
+    }
+  }
+}

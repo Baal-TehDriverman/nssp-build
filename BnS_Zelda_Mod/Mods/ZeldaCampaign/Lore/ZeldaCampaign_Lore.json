@@ -1,0 +1,224 @@
+{
+  "id": "ZeldaCampaign_Lore",
+  "name": "Zelda Campaign Lore Database",
+  "type": "LoreDatabase",
+  "version": "1.0.0",
+  "description": "Complete lore integration for the Zelda Campaign including NPC dialogues, story beats, item histories, and world building.",
+  "npcDialogues": {
+    "GreatDekuTree": {
+      "intro": "Young hero... thou hast been summoned by the Great Deku Tree... A wicked man of the desert seeks to take the Triforce... Thou must break the curse within me...",
+      "afterCurse": "Thou hast done well... But 'tis too late for me... Take this Kokiri Emerald... Keep it safe... The fate of the forest rests upon thee...",
+      "death": "The Great Deku Tree withers... His final breath carries a warning... \"The man from the desert... Ganondorf... He seeks the Triforce...\""
+    },
+    "Saria": {
+      "teachingMinuet": "You came! I knew you would! I have something to give you... This is the Minuet of Forest... It will let you warp to the Forest Temple... We'll be friends forever, right?",
+      "sageAwakening": "I am Saria... Sage of Forest... I shall aid you with the power of the forest... Take this Forest Medallion... The winds of the forest will always guide you.",
+      "friendship": "Even if we're apart... We're friends... Right? The ocarina... It connects us... Across time... Across distance..."
+    },
+    "Darunia": {
+      "firstMeeting": "Hmph! A kid? What do you want? The Spiritual Stone? Hah! You'd have to beat King Dodongo first! But... if you got guts... I'll let you try.",
+      "afterDodongo": "Hot stuff! You did it! You're a real man! A true brother of the Gorons! Take this... The Goron Ruby! It's yours! Let's be sworn brothers!",
+      "sageAwakening": "Darunia... Sage of Fire... The power of the mountain flows through this medallion... Volvagia... That dragon... Ganondorf revived it... Go, my sworn brother! Crush it!"
+    },
+    "PrincessRuto": {
+      "firstMeeting": "How dare you touch me! I am Princess Ruto of the Zoras! ...Oh? You're not a thief? You're here to save Lord Jabu-Jabu? Hmph... Fine. But you carry me!",
+      "insideJabu": "This place is disgusting! And that monster... Barinade! It's hurting Lord Jabu-Jabu! You... you go defeat it! I'll... I'll wait here! (Don't leave me...)",
+      "afterBarinade": "You... you actually did it! You saved me... and Lord Jabu-Jabu... Here. Take the Zora Sapphire. It's... it's an engagement gift! ...What? You didn't know? Zora tradition!",
+      "sageAwakening": "Ruto... Sage of Water... I'll support you with the power of water... This Water Medallion... It's proof of our... promise. Don't forget it... Don't forget ME."
+    },
+    "Impa": {
+      "firstMeeting": "I am Impa, nursemaid and protector of Princess Zelda. The Royal Family's secrets are not for outsiders... but you... you have the Spiritual Stones. And the Ocarina of Time. You are the one from the legend.",
+      "teachingZeldasLullaby": "This melody... Zelda's Lullaby... It proves your connection to the Royal Family. Play it where the Triforce mark appears. It will open the way.",
+      "shadowTemple": "Beneath the graveyard... The Shadow Temple... It was built by our ancestors to seal away Hyrule's dark history. Bongo Bongo... A phantom we sealed long ago... Ganondorf has released it. Go... as the Sage of Shadow, I entrust this to you.",
+      "sageAwakening": "Impa... Sage of Shadow... The shadows shall protect you... This Shadow Medallion holds the power of the Sheikah... Use it wisely."
+    },
+    "Nabooru": {
+      "firstMeeting": "A kid in a place like this? ...You're not with Ganondorf? Good. I'm Nabooru, second-in-command of the Gerudo. Ganondorf... He's using our people. I'll stop him. Help me get the Silver Gauntlets.",
+      "childSection": "These gauntlets... They're in the Spirit Temple's past. Only a child can reach them. Take them... and when you're grown... come back. We'll finish this together.",
+      "captured": "Twinrova... Kotake and Koume... Ganondorf's surrogate mothers... They got me... Turned me into an Iron Knuckle... You have to... stop them... Save the Gerudo...",
+      "sageAwakening": "Nabooru... Sage of Spirit... The desert winds guide this medallion... Twinrova... They're strong... But together... We can beat them. The Spirit Medallion... It's yours."
+    },
+    "Rauru": {
+      "awakening": "Welcome... Hero of Time. I am Rauru, the Sage of Light. Seven years... You slept in the Sacred Realm... Ganondorf seized the Triforce of Power... Hyrule fell... But there is hope. Five Sages await... Awaken them... And the path to Ganondorf will open.",
+      "lightMedallion": "Take this Light Medallion... It binds the six Sage Medallions together... With this... You can enter the Temple of Time... And face your destiny.",
+      "guidance": "The Master Sword... The Blade of Evil's Bane... It is the key... Pull it once more... Return to your childhood... There are things only a child can do... Then return... As the Hero of Time."
+    },
+    "Sheik": {
+      "firstMeeting": "You... You're the one... The Hero of Time... I am Sheik. A survivor of the Sheikah. I have waited... Seven years... Watching... Guiding... You must awaken the five Sages. Forest... Fire... Water... Shadow... Spirit... Then... The Temple of Time... Will open.",
+      "teachingSongs": [
+        "Prelude of Light... Return to the Temple of Time... The Sacred Realm awaits.",
+        "Minuet of Forest... The Sacred Forest Meadow... Saria waits.",
+        "Bolero of Fire... Death Mountain Crater... Darunia waits.",
+        "Serenade of Water... Lake Hylia... Ruto waits.",
+        "Nocturne of Shadow... Kakariko Graveyard... Impa waits.",
+        "Requiem of Spirit... Desert Colossus... Nabooru waits."
+      ],
+      "reveal": "The flow of time is always cruel... Its speed seems different for each person... But no one can change it... A thing that does not change with time... is a memory of younger days... ...Princess Zelda... I... I am... Sheik... No... I am... Princess Zelda."
+    },
+    "Ganondorf": {
+      "firstEncounter": "Hmph... A boy... playing hero? You possess the Spiritual Stones... And the Ocarina of Time... You opened the Door of Time... And led me to the Sacred Realm! Ha ha ha ha! The Triforce... It is MINE!",
+      "castle": "Welcome to my castle... Hero of Time... You've awakened the Sages... Impressive... But futile! The Triforce of Power... makes me immortal! Come... Let us end this... Once and for all!",
+      "finalForm": "You... You defeated my phantom... But this... This is my true form! GANON! The King of Evil! The Triforce of Power... transforms me! FEEL THE POWER OF DARKNESS!",
+      "defeat": "Impossible... The Triforce of Power... The Sages' power... The Master Sword... How... HOW CAN THIS BE?! CURSE YOU... CURSE YOU, SAGES! CURSE YOU, ZELDA! CURSE YOU... LINK! SOMEDAY... WHEN THIS SEAL BREAKS... I SHALL RETURN! AND I WILL EXTERMINATE YOUR DESCENDANTS!!"
+    },
+    "Zelda": {
+      "firstMeeting": "You... You have the Spiritual Stones? And the Ocarina of Time? Then... the legend is true... You are the Hero of Time... Please... Take this Ocarina... Play Zelda's Lullaby... Open the Door of Time... Stop Ganondorf!",
+      "ocarinaOfTime": "The Ocarina of Time... A sacred instrument passed down in the Royal Family... With the three Spiritual Stones... And this melody... The Door of Time will open... The Master Sword rests beyond... But you are too young... You must wait seven years... I will watch over you... In the Sacred Realm...",
+      "ending": "Link... Thank you... The peace has returned to Hyrule... The Master Sword... Return it to the Pedestal of Time... The Door of Time will close... The road between times will be sealed... ...Link... Give the Ocarina to me... As a sage... I can return you to your original time... Regain your lost time... Your childhood... ...Goodbye... Hero of Time..."
+    }
+  },
+  "storyBeats": {
+    "prologue": {
+      "title": "The Dream and the Summons",
+      "description": "Link dreams of a princess fleeing a dark rider. Navi awakens him - the Great Deku Tree has summoned him.",
+      "location": "Kokiri Forest",
+      "requiredItems": [],
+      "unlocks": ["GreatDekuTree"]
+    },
+    "dekuTree": {
+      "title": "Inside the Great Deku Tree",
+      "description": "Link enters the Great Deku Tree, defeats Queen Gohma, and receives the Kokiri Emerald. The Great Deku Tree dies, warning of Ganondorf.",
+      "location": "Great Deku Tree",
+      "requiredItems": ["KokiriSword", "DekuShield"],
+      "unlocks": ["DodongosCavern", "SpiritualStone_Kokiri"]
+    },
+    "dodongosCavern": {
+      "title": "Dodongo's Cavern",
+      "description": "Link helps Darunia clear the cavern of Dodongos, defeats King Dodongo, and earns the Goron Ruby and Bomb Bag.",
+      "location": "Death Mountain",
+      "requiredItems": ["BombBag"],
+      "unlocks": ["JabuJabusBelly", "SpiritualStone_Goron"]
+    },
+    "jabuJabusBelly": {
+      "title": "Jabu-Jabu's Belly",
+      "description": "Link rescues Princess Ruto from inside Lord Jabu-Jabu, defeats Barinade, and receives the Zora Sapphire and Boomerang.",
+      "location": "Zora's Domain",
+      "requiredItems": ["Boomerang", "ZoraTunic"],
+      "unlocks": ["DoorOfTime", "SpiritualStone_Zora"]
+    },
+    "doorOfTime": {
+      "title": "The Door of Time",
+      "description": "With all three Spiritual Stones and the Ocarina of Time, Link opens the Door of Time in the Temple of Time, pulls the Master Sword, and is sealed for seven years.",
+      "location": "Temple of Time",
+      "requiredItems": ["SpiritualStone_Kokiri", "SpiritualStone_Goron", "SpiritualStone_Zora", "OcarinaOfTime", "MasterSword"],
+      "unlocks": ["AdultEra", "TimeTravel"]
+    },
+    "adultAwakening": {
+      "title": "Awakening in the Sacred Realm",
+      "description": "Link awakens as an adult. Rauru explains Ganondorf took the Triforce of Power. Five Sages must be awakened.",
+      "location": "Temple of Light",
+      "requiredItems": [],
+      "unlocks": ["ForestTemple", "LightMedallion"]
+    },
+    "forestTemple": {
+      "title": "Forest Temple - Phantom Ganon",
+      "description": "Link navigates the twisted Forest Temple, acquires the Fairy Bow, and defeats Phantom Ganon. Saria awakens as Sage of Forest.",
+      "location": "Sacred Forest Meadow",
+      "requiredItems": ["FairyBow", "Hookshot"],
+      "unlocks": ["FireTemple", "Medallion_Forest", "MinuetOfForest"]
+    },
+    "fireTemple": {
+      "title": "Fire Temple - Volvagia",
+      "description": "Link rescues Gorons in the Fire Temple, acquires the Megaton Hammer, and defeats Volvagia. Darunia awakens as Sage of Fire.",
+      "location": "Death Mountain Crater",
+      "requiredItems": ["MegatonHammer", "GoronTunic"],
+      "unlocks": ["WaterTemple", "Medallion_Fire", "BoleroOfFire"]
+    },
+    "waterTemple": {
+      "title": "Water Temple - Morpha",
+      "description": "Link manipulates water levels in the Water Temple, acquires the Longshot, and defeats Morpha. Ruto awakens as Sage of Water.",
+      "location": "Lake Hylia",
+      "requiredItems": ["Longshot", "IronBoots", "ZoraTunic"],
+      "unlocks": ["ShadowTemple", "Medallion_Water", "SerenadeOfWater"]
+    },
+    "shadowTemple": {
+      "title": "Shadow Temple - Bongo Bongo",
+      "description": "Link uses the Lens of Truth and Hover Boots to navigate the Shadow Temple, defeating Bongo Bongo. Impa awakens as Sage of Shadow.",
+      "location": "Kakariko Graveyard",
+      "requiredItems": ["HoverBoots", "LensOfTruth"],
+      "unlocks": ["SpiritTemple", "Medallion_Shadow", "NocturneOfShadow"]
+    },
+    "spiritTemple": {
+      "title": "Spirit Temple - Twinrova",
+      "description": "Link navigates the Spirit Temple across time, acquires the Mirror Shield and Silver Gauntlets, and defeats Twinrova. Nabooru awakens as Sage of Spirit.",
+      "location": "Desert Colossus",
+      "requiredItems": ["MirrorShield", "SilverGauntlets", "RequiemOfSpirit"],
+      "unlocks": ["GanonsCastle", "Medallion_Spirit", "RequiemOfSpirit"]
+    },
+    "ganonsCastle": {
+      "title": "Ganon's Castle - The Final Barrier",
+      "description": "With all six medallions, Link enters Ganon's Castle, breaks the barriers, and faces Ganondorf in his tower.",
+      "location": "Ganon's Castle",
+      "requiredItems": ["Medallion_Forest", "Medallion_Fire", "Medallion_Water", "Medallion_Shadow", "Medallion_Spirit", "Medallion_Light", "LightArrows"],
+      "unlocks": ["GanondorfFight"]
+    },
+    "ganondorfFight": {
+      "title": "Battle with Ganondorf",
+      "description": "Link deflects Ganondorf's energy balls with the Master Sword, then strikes with Light Arrows. Zelda holds Ganondorf as Link delivers the final blow.",
+      "location": "Ganon's Tower",
+      "requiredItems": ["MasterSword", "LightArrows", "HylianShield"],
+      "unlocks": ["GanonFight"]
+    },
+    "ganonFight": {
+      "title": "Final Battle - Ganon",
+      "description": "Ganondorf transforms into Ganon. The Master Sword is knocked away. Link must use the Megaton Hammer or Biggoron's Sword to stun Ganon, then retrieve the Master Sword for the final strike. Zelda seals Ganon with the Sages' power.",
+      "location": "Ganon's Castle Ruins",
+      "requiredItems": ["MasterSword_True", "MegatonHammer", "LightArrows", "MirrorShield"],
+      "unlocks": ["TrueEnding", "Credits"]
+    },
+    "ending": {
+      "title": "The Seal and the Farewell",
+      "description": "The Sages seal Ganondorf in the Sacred Realm. Zelda returns Link to his childhood. Link meets Zelda again in the courtyard - the cycle continues.",
+      "location": "Temple of Time / Hyrule Castle Courtyard",
+      "requiredItems": ["OcarinaOfTime"],
+      "unlocks": ["NewGamePlus", "MasterSword_True"]
+    }
+  },
+  "itemLore": {
+    "MasterSword": {
+      "title": "The Master Sword",
+      "history": "Forged by the Goddess Hylia as the Goddess Sword, tempered in the three Sacred Flames by the chosen hero. It became the Master Sword, the Blade of Evil's Bane. It rests in the Pedestal of Time, waiting for the Hero of Time.",
+      "powers": ["Repels evil", "Fires sword beams at full health", "Key to time travel", "Seals darkness"],
+      "requirements": ["Three Spiritual Stones", "Ocarina of Time", "Zelda's Lullaby"]
+    },
+    "MasterSword_True": {
+      "title": "The Master Sword (True Power)",
+      "history": "The Master Sword fully awakened by the hero who has proven courage, wisdom, and power. Bathed in the light of the seven Sages, it reaches its true potential. Only the true Hero of Time can wield it.",
+      "powers": ["Infinite durability", "Powerful sword beams at any health", "Seals evil permanently", "Weakens Ganon", "Repels all dark magic", "Holy damage to all enemies"],
+      "requirements": ["All six Sage Medallions", "Light Medallion", "Defeat Ganondorf"]
+    },
+    "OcarinaOfTime": {
+      "title": "Ocarina of Time",
+      "history": "A sacred instrument of the Royal Family of Hyrule, passed down through generations. Made from a mysterious blue stone with the power to manipulate time, weather, and space when played with the correct melodies.",
+      "powers": ["Time manipulation", "Weather control", "Warping across Hyrule", "Communication with Sages", "Opening sealed doors", "Summoning Epona"],
+      "songs": [
+        "Song of Time - Opens Door of Time, moves Time Blocks",
+        "Song of Storms - Summons rain, reveals secrets",
+        "Zelda's Lullaby - Proves royal lineage, opens passages",
+        "Epona's Song - Summons Epona, calms beasts",
+        "Sun's Song - Shifts day/night, stuns undead",
+        "Minuet of Forest - Warps to Forest Temple",
+        "Bolero of Fire - Warps to Fire Temple",
+        "Serenade of Water - Warps to Water Temple",
+        "Nocturne of Shadow - Warps to Shadow Temple",
+        "Requiem of Spirit - Warps to Spirit Temple, shifts time",
+        "Prelude of Light - Warps to Temple of Time, opens Sacred Realm"
+      ]
+    },
+    "Triforce": {
+      "title": "The Triforce",
+      "history": "Left by the three Golden Goddesses - Din, Nayru, and Farore - upon creating the world. It represents Power, Wisdom, and Courage. When balanced, it grants any wish. When split, it seeks those who embody its virtues.",
+      "pieces": {
+        "Power": "Held by Ganondorf. Represents raw strength and ambition. The Triforce of Power makes him nearly immortal.",
+        "Wisdom": "Held by Princess Zelda. Represents insight and judgment. The Triforce of Wisdom guides the Sages.",
+        "Courage": "Held by Link. Represents bravery and action. The Triforce of Courage marks the Hero of Time."
+      }
+    }
+  },
+  "worldLore": {
+    "HyruleHistory": "Hyrule was created by the three Golden Goddesses. The Triforce was left in the Sacred Realm. The Royal Family of Hyrule guarded the Triforce and the Sacred Realm's entrance - the Temple of Time. The Sheikah served as protectors. Ganondorf, King of the Gerudo, sought the Triforce, triggering the events of the campaign.",
+    "SacredRealm": "A parallel dimension connected to Hyrule through the Temple of Time. The Triforce rests here. When Ganondorf touched it, it split into three pieces. The Sacred Realm reflects the heart of those who enter - becoming a world of evil under Ganondorf's influence.",
+    "Sages": "Seven Sages maintain the seal on the Sacred Realm. Six elemental Sages (Forest, Fire, Water, Shadow, Spirit, Light) and the Seventh Sage (Zelda). They channel their power through Medallions to seal evil.",
+    "TimeTravel": "The Master Sword and Ocarina of Time allow travel between Child Era (before Ganondorf's rise) and Adult Era (seven years later, under Ganondorf's rule). Actions in the past affect the future. Some puzzles require both eras."
+  }
+}

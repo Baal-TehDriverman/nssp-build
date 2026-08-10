@@ -1,0 +1,59 @@
+{
+  "id": "Effect_SongOfStorms_Ready",
+  "name": "Song of Storms Ready Effect",
+  "type": "SpellEffect",
+  "description": "Full storm manifests around player, ready to cast",
+  "particleSystems": [
+    {
+      "name": "StormClouds",
+      "prefab": "Particles/Spells/StormCloudsReady",
+      "offset": [0, 1.0, 0],
+      "scale": 3.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "LightningArcs",
+      "prefab": "Particles/Spells/LightningArcsReady",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 15
+    },
+    {
+      "name": "HeavyRain",
+      "prefab": "Particles/Spells/HeavyRain",
+      "offset": [0, 2.0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 100
+    },
+    {
+      "name": "WindLines",
+      "prefab": "Particles/Spells/WindLines",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/SongOfStormsReady",
+    "volume": 1.0,
+    "pitch": 1.0,
+    "thunderCrash": "Audio/Ambience/ThunderClose"
+  },
+  "visuals": {
+    "glowColor": [0.4, 0.4, 0.6, 1.0],
+    "pulseSpeed": 5.0,
+    "pulseIntensity": 0.6,
+    "skyDarken": true,
+    "screenFlash": {
+      "enabled": true,
+      "color": [0.3, 0.3, 0.5, 0.4],
+      "duration": 0.3
+    }
+  }
+}

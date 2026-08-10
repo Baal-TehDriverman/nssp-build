@@ -1,0 +1,50 @@
+{
+  "id": "Effect_SongOfTime_Ready",
+  "name": "Song of Time Ready Effect",
+  "type": "SpellEffect",
+  "description": "Golden time energy pulses, ready to cast",
+  "particleSystems": [
+    {
+      "name": "GoldenNotes",
+      "prefab": "Particles/Spells/SongOfTimeReadyNotes",
+      "offset": [0, 0.2, 0],
+      "scale": 1.2,
+      "duration": -1,
+      "loop": true,
+      "emissionRate": 30
+    },
+    {
+      "name": "TimeRing",
+      "prefab": "Particles/Spells/TimeRing",
+      "offset": [0, 0, 0],
+      "scale": 2.0,
+      "duration": -1,
+      "loop": true
+    },
+    {
+      "name": "ClockHands",
+      "prefab": "Particles/Spells/ClockHands",
+      "offset": [0, 0, 0],
+      "scale": 1.5,
+      "duration": -1,
+      "loop": true,
+      "rotationSpeed": 30
+    }
+  ],
+  "audio": {
+    "readySound": "Audio/Spells/SongOfTimeReady",
+    "volume": 0.8,
+    "pitch": 1.0
+  },
+  "visuals": {
+    "glowColor": [1.0, 0.85, 0.2, 1.0],
+    "pulseSpeed": 4.0,
+    "pulseIntensity": 0.6,
+    "timeDistortion": true,
+    "screenFlash": {
+      "enabled": true,
+      "color": [1.0, 0.85, 0.2, 0.4],
+      "duration": 0.3
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "HoverBoots",
+  "name": "Hover Boots",
+  "type": "Boots",
+  "description": "Mystical boots that allow the wearer to hover briefly above the ground, crossing gaps, quicksand, and invisible floors. Essential for Shadow Temple and Spirit Temple.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 10,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "Boots",
+    "KeyItem",
+    "PuzzleItem",
+    "GapCrossing",
+    "FallPrevention"
+  ],
+  "slot": "Feet",
+  "customData": {
+    "hoverTime": 3.0,
+    "preventsFallDamage": true,
+    "crossesGaps": true,
+    "crossesQuicksand": true,
+    "crossesInvisibleFloor": true,
+    "ignoresFloorSpikes": true,
+    "hoverHeight": 0.5,
+    "cooldown": 1.0,
+    "requiredFor": ["ShadowTemple_BongoBongo", "SpiritTemple_Gaps", "GanonsCastle_ShadowBarrier", "GerudoTrainingGround"],
+    "era": "Adult",
+    "location": "Shadow Temple",
+    "lore": "Woven from the silk of phantom spiders by the Sheikah. The wearer walks on air as if on solid ground.",
+    "puzzleUses": [
+      "Cross gaps in Shadow Temple",
+      "Walk on quicksand in Spirit Temple",
+      "Cross invisible floors in Shadow Temple",
+      "Ignore floor spikes",
+      "Bongo Bongo drum stage",
+      "Hover over damaging floors"
+    ]
+  }
+}

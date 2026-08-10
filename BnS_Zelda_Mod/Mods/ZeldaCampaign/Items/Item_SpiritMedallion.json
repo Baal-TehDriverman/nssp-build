@@ -1,0 +1,20 @@
+{
+  "id": "SpiritMedallion",
+  "name": "Spirit Medallion",
+  "type": "Medallion",
+  "description": "Medallion of the Spirit Sage.",
+  "damage": 0,
+  "defense": 0,
+  "weight": 1.0,
+  "value": 500,
+  "tags": [
+    "Zelda",
+    "Campaign",
+    "KeyItem",
+    "Medallion"
+  ],
+  "customData": {
+    "sage": "Nabooru",
+    "element": "Spirit"
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "$type": "ThunderRoad.ItemData, ThunderRoad",
+ "id": "ZeldaCampaign_EnergyBlast_1",
+ "sensitiveContent": "None",
+ "sensitiveFilterBehaviour": "Discard",
+ "version": 4,
+ "displayName": "ZeldaCampaign Energy Blast",
+ "author": "Lilith",
+ "valueType": "Gold",
+ "value": 0.0,
+ "rewardValue": 0.0,
+ "tier": 3,
+ "flags": 0,
+ "levelRequired": 0,
+ "category": "Misc",
+ "iconEffectId": null,
+ "preferredItemCenter": "Mass",
+ "drainImbueWhenIdle": true,
+ "prefabAddress": "Bas.Item.Misc.ProjectileMeteor",
+ "iconAddress": null,
+ "pooledCount": 48,
+ "androidPooledCount": 24,
+ "type": "Misc",
+ "allowedStorage": 0,
+ "despawnOnStoredInInventory": false,
+ "isStackable": false,
+ "consumableId": null,
+ "inventoryAudioContainerAddress": null,
+ "slot": null,
+ "overrideMassAndDrag": true,
+ "mass": 1.4,
+ "drag": 1.0,
+ "angularDrag": 0.05,
+ "damagers": [
+  {
+   "$type": "ThunderRoad.ItemData+Damager, ThunderRoad",
+   "transformName": "Damager",
+   "damagerID": "SwordSharp1H"
+  }
+ ],
+ "_nssp_note": "Cross-mod energy blast (ZeldaCampaign), color (0.9, 0.1, 0.1)",
+ "_nssp_aura": "Effect_Loot_ZeldaCampaign_Aura"
+}

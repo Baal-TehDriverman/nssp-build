@@ -1,0 +1,206 @@
+{
+  "id": "ZeldaCampaign_PuzzleSystem",
+  "name": "Zelda Campaign Puzzle System",
+  "type": "PuzzleFramework",
+  "version": "1.0.0",
+  "description": "Comprehensive puzzle mechanics for all dungeons including switches, blocks, torches, time, water, shadow, and dual-era puzzles.",
+  "puzzleTypes": {
+    "Switch": {
+      "description": "Activated by weight, weapon hit, or item interaction",
+      "variants": [
+        "FloorSwitch - Stepped on by player or block",
+        "WallSwitch - Hit with sword/arrow/hookshot",
+        "CeilingSwitch - Shot with arrow/hookshot",
+        "CrystalSwitch - Changes state when struck (blue/orange)",
+        "TimerSwitch - Stays active for set duration",
+        "MultiSwitch - Requires multiple switches simultaneously"
+      ],
+      "activationMethods": ["Weight", "SwordHit", "ArrowHit", "HookshotHit", "BombBlast", "MegatonHammer", "SongOfTime"],
+      "outputs": ["DoorOpen", "PlatformMove", "ChestSpawn", "EnemySpawn", "WaterLevelChange", "TimeBlockToggle"]
+    },
+    "PressurePlate": {
+      "description": "Weight-sensitive floor triggers",
+      "variants": [
+        "LightPlate - Player only",
+        "MediumPlate - Player or small block",
+        "HeavyPlate - Requires large block/statue",
+        "MultiPlate - Multiple plates must be held",
+        "SequencePlate - Must be activated in order"
+      ],
+      "activationMethods": ["PlayerWeight", "BlockWeight", "StatueWeight", "IronBootsWeight"],
+      "outputs": ["DoorOpen", "WallMove", "PlatformLower", "ChestUnlock"]
+    },
+    "Torch": {
+      "description": "Fire-based puzzles using Deku Sticks, Fire Arrows, Din's Fire",
+      "variants": [
+        "UnlitTorch - Requires fire source",
+        "TimedTorch - Stays lit for duration",
+        "PermanentTorch - Stays lit once ignited",
+        "BlueTorch - Requires blue fire (Ice Arrows)",
+        "RotatingTorch - Must be lit in sequence",
+        "UnderwaterTorch - Requires Fire Arrows underwater"
+      ],
+      "activationMethods": ["DekuStick", "FireArrow", "DinsFire", "LitDekuStick", "BlueFire"],
+      "outputs": ["DoorOpen", "ChestSpawn", "IceMelt", "EnemyReveal", "PlatformMove"]
+    },
+    "BlockPush": {
+      "description": "Movable blocks for puzzles",
+      "variants": [
+        "StandardBlock - Push/pull anywhere",
+        "IceBlock - Slides until wall",
+        "TimeBlock - Appears/disappears with Song of Time",
+        "SilverBlock - Requires Silver Gauntlets",
+        "GoldBlock - Requires Golden Gauntlets",
+        "StatueBlock - Heavy, requires Goron Bracelet/Gauntlets",
+        "MirrorBlock - Reflects light/laser"
+      ],
+      "activationMethods": ["Push", "Pull", "SilverGauntlets", "GoldenGauntlets", "GoronBracelet", "SongOfTime"],
+      "outputs": ["PressurePlateHold", "PathCreate", "LaserRedirect", "SwitchActivate", "Climbable"]
+    },
+    "Target": {
+      "description": "Shooting targets for ranged weapons",
+      "variants": [
+        "EyeSwitch - Shoot eye to activate",
+        "TargetPaint - Paint target on wall",
+        "MovingTarget - Rotating/moving target",
+        "SequentialTargets - Hit in order",
+        "TimedTargets - Hit within time limit",
+        "HiddenTarget - Revealed by Lens of Truth"
+      ],
+      "activationMethods": ["Arrow", "Hookshot", "Longshot", "Boomerang", "Slingshot"],
+      "outputs": ["DoorOpen", "ChestSpawn", "PlatformMove", "EnemyStun", "SecretReveal"]
+    },
+    "LaserMirror": {
+      "description": "Redirect light beams with mirrors",
+      "variants": [
+        "StaticMirror - Fixed rotation",
+        "RotatingMirror - Player rotates",
+        "CarryMirror - Player carries mirror shield",
+        "PrismSplitter - Splits beam",
+        "ColorFilter - Changes beam color"
+      ],
+      "activationMethods": ["MirrorShield", "RotateMirror", "CarryMirror"],
+      "outputs": ["TargetHit", "DoorOpen", "EnemyWeakness", "ChestSpawn"]
+    },
+    "WaterLevel": {
+      "description": "Multi-level water manipulation",
+      "variants": [
+        "WaterValve - Turn to change level (3 positions)",
+        "WaterCrystal - Strike to cycle level",
+        "DrainPlug - Pull to drain",
+        "FloodSwitch - Fill room",
+        "CurrentControl - Change flow direction"
+      ],
+      "activationMethods": ["IronBoots", "ZoraTunic", "Hookshot", "Longshot", "SongOfStorms", "ValveTurn"],
+      "outputs": ["WaterLevelChange", "CurrentChange", "NewPathOpen", "ChestAccess", "BossRoomAccess"]
+    },
+    "TimePuzzle": {
+      "description": "Song of Time and time-based mechanics",
+      "variants": [
+        "TimeBlock - Appears/disappears with Song of Time",
+        "TimeDoor - Opens only at specific time",
+        "TimeEnemy - Only vulnerable in past/future",
+        "TimePlatform - Moves on time cycle",
+        "PastFutureSwap - Requiem of Spirit switches era",
+        "SunMoonCycle - Sun's Song changes state"
+      ],
+      "activationMethods": ["SongOfTime", "SunsSong", "RequiemOfSpirit", "PreludeOfLight"],
+      "outputs": ["BlockToggle", "DoorOpen", "EraSwap", "EnemyVulnerable", "PathReveal"]
+    },
+    "ShadowIllusion": {
+      "description": "Lens of Truth and shadow mechanics",
+      "variants": [
+        "InvisiblePlatform - Visible only with Lens",
+        "FakeWall - Passable with Lens",
+        "HiddenEnemy - Revealed by Lens",
+        "IllusionPath - False path vs real path",
+        "ShadowClone - Mirror enemy",
+        "InvisibleSwitch - Lens reveals"
+      ],
+      "activationMethods": ["LensOfTruth", "HoverBoots", "NocturneOfShadow"],
+      "outputs": ["PathReveal", "EnemyReveal", "SwitchReveal", "ChestReveal", "BossWeakness"]
+    },
+    "DualEra": {
+      "description": "Puzzles requiring child/adult Link",
+      "variants": [
+        "ChildOnlySpace - Small tunnels",
+        "AdultOnlyStrength - Heavy blocks",
+        "TimeSwap - Requiem of Spirit switches",
+        "SeedPlanting - Child plants, adult harvests",
+        "StructuralDamage - Child breaks, adult uses",
+        "SharedProgress - Both eras affect same room"
+      ],
+      "activationMethods": ["RequiemOfSpirit", "MasterSwordPedestal", "SongOfTime"],
+      "outputs": ["EraSwap", "PathOpen", "ItemAccess", "BossAccess"]
+    },
+    "MusicPuzzle": {
+      "description": "Ocarina song-based puzzles",
+      "variants": [
+        "SongDoor - Opens with specific song",
+        "SongPlatform - Appears with song",
+        "SongEnemy - Stuns/vulnerable to song",
+        "SongReveal - Reveals hidden with song",
+        "SongTimeShift - Changes time of day",
+        "SongWeather - Changes weather",
+        "SongWarp - Warps to location"
+      ],
+      "activationMethods": ["AllOcarinaSongs"],
+      "outputs": ["DoorOpen", "PlatformSpawn", "EnemyStun", "SecretReveal", "TimeShift", "WeatherChange", "Warp"]
+    }
+  },
+  "puzzleItems": {
+    "requiredItems": {
+      "DekuStick": { "puzzles": ["Torch", "FireLighting"], "dungeons": ["DekuTree", "DodongosCavern"] },
+      "Bomb": { "puzzles": ["WallBreak", "SwitchHit", "BlockDestroy"], "dungeons": ["All"] },
+      "Bombchu": { "puzzles": ["RemoteSwitch", "MovingTarget", "UnderwaterSwitch"], "dungeons": ["WaterTemple", "ShadowTemple"] },
+      "Boomerang": { "puzzles": ["StunEnemy", "HitSwitch", "CutRope", "RetrieveItem"], "dungeons": ["JabuJabusBelly", "ForestTemple"] },
+      "Hookshot": { "puzzles": ["TargetHit", "CrossGap", "PullSelf", "StunEnemy"], "dungeons": ["ForestTemple", "FireTemple", "WaterTemple", "ShadowTemple", "SpiritTemple"] },
+      "Longshot": { "puzzles": ["LongTarget", "DeepGap", "MorphaNucleus"], "dungeons": ["WaterTemple", "ShadowTemple", "SpiritTemple", "GanonsCastle"] },
+      "Bow": { "puzzles": ["EyeSwitch", "TargetHit", "LightArrow", "PhantomGanon"], "dungeons": ["ForestTemple", "FireTemple", "WaterTemple", "ShadowTemple", "SpiritTemple", "GanonsCastle"] },
+      "FireArrow": { "puzzles": ["TorchLight", "IceMelt", "EnemyWeakness"], "dungeons": ["FireTemple", "IceCavern", "GanonsCastle"] },
+      "IceArrow": { "puzzles": ["FreezeWater", "EnemyFreeze", "BlueTorch"], "dungeons": ["WaterTemple", "GerudoTrainingGround"] },
+      "LightArrow": { "puzzles": ["GanondorfStun", "GanonStun", "BarrierBreak"], "dungeons": ["GanonsCastle"] },
+      "MegatonHammer": { "puzzles": ["HeavySwitch", "BlockBreak", "VolvagiaStun", "RustySwitch"], "dungeons": ["FireTemple", "ShadowTemple", "SpiritTemple", "GanonsCastle"] },
+      "SilverGauntlets": { "puzzles": ["SilverBlockPush", "HeavyLift"], "dungeons": ["SpiritTempleChild", "GerudoTrainingGround"] },
+      "GoldenGauntlets": { "puzzles": ["GoldBlockPush", "MassiveLift", "PillarLift"], "dungeons": ["GanonsCastle", "GerudoTrainingGround"] },
+      "GoronBracelet": { "puzzles": ["StatuePush", "HeavyLift"], "dungeons": ["DodongosCavern", "FireTemple"] },
+      "IronBoots": { "puzzles": ["UnderwaterWalk", "HeavyPressurePlate", "CurrentResist", "FanResist"], "dungeons": ["WaterTemple", "IceCavern", "ShadowTemple"] },
+      "HoverBoots": { "puzzles": ["GapCross", "QuickSand", "BongoBongoStage", "InvisibleFloor"], "dungeons": ["ShadowTemple", "SpiritTemple", "GanonsCastle"] },
+      "ZoraTunic": { "puzzles": ["UnderwaterBreath", "LongDive"], "dungeons": ["JabuJabusBelly", "WaterTemple"] },
+      "GoronTunic": { "puzzles": ["HeatResist", "LavaWalk"], "dungeons": ["DodongosCavern", "FireTemple", "GanonsCastle"] },
+      "LensOfTruth": { "puzzles": ["InvisibleReveal", "FakeWall", "HiddenEnemy", "IllusionPath"], "dungeons": ["ShadowTemple", "SpiritTemple", "GanonsCastle", "GerudoTrainingGround"] },
+      "MirrorShield": { "puzzles": ["LaserReflect", "FireReflect", "TwinrovaReflect", "LightPuzzle"], "dungeons": ["SpiritTemple", "GanonsCastle"] },
+      "OcarinaOfTime": { "puzzles": ["AllSongPuzzles", "TimeBlock", "WarpAccess"], "dungeons": ["All"] },
+      "MasterSword": { "puzzles": ["TimeTravel", "EvilSeal", "BeamPuzzle", "BarrierBreak"], "dungeons": ["TempleOfTime", "GanonsCastle"] }
+    },
+    "optionalItems": {
+      "BiggoronSword": { "puzzles": ["TwoHandedDamage", "NoShieldPuzzles"], "dungeons": ["All"] },
+      "DinsFire": { "puzzles": ["WideTorchLight", "EnemyBurn"], "dungeons": ["FireTemple", "ShadowTemple"] },
+      "FaroresWind": { "puzzles": ["WarpPoint", "EscapePuzzle"], "dungeons": ["All"] },
+      "NayrusLove": { "puzzles": ["InvinciblePuzzle", "DamageTank"], "dungeons": ["GanonsCastle"] },
+      "MagicBean": { "puzzles": ["PlantRide", "TimeGap"], "dungeons": ["ChildEra"] },
+      "GoldSkulltula": { "puzzles": ["TokenCollection", "CurseBreak"], "dungeons": ["All"] }
+    }
+  },
+  "difficultyScaling": {
+    "Normal": {
+      "hintsEnabled": true,
+      "puzzleTimeLimit": "generous",
+      "resetForgiving": true,
+      "visualCues": true
+    },
+    "Hero": {
+      "hintsEnabled": false,
+      "puzzleTimeLimit": "standard",
+      "resetForgiving": false,
+      "visualCues": "minimal"
+    },
+    "Master": {
+      "hintsEnabled": false,
+      "puzzleTimeLimit": "strict",
+      "resetForgiving": false,
+      "visualCues": false,
+      "oneLifeMode": true
+    }
+  }
+}

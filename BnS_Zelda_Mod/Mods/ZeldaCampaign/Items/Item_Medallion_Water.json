@@ -1,0 +1,15 @@
+{
+  "id": "Medallion_Water",
+  "name": "Water Medallion",
+  "type": "KeyItem",
+  "description": "The medallion of the Water Sage, Ruto. Proof of awakening the Water Temple.",
+  "weight": 0.3,
+  "value": 500,
+  "tags": ["Zelda", "Campaign", "KeyItem", "Medallion", "Water", "Sage"],
+  "customData": {
+    "sage": "Ruto",
+    "element": "Water",
+    "temple": "WaterTemple",
+    "lore": "Princess Ruto, the Sage of Water, bestows this medallion upon those who conquer the Water Temple. It holds the power of the flowing waters."
+  }
+}

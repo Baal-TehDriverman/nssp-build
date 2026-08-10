@@ -1,0 +1,30 @@
+{
+  "$type": "ThunderRoad.ItemData, ThunderRoad",
+  "sensitiveContent": "None",
+  "sensitiveFilterBehaviour": "Discard",
+  "version": 4,
+  "type": "Misc",
+  "category": null,
+  "flags": "Throwable",
+  "_nssp_gore": {
+    "kind": "blood_splash",
+    "dropPool": "RealisticBleeding"
+  },
+  "id": "Lithosphere_BloodSplatter",
+  "displayName": "Blood Splatter",
+  "description": "Concentrated gore in a vial. Shake to spray.",
+  "prefabAddress": "Bas.Item.Misc.Jar",
+  "valueType": "Gold",
+  "value": 25.0,
+  "tier": 2,
+  "allowedStorage": "Container, SandboxAllItems",
+  "slot": "Small",
+  "mass": 0.3,
+  "modules": [
+    {
+      "$type": "ThunderRoad.ItemModuleConsumable, ThunderRoad",
+      "consumableId": "BloodSplatter",
+      "useEffectId": "Effect_Lithosphere_BloodSplatter_Aura"
+    }
+  ]
+}
